@@ -1,0 +1,565 @@
+{
+  "config": {
+    "expandedModels": false,
+    "canonical": "https://www.innoxone.com/",
+    "previewRoutesToLive": true
+  },
+  "logo": {
+    "viewBox": "0 0 1000 168",
+    "ink": "M298 89 L298 118 L274 118 L267 110 L265 110 L251 95 L249 95 L235 80 L233 80 L219 65 L217 65 L217 64 L209 57 L209 117 L208 117 L208 118 L184 118 L184 24 L210 24 L224 39 L226 39 L240 54 L242 54 L242 55 L243 55 L257 70 L259 70 L272 84 L274 84 L274 24 L298 24 L298 89 Z M380 100 L394 97 L394 96 L398 95 L399 93 L401 93 L401 92 L404 90 L404 88 L406 87 L406 85 L407 85 L407 83 L408 83 L408 79 L409 79 L409 62 L408 62 L408 58 L407 58 L406 54 L405 54 L404 51 L403 51 L402 49 L400 49 L398 46 L396 46 L396 45 L394 45 L394 44 L391 44 L391 43 L387 43 L387 42 L381 42 L381 41 L364 41 L364 42 L358 42 L358 43 L354 43 L354 44 L351 44 L351 45 L347 46 L346 48 L344 48 L344 49 L340 52 L340 54 L338 55 L337 61 L336 61 L335 75 L336 75 L336 81 L337 81 L337 83 L338 83 L338 86 L340 87 L340 89 L341 89 L345 94 L347 94 L347 95 L349 95 L349 96 L351 96 L351 97 L354 97 L354 98 L357 98 L357 99 L363 99 L363 100 L380 100 Z M347 116 L340 115 L340 114 L338 114 L338 113 L336 113 L336 112 L330 110 L329 108 L327 108 L327 107 L317 98 L317 96 L316 96 L316 94 L315 94 L315 92 L314 92 L314 90 L313 90 L313 88 L312 88 L311 80 L310 80 L310 61 L311 61 L312 53 L313 53 L313 51 L314 51 L316 45 L318 44 L318 42 L319 42 L327 33 L329 33 L330 31 L332 31 L332 30 L334 30 L334 29 L336 29 L336 28 L338 28 L338 27 L341 27 L341 26 L344 26 L344 25 L347 25 L347 24 L352 24 L352 23 L359 23 L359 22 L386 22 L386 23 L393 23 L393 24 L397 24 L397 25 L401 25 L401 26 L404 26 L404 27 L406 27 L406 28 L409 28 L409 29 L413 30 L414 32 L416 32 L417 34 L419 34 L419 35 L426 41 L426 43 L428 44 L428 46 L430 47 L431 52 L432 52 L432 54 L433 54 L434 63 L435 63 L435 78 L434 78 L434 83 L433 83 L432 90 L431 90 L430 94 L428 95 L428 97 L426 98 L426 100 L425 100 L419 107 L417 107 L416 109 L414 109 L413 111 L411 111 L411 112 L409 112 L409 113 L407 113 L407 114 L398 116 L398 117 L387 118 L387 119 L358 119 L358 118 L351 118 L351 117 L347 117 L347 116 Z M784 65 L784 118 L760 118 L760 117 L759 117 L759 24 L785 24 L785 25 L786 25 L788 28 L790 28 L805 44 L807 44 L821 59 L823 59 L837 74 L839 74 L848 84 L850 84 L850 24 L874 24 L874 117 L873 117 L873 118 L850 118 L850 117 L849 117 L848 115 L846 115 L832 100 L830 100 L815 84 L813 84 L799 69 L797 69 L786 57 L784 57 L784 65 Z M137 75 L138 75 L146 84 L148 84 L148 24 L172 24 L172 118 L148 118 L148 117 L147 117 L142 111 L140 111 L126 96 L124 96 L110 81 L108 81 L93 65 L91 65 L84 57 L82 57 L82 58 L83 58 L83 117 L82 117 L82 118 L58 118 L58 24 L83 24 L83 25 L85 25 L99 40 L101 40 L115 55 L117 55 L117 56 L118 56 L132 71 L134 71 L137 75 Z M915 118 L886 118 L886 117 L885 117 L885 24 L986 24 L986 42 L913 42 L913 61 L976 61 L976 77 L975 77 L975 78 L913 78 L913 99 L986 99 L986 118 L915 118 Z M702 98 L707 97 L707 96 L709 96 L710 94 L712 94 L712 93 L718 88 L718 86 L719 86 L719 84 L720 84 L720 82 L721 82 L721 78 L722 78 L722 63 L721 63 L721 59 L720 59 L718 53 L717 53 L712 47 L710 47 L710 46 L708 46 L708 45 L706 45 L706 44 L703 44 L703 43 L700 43 L700 42 L693 42 L693 41 L670 42 L670 43 L667 43 L667 44 L664 44 L664 45 L658 47 L658 48 L652 53 L652 55 L651 55 L651 57 L650 57 L650 60 L649 60 L649 64 L648 64 L648 77 L649 77 L649 82 L650 82 L652 88 L653 88 L658 94 L660 94 L661 96 L664 96 L664 97 L670 98 L670 99 L676 99 L676 100 L694 100 L694 99 L700 99 L700 98 L702 98 Z M21 64 L21 24 L46 24 L46 118 L21 118 L21 64 Z M741 45 L742 48 L743 48 L743 50 L744 50 L744 52 L745 52 L746 59 L747 59 L747 65 L748 65 L748 76 L747 76 L747 82 L746 82 L745 89 L744 89 L744 91 L743 91 L741 97 L738 99 L738 101 L737 101 L733 106 L731 106 L729 109 L727 109 L727 110 L725 110 L724 112 L719 113 L719 114 L717 114 L717 115 L710 116 L710 117 L706 117 L706 118 L700 118 L700 119 L670 119 L670 118 L664 118 L664 117 L656 116 L656 115 L653 115 L653 114 L651 114 L651 113 L646 112 L645 110 L641 109 L638 105 L636 105 L636 104 L633 102 L633 100 L630 98 L630 96 L628 95 L628 93 L627 93 L627 91 L626 91 L626 89 L625 89 L624 82 L623 82 L622 67 L623 67 L623 59 L624 59 L624 55 L625 55 L625 53 L626 53 L626 50 L627 50 L628 46 L630 45 L630 43 L633 41 L633 39 L634 39 L636 36 L638 36 L640 33 L642 33 L643 31 L645 31 L645 30 L647 30 L647 29 L649 29 L649 28 L651 28 L651 27 L654 27 L654 26 L657 26 L657 25 L660 25 L660 24 L671 23 L671 22 L699 22 L699 23 L705 23 L705 24 L710 24 L710 25 L717 26 L717 27 L719 27 L719 28 L721 28 L721 29 L723 29 L723 30 L729 32 L732 36 L734 36 L734 37 L738 40 L738 42 L739 42 L741 45 Z M548 108 L546 108 L542 103 L540 103 L540 102 L536 99 L536 97 L539 96 L544 90 L546 90 L551 84 L553 84 L558 78 L560 78 L561 76 L563 76 L565 79 L567 79 L573 86 L575 86 L581 93 L583 93 L588 99 L590 99 L596 106 L598 106 L604 113 L606 113 L612 120 L614 120 L614 121 L615 121 L619 126 L621 126 L622 128 L570 128 L570 127 L569 127 L567 124 L565 124 L561 119 L559 119 L554 113 L552 113 L548 108 Z M583 12 L624 12 L624 14 L623 14 L621 17 L619 17 L614 23 L612 23 L607 29 L605 29 L600 35 L598 35 L598 36 L597 36 L592 42 L590 42 L585 48 L583 48 L578 54 L576 54 L571 60 L569 60 L563 67 L561 67 L561 66 L560 66 L556 61 L554 61 L548 54 L546 54 L540 47 L538 47 L538 46 L535 44 L535 42 L536 42 L537 40 L539 40 L543 35 L545 35 L549 30 L551 30 L554 26 L556 26 L560 21 L562 21 L562 20 L563 20 L566 16 L568 16 L571 12 L583 12 Z",
+    "green": "M436 162 L392 162 L392 160 L393 160 L394 158 L396 158 L400 153 L402 153 L406 148 L408 148 L411 144 L413 144 L417 139 L419 139 L423 134 L425 134 L429 129 L431 129 L435 124 L437 124 L440 120 L442 120 L442 119 L443 119 L446 115 L448 115 L452 110 L454 110 L457 106 L459 106 L459 105 L460 105 L463 101 L465 101 L469 96 L471 96 L474 92 L476 92 L480 87 L482 87 L482 86 L483 86 L486 82 L488 82 L492 77 L494 77 L497 73 L499 73 L499 72 L501 71 L501 69 L500 69 L497 65 L495 65 L490 59 L488 59 L484 54 L482 54 L478 49 L476 49 L471 43 L469 43 L465 38 L463 38 L459 33 L457 33 L457 32 L456 32 L452 27 L450 27 L446 22 L444 22 L440 17 L438 17 L438 16 L435 14 L435 12 L489 12 L489 13 L491 13 L495 18 L497 18 L503 25 L505 25 L511 32 L513 32 L519 39 L521 39 L526 45 L528 45 L534 52 L536 52 L542 59 L544 59 L550 66 L552 66 L557 72 L554 73 L549 79 L547 79 L542 85 L540 85 L535 91 L533 91 L527 98 L525 98 L520 104 L518 104 L513 110 L511 110 L506 116 L504 116 L499 122 L497 122 L492 128 L490 128 L484 135 L482 135 L477 141 L475 141 L470 147 L468 147 L463 153 L461 153 L461 154 L460 154 L456 159 L454 159 L452 162 L436 162 Z"
+  },
+  "labels": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "inquire": "Inquire",
+    "explore": "Explore INNO-F1",
+    "play": "Play hero video",
+    "pause": "Pause hero video",
+    "unavailable": "Video unavailable",
+    "models": "Models",
+    "lineup": "INNO-F1. Your own electric golf cart.",
+    "variants": "Choose your F1 variant",
+    "story": "Our story",
+    "region": "United States / English",
+    "footer": "More from INNOXONE",
+    "copyright": "© 2026 INNOXONE."
+  },
+  "nav": [
+    {
+      "name": "Our story",
+      "href": "#origin"
+    },
+    {
+      "name": "INNO-F1",
+      "href": "#lineup",
+      "product": true
+    },
+    {
+      "name": "ROBOCADDY",
+      "href": "#robocaddy"
+    },
+    {
+      "name": "CONNECT",
+      "href": "#connect"
+    }
+  ],
+  "contact": {
+    "name": "Contact",
+    "href": "/contact/",
+    "phone": "949-384-XONE (9663)",
+    "tel": "+19493849663",
+    "email": "info@innoxone.com",
+    "address": "31896 Plaza Dr Suite D2, San Juan Capistrano, CA 92675",
+    "map": "https://maps.app.goo.gl/sYTsCQduQt7NKxdF8"
+  },
+  "hero": {
+    "headline": [
+      "Personal Golf Mobility",
+      "Designed Around",
+      "Every Golfer"
+    ],
+    "description": "INNOXONE makes single-rider electric golf carts for golfers, golf courses and resorts. With INNO-F1, drive to your own ball and carry your clubs in a cart built for one.",
+    "poster": "assets/hero-1920.webp",
+    "alt": "Golfers driving their own INNO-F1 electric golf carts across the fairway.",
+    "video": {
+      "desktop": "assets/hero-1080.mp4",
+      "mobile": "assets/hero-mobile.mp4"
+    },
+    "action": "Arrange a test ride",
+    "href": "/contact/?interest=test-ride"
+  },
+  "variants": [
+    {
+      "id": "original",
+      "name": "Original",
+      "descriptor": "A single-rider electric golf cart with your own seat and space for your clubs.",
+      "image": "assets/f1-original.webp",
+      "alt": "Green INNO F1 Original single-rider golf cart with an orange seat and rear golf bag.",
+      "chips": [
+        "Single rider"
+      ],
+      "benefits": [
+        "Your own seat",
+        "Dedicated golf-bag space",
+        "Independent movement"
+      ],
+      "specification": "Single rider · Electric · Golf-bag holder"
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "descriptor": "A simplified single-rider electric golf cart with an open-sided layout.",
+      "image": "assets/f1-light.webp",
+      "alt": "Red-orange INNO F1 Light golf cart with a black roof, slim uprights and rear golf bag.",
+      "chips": [
+        "Single rider"
+      ],
+      "benefits": [
+        "Open-sided layout",
+        "Slim roof frame",
+        "Dedicated golf-bag space"
+      ],
+      "specification": "Single rider · Electric · Slim roof frame"
+    },
+    {
+      "id": "marshal",
+      "name": "Marshal",
+      "descriptor": "An electric golf cart for marshals and course staff, with rear utility storage.",
+      "image": "assets/f1-marshal.webp",
+      "alt": "White INNO F1 Marshal golf cart with an orange seat and gray rear utility box.",
+      "chips": [
+        "Single rider"
+      ],
+      "benefits": [
+        "Course-team mobility",
+        "Rear utility storage",
+        "Single-seat configuration"
+      ],
+      "specification": "Single rider · Electric · Rear utility box"
+    }
+  ],
+  "futureModels": [
+    {
+      "name": "INNO F1",
+      "href": "/inno-f1/",
+      "image": "assets/f1-original.webp",
+      "chip": "Single rider"
+    }
+  ],
+  "details": {
+    "headline": "Designed around you.",
+    "items": [
+      {
+        "id": "seat",
+        "title": "A seat of your own.",
+        "description": "A single seat with armrests and space to settle into your round.",
+        "image": "assets/seat-1000.webp",
+        "srcset": "assets/seat-480.webp 480w, assets/seat-1000.webp 1000w",
+        "width": 1000,
+        "height": 1227,
+        "alt": "Orange INNO F1 seat with black armrests and stitched upholstery.",
+        "sizes": "(max-width:599px) calc(100vw - 40px), (max-width:1100px) 44vw, 32vw"
+      },
+      {
+        "id": "dashboard",
+        "title": "The driver comes first.",
+        "description": "Steering, pedals and controls arranged around you.",
+        "image": "assets/dashboard-900.webp",
+        "srcset": "assets/dashboard-480.webp 480w, assets/dashboard-900.webp 900w",
+        "width": 900,
+        "height": 1350,
+        "alt": "INNO F1 steering wheel, dashboard switches and footwell.",
+        "sizes": "(max-width:599px) calc(100vw - 40px), (max-width:1100px) 44vw, 32vw"
+      },
+      {
+        "id": "trays",
+        "title": "Keep it close.",
+        "description": "Built-in trays for small essentials.",
+        "image": "assets/tray-900.webp",
+        "srcset": "assets/tray-480.webp 480w, assets/tray-900.webp 900w",
+        "width": 900,
+        "height": 900,
+        "alt": "Recessed storage tray beneath the INNO F1 steering wheel.",
+        "sizes": "(max-width:599px) calc(100vw - 40px), (max-width:1100px) 44vw, 32vw"
+      },
+      {
+        "id": "storage",
+        "title": "Bring what you need.",
+        "description": "Rear storage for the things you take onto the course.",
+        "image": "assets/storage-1400.webp",
+        "srcset": "assets/storage-640.webp 640w, assets/storage-1400.webp 1400w",
+        "width": 1400,
+        "height": 811,
+        "alt": "Rear storage basket and bottle holder behind the seat of a green INNO-F1 on the course.",
+        "sizes": "(max-width:599px) calc(100vw - 40px), (max-width:1100px) 44vw, 32vw"
+      }
+    ],
+    "intro": "Your own seat. Controls within reach. Space for the things you bring to the course.",
+    "action": "Arrange a test ride",
+    "href": "/contact/?interest=test-ride",
+    "closing": "Explore the details in person."
+  },
+  "robocaddy": {
+    "name": "ROBOCADDY®",
+    "headline": "The Future of Personal Golf Mobility.",
+    "description": "The freedom of walking. The option to ride. ROBOCADDY brings the INNOXONE idea of personal choice into a new Walk & Ride Golf family.",
+    "action": "Ask about ROBOCADDY",
+    "href": "/contact/?interest=robocaddy",
+    "image": "assets/robocaddy-1400.webp",
+    "alt": "White and gray ROBOCADDY personal golf mobility models in INNOXONE’s published product artwork.",
+    "promise": "Walk or Ride. The Choice Is Yours.",
+    "show": "The next chapter: PGA Show, January 2027."
+  },
+  "sister": {
+    "name": "Better golf, indoors and outdoors.",
+    "description": "What if a showroom became a golfers’ club? Inside the Gallery, four TrackMan simulator bays make space to play, practice and learn. Explore instruction, club fitting, shopping and a community built around the game.",
+    "action": "Discover XONE Golf Club",
+    "href": "https://www.xonegolf.com/",
+    "image": "assets/xone-bay-800.webp",
+    "alt": "A golfer playing in Bay 1 beneath the XONE Golf sign.",
+    "label": "XONE Golf Club"
+  },
+  "inquiry": {
+    "headline": "Try INNO-F1. Find your better ride.",
+    "description": "Looking for your own electric golf cart or a new option for your course? Tell us what you need. We will help you choose a model and plan a demonstration.",
+    "paths": [
+      {
+        "title": "For golfers",
+        "name": "Find your personal golf cart",
+        "text": "Arrange a test ride or Gallery visit. Ask about the right model, current pricing and delivery to your location.",
+        "href": "/contact/?interest=test-ride",
+        "action": "Arrange a test ride"
+      },
+      {
+        "title": "For course operators",
+        "name": "Bring INNO-F1 to your course",
+        "text": "Discuss a course demonstration, rental fleet, member program or electric carts for your course team.",
+        "href": "/contact/?interest=personal-ride-upgrade",
+        "action": "Discuss a course demonstration"
+      }
+    ],
+    "partner": "For dealers, resorts and business partners",
+    "partnerText": "Let’s talk about product sales, mobility services and the opportunities ahead.",
+    "partnerHref": "/contact/?interest=business-partnership",
+    "help": "Share your location and what you have in mind. Our team will help you plan the next step.",
+    "call": "Prefer a conversation? Call or text us."
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Golf mobility",
+        "links": [
+          {
+            "name": "INNO-F1 family",
+            "href": "#lineup"
+          },
+          {
+            "name": "ROBOCADDY",
+            "href": "#robocaddy"
+          },
+          {
+            "name": "INNOXONE CONNECT",
+            "href": "#connect"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "name": "Our story",
+            "href": "#origin"
+          },
+          {
+            "name": "Events",
+            "href": "/events/"
+          },
+          {
+            "name": "Blog",
+            "href": "/blog/"
+          },
+          {
+            "name": "Golf Gallery",
+            "href": "#gallery"
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {
+            "name": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "name": "Product support",
+            "href": "/support/"
+          },
+          {
+            "name": "Delivery questions",
+            "href": "#faq-delivery"
+          },
+          {
+            "name": "Warranty assistance",
+            "href": "/contact/?interest=warranty"
+          }
+        ]
+      }
+    ],
+    "socials": [
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/innoxone.golf"
+      },
+      {
+        "name": "TikTok",
+        "href": "https://www.tiktok.com/@innoxone"
+      },
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@innodesign6980"
+      }
+    ],
+    "legal": [
+      {
+        "name": "Privacy inquiries",
+        "href": "/contact/?interest=privacy-request"
+      },
+      {
+        "name": "Contact INNOXONE",
+        "href": "/contact/"
+      }
+    ]
+  },
+  "faq": {
+    "headline": "A few things you may be wondering.",
+    "intro": "Answers about single-rider electric golf carts, test rides, pricing and course programs.",
+    "contact": "Have another question?",
+    "items": [
+      {
+        "q": "What is an INNO-F1 single-rider golf cart?",
+        "a": "INNO-F1 is an electric golf cart built for one driver. Original and Light give golfers their own seat and space for a golf bag, so each player can drive to their own ball. Marshal provides rear utility storage for course teams. INNOXONE creates personal golf mobility for individual golfers, clubs, public courses and resorts."
+      },
+      {
+        "q": "Which INNO-F1 is right for me?",
+        "a": "Original is designed for personal golf mobility. Light offers a simplified single-rider configuration. Marshal focuses on course operations and player assistance, with rear utility storage. Contact us to discuss the configurations currently available.",
+        "link": "Explore the INNO-F1 family",
+        "href": "#lineup"
+      },
+      {
+        "q": "Can I try an INNO-F1 before deciding?",
+        "a": "Contact us to arrange a test ride or a visit to the INNOXONE Golf Gallery. Tell us where you are based and which model interests you so we can confirm the available options.",
+        "link": "Arrange a test ride",
+        "href": "/contact/?interest=test-ride"
+      },
+      {
+        "q": "Can my course introduce single-rider golf?",
+        "a": "Yes, you can speak with INNOXONE about demonstrations, premium rental options, member programs and mobility for course teams. Share your course location and goals. Program scope, availability and any operational benefits should be evaluated for your course.",
+        "link": "Explore a course program",
+        "href": "/contact/?interest=personal-ride-upgrade"
+      },
+      {
+        "q": "What is ROBOCADDY?",
+        "a": "ROBOCADDY is INNOXONE’s Walk & Ride Golf mobility family, built around the freedom to walk or ride. The brand’s next chapter is planned for the January 2027 PGA Show. Ask our team about product details and availability as development progresses.",
+        "link": "Discover ROBOCADDY",
+        "href": "#robocaddy"
+      },
+      {
+        "q": "How do I confirm price, delivery and availability?",
+        "a": "Contact INNOXONE with your preferred model, quantity and delivery location. Our team can discuss the appropriate configuration and confirm current pricing, shipping arrangements and timing before you make a purchase.",
+        "link": "Ask about pricing and delivery",
+        "href": "/contact/"
+      },
+      {
+        "q": "What are CONNECT and Intelligent Golf Operations?",
+        "a": "INNOXONE CONNECT is our vision for linking golfers, intelligent vehicles and course operators. Intelligent Golf Operations is the broader direction combining mobility products, services and connected operations. Ask our team about development, course collaboration and future availability.",
+        "link": "Talk about CONNECT",
+        "href": "/contact/?interest=connect-igo"
+      },
+      {
+        "q": "Where is the INNOXONE Golf Gallery?",
+        "a": "Visit 31896 Plaza Dr, Suite D2, San Juan Capistrano, CA 92675. Call or text 949-384-9663 before your visit to confirm hours, demonstrations and the models on display.",
+        "link": "Get directions",
+        "href": "https://maps.app.goo.gl/sYTsCQduQt7NKxdF8"
+      },
+      {
+        "q": "What can I do at XONE Golf Club?",
+        "a": "XONE Golf Club brings indoor golf into the INNOXONE Gallery with four TrackMan simulator bays. Visit xonegolf.com for bookings, instruction, current programs and opening hours.",
+        "link": "Visit XONE Golf Club",
+        "href": "https://www.xonegolf.com/"
+      },
+      {
+        "q": "How do I get help with an INNO-F1 I already own?",
+        "a": "Visit our Support page or email info@innoxone.com with your model and a description of what you need. The team can direct your product, service and warranty questions.",
+        "link": "Product support",
+        "href": "/support/"
+      }
+    ]
+  },
+  "meta": {
+    "title": "INNOXONE | Single-Rider Electric Golf Carts & Golf Mobility",
+    "description": "Discover INNO-F1 single-rider electric golf carts for golfers, courses and resorts. Explore the models and arrange a test ride in San Juan Capistrano, CA."
+  },
+  "harold": {
+    "headline": "Better golf starts with how you move.",
+    "name": "Meet Harold.",
+    "paragraphs": [
+      "Harold discovered INNO-F1 on YouTube, then flew from Arizona to California for a test ride. He chose a personal ride of his own.",
+      "On the course, that choice meant something simple: staying with his own ball, keeping his rhythm and giving his next shot his full attention.",
+      "That is why INNOXONE exists: to design personal golf mobility around the way people play, and give more golfers the freedom Harold found."
+    ],
+    "action": "Experience INNO-F1",
+    "href": "/contact/?interest=test-ride",
+    "source": "https://www.linkedin.com/posts/young-kim-b773788_innof1-innoxone-bettergolf-activity-7507247988986003456-ol5l",
+    "film": "assets/harold-story.mp4",
+    "poster": "assets/harold-poster.webp",
+    "captions": "assets/harold-story.vtt",
+    "quote": "I can go right to my ball."
+  },
+  "benefits": {
+    "headline": "One player. One cart.",
+    "intro": "INNO-F1 lets each golfer drive to their own ball, carry their clubs and choose where to stop. Built for individual golfers and for the clubs, public courses and resorts that welcome them.",
+    "players": {
+      "title": "Better for players.",
+      "lead": "Your ball. Your rhythm. Your way around the course.",
+      "items": [
+        {
+          "title": "Freedom",
+          "text": "Go to your own ball. Choose where to stop. Prepare for your next shot without following someone else’s route."
+        },
+        {
+          "title": "A more natural pace",
+          "text": "Independent movement can reduce the waiting between shots and keep your attention on your own game."
+        },
+        {
+          "title": "More enjoyment",
+          "text": "Your own seat, your own space and a more personal way to experience the course."
+        }
+      ],
+      "action": "Arrange your test ride",
+      "href": "/contact/?interest=personal-ride-experience"
+    },
+    "operators": {
+      "title": "Better for operators.",
+      "lead": "A better golf experience creates new possibilities for your course.",
+      "items": [
+        {
+          "title": "Support the pace of play",
+          "text": "Let players reach their balls independently. Evaluate how single-rider mobility fits your course and its pace-of-play goals."
+        },
+        {
+          "title": "Give golfers more choice",
+          "text": "Offer another way to play, with comfort, independence and the flexibility to suit different players."
+        },
+        {
+          "title": "Create new opportunities",
+          "text": "Explore premium rentals, private ownership, pro-shop sales, member programs, demonstrations and mobility for course teams."
+        },
+        {
+          "title": "Fit the operation",
+          "text": "Consider marshal and player-assistance uses. Evaluate turf impact and operating costs through a course trial."
+        }
+      ],
+      "action": "Discuss a course demonstration",
+      "href": "/contact/?interest=personal-ride-upgrade"
+    },
+    "image": "assets/course-life-1600.webp",
+    "alt": "A green INNO-F1 beside the fairway, with a single orange seat and rear storage."
+  },
+  "why": {
+    "headline": "See what changes on the course.",
+    "question": "Four golfers. Four balls. The freedom to move independently.",
+    "text": "Follow the idea onto the fairway. With a ride of their own, golfers can head to their own ball and prepare for their next shot without sharing a cart’s route.",
+    "closing": "More attention on your game.",
+    "filmTitle": "The idea behind single-rider golf",
+    "film": "assets/pace-of-play.mp4",
+    "poster": "assets/pace-poster.webp"
+  },
+  "lineupIntro": "Choose Original for your personal ride, Light for a simplified configuration, or Marshal for your course team. Each INNO-F1 is built for one driver.",
+  "connect": {
+    "name": "INNOXONE CONNECT",
+    "headline": "A better ride is only the beginning.",
+    "intro": "Our vision for Intelligent Golf Operations connects the golfer, the vehicle and the course. Personal mobility becomes part of a more informed, more responsive golf experience.",
+    "nodes": [
+      {
+        "title": "The golfer",
+        "text": "More choice in how to move, play and experience the course."
+      },
+      {
+        "title": "The vehicle",
+        "text": "Purpose-built mobility, with intelligence designed around real use."
+      },
+      {
+        "title": "The course",
+        "text": "A clearer connection between the player experience and day-to-day operations."
+      }
+    ],
+    "aiTitle": "Physical AI, with a purpose.",
+    "aiText": "We see Physical AI as intelligence that works in the real world of golf. The direction is practical: vehicles and services that respond to the needs of golfers and course teams.",
+    "igoTitle": "Intelligent Golf Operations",
+    "igoText": "INNOXONE’s direction brings together product sales, mobility services and CONNECT. The goal is better golf for players and better ways for operators to manage the experience.",
+    "note": "CONNECT and Intelligent Golf Operations describe our platform vision. Talk with us about development, course collaboration and future availability.",
+    "action": "Discuss the CONNECT vision",
+    "href": "/contact/?interest=connect-igo"
+  },
+  "gallery": {
+    "headline": "Try INNO-F1 in San Juan Capistrano.",
+    "name": "INNOXONE Golf Gallery",
+    "intro": "From the original question and early design development to today’s vehicles, the INNOXONE Golf Gallery gives our story a physical home. Explore the collection and arrange a test ride in San Juan Capistrano.",
+    "image": "assets/gallery-1600.webp",
+    "alt": "INNOXONE Golf Gallery, with personal golf vehicles displayed beside the entrance to the golf club.",
+    "history": [
+      {
+        "title": "The question",
+        "text": "Why should two golfers with two different balls always move together?"
+      },
+      {
+        "title": "The design",
+        "text": "INNODESIGN’s California design approach, built around one golfer and one golf bag."
+      },
+      {
+        "title": "The experience",
+        "text": "Individual freedom becomes something you can sit in, drive and feel."
+      },
+      {
+        "title": "The movement",
+        "text": "Golfers ask for a better choice. Courses gain a new way to respond."
+      }
+    ],
+    "action": "Plan a Gallery visit",
+    "href": "/contact/?interest=gallery-visit"
+  },
+  "origin": {
+    "headline": [
+      "Two golfers.",
+      "Two different balls.",
+      "Why one ride?"
+    ],
+    "intro": "A different question. A different kind of golf cart.",
+    "text": "Two golfers can share a round without taking the same route. Young Kim saw a chance to design an electric golf cart around one player, one golf bag and the next shot.",
+    "film": "assets/young-kim-story.mp4",
+    "poster": "assets/young-kim-1280.webp",
+    "captions": "assets/young-kim-story.vtt",
+    "filmTitle": "Meet the designer. Hear the idea.",
+    "name": "Young Kim",
+    "role": "Founder of INNOXONE · Designer of INNO-F1",
+    "filmContext": "Golf Authority interview · PGA Show 2024",
+    "filmDuration": "4:17",
+    "designHeadline": [
+      "One golfer.",
+      "The starting point",
+      "for every detail."
+    ],
+    "chapters": [
+      {
+        "title": "Start with your own game.",
+        "text": "Golfers hit different shots and head in different directions. A cart built for one lets you go straight to your own ball, without taking a shared cart to another player’s shot first."
+      },
+      {
+        "title": "Put the essentials around you.",
+        "text": "INNO-F1 brings together a single seat, steering and controls within reach, and space for your golf bag. You drive the cart. Your clubs come with you."
+      },
+      {
+        "title": "Keep the round your own.",
+        "text": "Choose where to stop, get ready for your next shot and enjoy your own space. You still share the round with your group, with the freedom to move independently."
+      }
+    ],
+    "closing": "Your own seat. Your own clubs. Your own way to the next shot.",
+    "action": "Arrange a test ride",
+    "href": "/contact/?interest=test-ride",
+    "label": "The story of INNO-F1",
+    "designerTitle": "A designer’s eye. A golfer’s freedom.",
+    "designerText": "In his PGA Show interview, Young Kim connects his experience designing everyday products with his lifelong interest in cars. For INNO-F1, he brought that thinking to a simple question: why should a golf cart always be built for two?",
+    "photo": {
+      "src": "assets/origin-drive-1600.webp",
+      "alt": "Red INNO-F1 single-rider electric golf cart with a golf bag outside a California clubhouse.",
+      "title": [
+        "From a new idea",
+        "to your next round."
+      ],
+      "text": "That is the idea behind INNO-F1: a personal electric golf cart that lets you follow your own ball. Sit in it, drive it and see how it fits the way you play."
+    }
+  }
+}
