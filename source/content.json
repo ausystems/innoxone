@@ -37,6 +37,10 @@
       "product": true
     },
     {
+      "name": "INNO-F2",
+      "href": "#inno-f2"
+    },
+    {
       "name": "ROBOCADDY",
       "href": "#robocaddy"
     },
@@ -183,14 +187,22 @@
   },
   "robocaddy": {
     "name": "ROBOCADDY®",
-    "headline": "The Future of Personal Golf Mobility.",
-    "description": "The freedom of walking. The option to ride. ROBOCADDY brings the INNOXONE idea of personal choice into a new Walk & Ride Golf family.",
-    "action": "Ask about ROBOCADDY",
-    "href": "/contact/?interest=robocaddy",
-    "image": "assets/robocaddy-1400.webp",
-    "alt": "White and gray ROBOCADDY personal golf mobility models in INNOXONE’s published product artwork.",
+    "headline": "Coming soon at the 2027 Orlando PGA Show",
+    "description": "The next chapter of Walk & Ride Golf. A new family of personal golf mobility, built around the freedom to choose how you move.",
+    "image": "assets/robocaddy-teaser-1920.webp",
+    "alt": "Four ROBOCADDY product concepts shown in dark silhouette ahead of the 2027 Orlando PGA Show.",
     "promise": "Walk or Ride. The Choice Is Yours.",
-    "show": "The next chapter: PGA Show, January 2027."
+    "show": "Orlando, Florida · January 2027",
+    "action": "Ask about the 2027 reveal",
+    "href": "/contact/?interest=robocaddy-2027",
+    "caption": "2027 collection preview",
+    "storyLabel": "Why ROBOCADDY was born",
+    "storyTitle": "Golf has always been a game of movement.",
+    "storyParagraphs": [
+      "For generations, golfers walked the fairways, experiencing the course one step at a time. Then golf carts made the game more accessible and convenient.",
+      "But golfers have always had to choose: to walk, to ride, or to compromise. We created ROBOCADDY to give golfers a better choice. Walk, ride, or do both, and make golf more enjoyable."
+    ],
+    "closing": "Modern golf is about to move forward."
   },
   "sister": {
     "name": "Better golf, indoors and outdoors.",
@@ -234,6 +246,10 @@
           {
             "name": "INNO-F1 family",
             "href": "#lineup"
+          },
+          {
+            "name": "INNO-F2",
+            "href": "#inno-f2"
           },
           {
             "name": "ROBOCADDY",
@@ -342,7 +358,7 @@
       },
       {
         "q": "What is ROBOCADDY?",
-        "a": "ROBOCADDY is INNOXONE’s Walk & Ride Golf mobility family, built around the freedom to walk or ride. The brand’s next chapter is planned for the January 2027 PGA Show. Ask our team about product details and availability as development progresses.",
+        "a": "ROBOCADDY is INNOXONE’s Walk & Ride Golf mobility family, created to give golfers the choice to walk, ride or do both. The 2027 collection is coming soon at the Orlando PGA Show in January 2027. Contact our team for details about the reveal and future availability.",
         "link": "Discover ROBOCADDY",
         "href": "#robocaddy"
       },
@@ -375,12 +391,18 @@
         "a": "Visit our Support page or email info@innoxone.com with your model and a description of what you need. The team can direct your product, service and warranty questions.",
         "link": "Product support",
         "href": "/support/"
+      },
+      {
+        "q": "Where can I learn more about INNO-F2?",
+        "a": "Explore the INNO-F2 preview on this page, then contact INNOXONE to discuss specifications, available configurations and timing. Our team can help you understand the options for your own golf or your course.",
+        "link": "Ask about INNO-F2",
+        "href": "/contact/?interest=inno-f2"
       }
     ]
   },
   "meta": {
     "title": "INNOXONE | Single-Rider Electric Golf Carts & Golf Mobility",
-    "description": "Discover INNO-F1 single-rider electric golf carts for golfers, courses and resorts. Explore the models and arrange a test ride in San Juan Capistrano, CA."
+    "description": "Explore INNO-F1 electric golf carts, discover INNO-F2 and preview ROBOCADDY. Personal golf mobility for golfers and courses. Arrange a test ride."
   },
   "harold": {
     "headline": "Better golf starts with how you move.",
@@ -561,5 +583,29 @@
       ],
       "text": "That is the idea behind INNO-F1: a personal electric golf cart that lets you follow your own ball. Sit in it, drive it and see how it fits the way you play."
     }
+  },
+  "f2": {
+    "name": "INNO-F2",
+    "headline": "A fresh take on the golf cart.",
+    "description": "Meet INNO-F2, another way to experience INNOXONE personal golf mobility. A distinctive roof, wide windshield and open sides give its design a character of its own.",
+    "note": "Speak with our team about specifications, availability and the right fit for you or your course.",
+    "action": "Ask about INNO-F2",
+    "href": "/contact/?interest=inno-f2",
+    "image": "assets/inno-f2-1400.webp",
+    "alt": "Front three-quarter view of the white INNO-F2 golf cart with an orange seat, roof and windshield.",
+    "details": [
+      {
+        "title": "A distinctive profile",
+        "text": "A sculpted roof and front frame give INNO-F2 its own identity."
+      },
+      {
+        "title": "An open view",
+        "text": "A broad windshield and open sides keep the course in view."
+      },
+      {
+        "title": "Explore your options",
+        "text": "Talk to INNOXONE about the model, configuration and availability."
+      }
+    ]
   }
 }
