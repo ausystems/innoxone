@@ -483,27 +483,41 @@
   "connect": {
     "name": "INNOXONE CONNECT",
     "headline": "A better ride is only the beginning.",
-    "intro": "Our vision for Intelligent Golf Operations connects the golfer, the vehicle and the course. Personal mobility becomes part of a more informed, more responsive golf experience.",
-    "nodes": [
+    "intro": "Our vision brings golfers, intelligent vehicles and course teams closer together.",
+    "views": [
       {
-        "title": "The golfer",
-        "text": "More choice in how to move, play and experience the course."
+        "id": "golfer",
+        "label": "The golfer",
+        "headline": "Your game, your way.",
+        "text": "More choice in how you move, with the golfer at the center of the experience.",
+        "image": "assets/connect-golfer-1600.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Golfers driving individual INNO-F1 carts together across a green fairway."
       },
       {
-        "title": "The vehicle",
-        "text": "Purpose-built mobility, with intelligence designed around real use."
+        "id": "vehicle",
+        "label": "The vehicle",
+        "headline": "Intelligence in motion.",
+        "text": "Our Physical AI vision brings responsive technology to the vehicles and services golfers use.",
+        "image": "assets/connect-vehicle-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "A green INNO-F1 single-rider golf cart beside a landscaped fairway."
       },
       {
-        "title": "The course",
-        "text": "A clearer connection between the player experience and day-to-day operations."
+        "id": "course",
+        "label": "The course",
+        "headline": "A more connected course.",
+        "text": "Intelligent Golf Operations brings our products, mobility services and course teams into one connected vision.",
+        "image": "assets/connect-course-1600.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Individual golf carts following the path toward the clubhouse."
       }
     ],
-    "aiTitle": "Physical AI, with a purpose.",
-    "aiText": "We see Physical AI as intelligence that works in the real world of golf. The direction is practical: vehicles and services that respond to the needs of golfers and course teams.",
-    "igoTitle": "Intelligent Golf Operations",
-    "igoText": "INNOXONE’s direction brings together product sales, mobility services and CONNECT. The goal is better golf for players and better ways for operators to manage the experience.",
-    "note": "CONNECT and Intelligent Golf Operations describe our platform vision. Talk with us about development, course collaboration and future availability.",
-    "action": "Discuss the CONNECT vision",
+    "note": "CONNECT is a platform vision. Ask about development and future availability.",
+    "action": "Explore CONNECT for your course",
     "href": "/contact/?interest=connect-igo"
   },
   "gallery": {
