@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Golf Carts & Products | INNO-F1, INNO-F2 & ROBOCADDY | INNOXONE",
+    "description": "Explore INNOXONE golf carts: INNO-F1 Original, Light and Marshal, plus INNO-F2 and the ROBOCADDY preview. View model details and contact our team to order.",
+    "canonical": "https://ausystems.github.io/innoxone/golf-carts-products/"
+  },
+  "products": [
+    {
+      "id": "inno-f1-original",
+      "name": "INNO-F1 Original",
+      "family": "INNO-F1",
+      "audience": "For your round",
+      "headline": "Your own way around the course.",
+      "summary": "A single-rider electric golf cart with your own seat and space for your clubs.",
+      "description": "Go straight to your ball with your clubs close by. INNO-F1 Original gives each golfer a seat, a set of controls and a ride of their own.",
+      "image": "f1-original.webp",
+      "srcset": "f1-original-600.webp 600w, f1-original-900.webp 900w, f1-original.webp 1200w",
+      "width": 1200,
+      "height": 700,
+      "alt": "Green INNO-F1 Original single-rider electric golf cart with an orange seat and rear golf-bag holder.",
+      "facts": ["Single rider", "Electric", "Golf-bag holder"],
+      "features": [
+        {"title": "A seat of your own", "text": "A single seat with armrests, arranged around the individual golfer."},
+        {"title": "Clubs within reach", "text": "Dedicated golf-bag space travels with you from shot to shot."},
+        {"title": "Your own route", "text": "Move independently to your ball while following your course’s cart rules."}
+      ],
+      "inquiry": "inno-f1-original"
+    },
+    {
+      "id": "inno-f1-light",
+      "name": "INNO-F1 Light",
+      "family": "INNO-F1",
+      "audience": "For your round",
+      "headline": "An open view of every round.",
+      "summary": "Single-rider electric golf mobility with an open-sided layout and slim roof frame.",
+      "description": "An open-sided take on personal golf mobility. INNO-F1 Light pairs a single seat with a slim roof frame and dedicated space for your golf bag.",
+      "image": "f1-light.webp",
+      "srcset": "f1-light-600.webp 600w, f1-light-900.webp 900w, f1-light.webp 1200w",
+      "width": 1200,
+      "height": 700,
+      "alt": "Red-orange INNO-F1 Light single-rider electric golf cart with slim roof uprights and a rear golf bag.",
+      "facts": ["Single rider", "Electric", "Slim roof frame"],
+      "features": [
+        {"title": "An open-sided layout", "text": "A slim roof frame keeps the design open around the seat."},
+        {"title": "One golfer, one cart", "text": "Your own controls and your own route to the next shot."},
+        {"title": "Room for your clubs", "text": "A dedicated golf-bag holder keeps your equipment with you."}
+      ],
+      "inquiry": "inno-f1-light"
+    },
+    {
+      "id": "inno-f1-marshal",
+      "name": "INNO-F1 Marshal",
+      "family": "INNO-F1",
+      "audience": "For your course team",
+      "headline": "A different role. The same personal approach.",
+      "summary": "Electric mobility for marshals and course staff, with a rear utility box.",
+      "description": "Keep your course team moving. INNO-F1 Marshal brings the single-rider format to course duties, with rear utility storage for the things staff need to carry.",
+      "image": "f1-marshal.webp",
+      "srcset": "f1-marshal-600.webp 600w, f1-marshal-900.webp 900w, f1-marshal.webp 1200w",
+      "width": 1200,
+      "height": 700,
+      "alt": "White INNO-F1 Marshal single-seat electric golf cart with an orange seat and gray rear utility box.",
+      "facts": ["Single rider", "Electric", "Utility storage"],
+      "features": [
+        {"title": "For the course team", "text": "A configuration for marshals and staff moving around the course."},
+        {"title": "Rear utility storage", "text": "A rear box provides space for equipment and everyday course essentials."},
+        {"title": "Single-seat design", "text": "An individual vehicle for the team member at the wheel."}
+      ],
+      "inquiry": "inno-f1-marshal"
+    },
+    {
+      "id": "inno-f2",
+      "name": "INNO-F2",
+      "family": "INNO-F2",
+      "audience": "Explore INNO-F2",
+      "headline": "A fresh perspective on golf mobility.",
+      "summary": "A distinctive roof, broad windshield and open-sided golf cart design.",
+      "description": "Meet another expression of INNOXONE personal golf mobility. INNO-F2 brings a distinctive front profile, broad windshield and open sides to the collection.",
+      "image": "inno-f2-1000.webp",
+      "srcset": "inno-f2-640.webp 640w, inno-f2-1000.webp 1000w, inno-f2-1400.webp 1400w",
+      "width": 1400,
+      "height": 1519,
+      "alt": "White INNO-F2 golf cart viewed from the front quarter, with an orange seat, roof and windshield.",
+      "facts": ["Distinctive roof", "Broad windshield", "Open sides"],
+      "features": [
+        {"title": "A distinctive profile", "text": "A sculpted roof and front frame give INNO-F2 its own identity."},
+        {"title": "An open view", "text": "A broad windshield and open sides keep the course in view."},
+        {"title": "Find your fit", "text": "Ask our team about specifications, configurations and availability."}
+      ],
+      "inquiry": "inno-f2"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Which INNO-F1 is right for me?",
+      "a": "Original and Light are single-rider electric golf carts with dedicated golf-bag space. Light has a slim roof frame and an open-sided layout. Marshal is configured for course staff, with a rear utility box. Our team can help you choose."
+    },
+    {
+      "q": "How do I place an order?",
+      "a": "Choose a model and select Inquire in its product details, or call 949-384-XONE (9663). Our team will confirm your configuration, pricing, availability and delivery arrangements before you place an order."
+    },
+    {
+      "q": "Can I see a golf cart in person?",
+      "a": "Contact us to arrange a showroom visit at 31896 Plaza Dr Suite D2, San Juan Capistrano, California. Ask which models are available to see and whether a demonstration can be arranged for your visit."
+    },
+    {
+      "q": "When will ROBOCADDY be revealed?",
+      "a": "The ROBOCADDY collection is coming to the 2027 Orlando PGA Show in January 2027. The silhouettes are a collection preview. Contact our team with questions about the reveal and future availability."
+    }
+  ]
+}

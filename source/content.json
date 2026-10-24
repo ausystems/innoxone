@@ -28,21 +28,12 @@
   },
   "nav": [
     {
+      "name": "Golf Carts & Products",
+      "href": "golf-carts-products/"
+    },
+    {
       "name": "Our story",
       "href": "#origin"
-    },
-    {
-      "name": "INNO-F1",
-      "href": "#lineup",
-      "product": true
-    },
-    {
-      "name": "INNO-F2",
-      "href": "#inno-f2"
-    },
-    {
-      "name": "ROBOCADDY",
-      "href": "#robocaddy"
     },
     {
       "name": "CONNECT",
@@ -72,7 +63,7 @@
       "mobile": "assets/hero-mobile.mp4"
     },
     "action": "Arrange a test ride",
-    "href": "/contact/?interest=test-ride"
+    "href": "golf-carts-products/"
   },
   "variants": [
     {

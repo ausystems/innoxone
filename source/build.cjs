@@ -31,5 +31,8 @@ const DATA = ${JSON.stringify({config:DATA.config,labels:DATA.labels,hero:DATA.h
 ${runtime}
 </script></body></html>`;
 fs.writeFileSync(path.join(ROOT,'index.html'),html);
-fs.writeFileSync(path.join(ROOT,'sitemap-homepage.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://www.innoxone.com/</loc><lastmod>2026-10-21</lastmod></url></urlset>\n');
+fs.writeFileSync(path.join(ROOT,'sitemap-homepage.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://www.innoxone.com/</loc><lastmod>2026-10-24</lastmod></url></urlset>\n');
 console.log('Built static homepage:',Buffer.byteLength(html),'bytes; FAQs:',DATA.faq.items.length);
+
+// Build the shared collection page alongside the homepage.
+require('./build-products.cjs');
