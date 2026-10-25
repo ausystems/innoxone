@@ -1,0 +1,20 @@
+// Shared navigation and footer for the collection and company pages.
+const common = require('./content.json');
+const products = require('./products.json').products;
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+const mark = `<svg viewBox="${common.logo.viewBox}" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="${common.logo.ink}"/><path fill="var(--green)" fill-rule="evenodd" d="${common.logo.green}"/></svg>`;
+const logo = `<a class="wordmark" href="../" aria-label="INNOXONE home">${mark}</a>`;
+const pages = [{id:'home',name:'Home',href:'../'},{id:'products',name:'Golf Carts & Products',href:'../golf-carts-products/'},{id:'about',name:'About Us',href:'../about/'}];
+const contactURL = 'https://www.innoxone.com/contact/';
+const nav = current => pages.map(page => `<a href="${page.href}"${page.id === current ? ' aria-current="page"' : ''}>${esc(page.name)}</a>`).join('');
+function header(current) {
+  return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><nav class="nav-left" aria-label="Main navigation">${nav(current)}</nav><button class="menu-button" type="button" data-open="site-menu" aria-controls="site-menu" aria-expanded="false"><span class="menu-lines" aria-hidden="true"></span>Menu</button>${logo}<div class="nav-right"><a href="${contactURL}">Contact</a><a class="pill" href="${contactURL}" data-inquiry="general">Inquire</a></div></div></header>`;
+}
+function menu(current) {
+  return `<dialog class="menu-dialog" id="site-menu" aria-label="Main menu">${logo}<button class="dialog-close" type="button" data-close aria-label="Close menu" autofocus><span class="cross" aria-hidden="true"></span></button><nav aria-label="Mobile navigation">${nav(current)}<a href="${contactURL}">Contact / Request a quote</a></nav><div class="menu-contact"><a href="tel:${common.contact.tel}">${common.contact.phone}</a><a href="mailto:${common.contact.email}">${common.contact.email}</a><p>${common.contact.address}</p></div></dialog>`;
+}
+function footer(current) {
+  const productBase = current === 'products' ? '' : '../golf-carts-products/';
+  return `<footer class="site-footer"><div class="wrap"><nav class="footer-top" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><span aria-current="page">${esc(pages.find(page => page.id === current).name)}</span></nav><div class="footer-grid"><div><h2>Golf mobility</h2><ul>${products.map(product => `<li><a href="${productBase}#product-${product.id}"${current === 'products' ? ` data-open="product-${product.id}" aria-haspopup="dialog"` : ''}>${esc(product.name)}</a></li>`).join('')}<li><a href="${productBase}#robocaddy">ROBOCADDY</a></li></ul></div><div><h2>Explore INNOXONE</h2><ul><li><a href="../">Home</a></li><li><a href="../about/">About Us</a></li><li><a href="../#connect">INNOXONE CONNECT</a></li><li><a href="https://www.xonegolf.com/">XONE Golf Club</a></li><li><a href="https://www.innoxone.com/support/">Product support</a></li></ul></div><div class="footer-contact-column"><h2>Talk to our team</h2><ul><li><a href="${contactURL}">Contact / Request a quote</a></li><li><a href="tel:${common.contact.tel}">${common.contact.phone}</a></li><li><a href="mailto:${common.contact.email}">${common.contact.email}</a></li></ul><address>${common.contact.address}</address></div></div><div class="footer-bottom">${logo}<div class="footer-socials">${common.footer.socials.map(social => `<a href="${esc(social.href)}">${esc(social.name)}</a>`).join('')}</div><p>© 2026 INNOXONE</p></div></div></footer>`;
+}
+module.exports = {header, menu, footer, esc, mark, logo};

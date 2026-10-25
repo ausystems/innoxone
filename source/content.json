@@ -32,8 +32,8 @@
       "href": "golf-carts-products/"
     },
     {
-      "name": "Our story",
-      "href": "#origin"
+      "name": "About Us",
+      "href": "about/"
     },
     {
       "name": "CONNECT",
@@ -256,8 +256,8 @@
         "title": "Company",
         "links": [
           {
-            "name": "Our story",
-            "href": "#origin"
+            "name": "About Us",
+            "href": "about/"
           },
           {
             "name": "Events",

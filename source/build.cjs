@@ -36,3 +36,5 @@ console.log('Built static homepage:',Buffer.byteLength(html),'bytes; FAQs:',DATA
 
 // Build the shared collection page alongside the homepage.
 require('./build-products.cjs');
+
+require('./build-about.cjs');

@@ -3,7 +3,8 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const common = JSON.parse(fs.readFileSync(path.join(__dirname, 'content.json'), 'utf8'));
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'products.json'), 'utf8'));
-const css = fs.readFileSync(path.join(__dirname, 'products.css'), 'utf8');
+const shell = require('./site-shell.cjs');
+const css = fs.readFileSync(path.join(__dirname, 'site.css'), 'utf8') + fs.readFileSync(path.join(__dirname, 'products.css'), 'utf8');
 const runtime = fs.readFileSync(path.join(__dirname, 'products.js'), 'utf8');
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 const asset = name => '../assets/' + name;
@@ -18,9 +19,7 @@ const mailURL = product => 'mailto:' + common.contact.email + '?subject=' + enco
 const inquiry = (label, interest, cls = 'pill') => `<a class="${cls}" href="${contactURL(interest)}" data-inquiry="${esc(interest || 'general')}">${esc(label)}</a>`;
 const photo = (product, extra = '') => `<img src="${asset(product.image)}" srcset="${srcset(product.srcset)}" sizes="(max-width:599px) 90vw, 45vw" width="${product.width}" height="${product.height}" alt="${esc(product.alt)}" loading="lazy" decoding="async" ${extra}>`;
 
-function header() {
-  return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><nav class="nav-left" aria-label="Main navigation"><a href="../">Home</a><a href="./" aria-current="page">Golf Carts &amp; Products</a></nav><button class="menu-button" type="button" data-open="site-menu" aria-controls="site-menu" aria-expanded="false"><span class="menu-lines" aria-hidden="true"></span>Menu</button>${logo}<div class="nav-right"><a href="${contactURL()}">Contact</a>${inquiry('Inquire', '')}</div></div></header>`;
-}
+function header() { return shell.header('products'); }
 function intro() {
   return `<section class="collection-intro wrap" aria-labelledby="page-title"><div class="collection-heading"><h1 id="page-title"><span>Golf carts &amp;</span><span>products.</span></h1><p><strong>Personal golf mobility.</strong><br>For your game. For your course.</p></div><div class="hero-stage"><div class="hero-copy"><p class="hero-family">INNO-F1</p><h2><span>One player.</span><span>One cart.</span></h2><p>Single-rider electric golf carts that give every golfer a ride of their own.</p><a class="text-link" href="#lineup">Explore the lineup${arrow}</a></div><div class="hero-product"><img src="${asset('f1-original.webp')}" srcset="${srcset('f1-original-600.webp 600w, f1-original-900.webp 900w, f1-original.webp 1200w')}" sizes="(max-width:767px) 95vw, 65vw" width="1200" height="700" alt="Green INNO-F1 Original electric golf cart, designed for one golfer and their clubs." fetchpriority="high" decoding="async"></div><p class="hero-caption">INNO-F1 Original</p></div><nav class="collection-jumps" aria-label="Product families"><a href="#lineup">INNO-F1${arrow}</a><a href="#inno-f2">INNO-F2${arrow}</a><a href="#robocaddy">ROBOCADDY${arrow}</a></nav></section>`;
 }
@@ -47,12 +46,8 @@ function visit() {
 function questions() {
   return `<section class="questions-section wrap" aria-labelledby="questions-title"><div class="questions-grid"><div class="questions-intro"><h2 id="questions-title">A few things<br>you might ask.</h2><p>Questions about models or ordering?</p><a class="text-link" href="tel:${common.contact.tel}" data-inquiry="general">Talk to our team${arrow}</a></div><div class="question-list">${data.faq.map(item => `<details class="question"><summary>${esc(item.q)}${plus}</summary><p>${esc(item.a)}</p></details>`).join('')}</div></div></section>`;
 }
-function footer() {
-  return `<footer class="site-footer"><div class="wrap"><nav class="footer-top" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><span aria-current="page">Golf Carts &amp; Products</span></nav><div class="footer-grid"><div><h2>Golf mobility</h2><ul>${data.products.map(product => `<li><a href="#product-${product.id}" data-open="product-${product.id}" aria-haspopup="dialog">${esc(product.name)}</a></li>`).join('')}<li><a href="#robocaddy">ROBOCADDY</a></li></ul></div><div><h2>Explore INNOXONE</h2><ul><li><a href="../">Home</a></li><li><a href="../#origin">Our story</a></li><li><a href="../#connect">INNOXONE CONNECT</a></li><li><a href="https://www.xonegolf.com/">XONE Golf Club</a></li><li><a href="https://www.innoxone.com/support/">Product support</a></li></ul></div><div class="footer-contact-column"><h2>Talk to our team</h2><ul><li><a href="${contactURL()}">Contact / Request a quote</a></li><li><a href="tel:${common.contact.tel}">${common.contact.phone}</a></li><li><a href="mailto:${common.contact.email}">${common.contact.email}</a></li></ul><address>${common.contact.address}</address></div></div><div class="footer-bottom">${logo}<div class="footer-socials">${common.footer.socials.map(social => `<a href="${esc(social.href)}">${esc(social.name)}</a>`).join('')}</div><p>© 2026 INNOXONE</p></div></div></footer>`;
-}
-function menu() {
-  return `<dialog class="menu-dialog" id="site-menu" aria-label="Main menu">${logo}${close.replace('Close product details', 'Close menu')}<nav aria-label="Mobile navigation"><a href="../">Home</a><a href="./" aria-current="page">Golf Carts &amp; Products</a><a href="../#origin">Our story</a><a href="${contactURL()}">Contact / Request a quote</a></nav><div class="menu-contact"><a href="tel:${common.contact.tel}">${common.contact.phone}</a><a href="mailto:${common.contact.email}">${common.contact.email}</a><p>${common.contact.address}</p></div></dialog>`;
-}
+function footer() { return shell.footer('products'); }
+function menu() { return shell.menu('products'); }
 
 const organization = {'@type':'Organization','@id':'https://www.innoxone.com/#organization',name:'INNOXONE',url:'https://www.innoxone.com/',logo:'https://ausystems.github.io/innoxone/assets/innoxone-logo.svg',telephone:common.contact.tel,email:common.contact.email,sameAs:common.footer.socials.map(s => s.href)};
 const schema = {'@context':'https://schema.org','@graph':[
@@ -62,7 +57,7 @@ const schema = {'@context':'https://schema.org','@graph':[
   {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://ausystems.github.io/innoxone/'},{'@type':'ListItem',position:2,name:'Golf Carts & Products',item:data.meta.canonical}]},
   {'@type':'FAQPage','@id':data.meta.canonical+'#questions',mainEntity:data.faq.map(item => ({'@type':'Question',name:item.q,acceptedAnswer:{'@type':'Answer',text:item.a}}))}
 ]};
-const fallbackCSS = '.product-dialog:not([open]){display:block;position:static;width:calc(100% - 40px);max-width:1152px;max-height:none;margin:32px auto;background:#fff;border:1px solid var(--line)}.product-dialog .dialog-close,.menu-button{display:none}.dialog-order{position:static}.site-header .nav-left{display:flex;gap:16px}.site-header .nav-left>a:first-child{display:none}.site-header .nav-left>a{font-size:11px}.site-header .wordmark{width:110px}.site-header .nav-right{display:none}.site-header .header-inner{grid-template-columns:1fr auto}';
+const fallbackCSS = '.product-dialog:not([open]){display:block;position:static;width:calc(100% - 40px);max-width:1152px;max-height:none;margin:32px auto;background:#fff;border:1px solid var(--line)}.product-dialog .dialog-close,.menu-button{display:none}.dialog-order{position:static}.site-header .nav-left{display:flex;gap:16px}.site-header .nav-left>a:not([aria-current]){display:none}.site-header .nav-left>a{font-size:11px}.site-header .wordmark{width:110px}.site-header .nav-right{display:none}.site-header .header-inner{grid-template-columns:1fr auto}';
 const html = `<!doctype html><html lang="en-US"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff">
 <title>${esc(data.meta.title)}</title><meta name="description" content="${esc(data.meta.description)}"><meta name="robots" content="index,follow,max-image-preview:large">

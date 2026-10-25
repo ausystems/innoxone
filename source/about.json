@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "About INNOXONE | Young Kim & Personal Golf Mobility",
+    "description": "Meet the people and ideas behind INNOXONE. Discover Young Kim’s design story, hear from an INNO-F1 owner, and visit our Golf Gallery in California.",
+    "canonical": "https://ausystems.github.io/innoxone/about/"
+  },
+  "hero": {
+    "label": "About INNOXONE",
+    "headline": [
+      "A better choice.",
+      "For better golf."
+    ],
+    "text": "We’re a California golf mobility company. We design personal electric golf carts around the people who play.",
+    "action": "Watch our story"
+  },
+  "founder": {
+    "name": "Young Kim",
+    "role": "Founder of INNOXONE · Designer of INNO-F1",
+    "quote": "Design is loving others.",
+    "quoteSource": "https://innodesignproducts.com/about/",
+    "headline": "Good design starts with people.",
+    "paragraphs": [
+      "Young Kim’s work at INNODESIGN spans everyday electronics and the torch and cauldron for the PyeongChang 2018 Winter Olympics. Different products, with people at the center.",
+      "His lifelong interest in cars brought that thinking to golf. He asked a simple question: why should two golfers, playing two different balls, always share one ride?"
+    ],
+    "film": "young-kim-story.mp4",
+    "poster": "young-kim-1920.webp",
+    "captions": "young-kim-story.vtt",
+    "duration": "4:17",
+    "context": "Golf Authority interview · PGA Show 2024",
+    "chapters": [
+      {
+        "label": "The single-rider idea",
+        "time": 105.3,
+        "display": "1:45"
+      },
+      {
+        "label": "A designer’s perspective",
+        "time": 149.4,
+        "display": "2:29"
+      },
+      {
+        "label": "A love of cars",
+        "time": 188,
+        "display": "3:08"
+      }
+    ]
+  },
+  "purpose": {
+    "label": "The idea behind INNO-F1",
+    "headline": [
+      "Start with one golfer.",
+      "Design around them."
+    ],
+    "text": "A seat of your own. Your clubs close by. The freedom to go to your ball and prepare for your next shot.",
+    "closing": "INNO-F1 puts that idea into a single-rider electric golf cart. You still share the round, with your own way around the course."
+  },
+  "owner": {
+    "quote": "I can go right to my ball.",
+    "name": "Harold",
+    "role": "INNO-F1 owner",
+    "text": "Harold traveled from Arizona to California to try INNO-F1. In his own words, having a cart to himself means getting to his ball and keeping his attention on his next shot.",
+    "film": "harold-story.mp4",
+    "poster": "harold-poster.webp",
+    "captions": "harold-story.vtt",
+    "duration": "1:53"
+  },
+  "future": {
+    "headline": [
+      "One idea.",
+      "More ways to move."
+    ],
+    "text": "Our vision reaches beyond a single model: personal vehicles, more choice for golfers, and better ways for course teams to work.",
+    "robo": "Walk or Ride. The Choice Is Yours. Our next family of personal golf mobility is coming to the 2027 Orlando PGA Show.",
+    "connect": "INNOXONE CONNECT brings golfers, vehicles and course teams into one vision for intelligent mobility and Physical AI."
+  },
+  "visit": {
+    "label": "San Juan Capistrano, California",
+    "headline": [
+      "Our story has a home.",
+      "You’re invited."
+    ],
+    "text": "Visit the INNOXONE Golf Gallery to see the vehicles and the thinking behind them. Meet our team, ask your questions and arrange a test ride.",
+    "note": "Contact us to confirm a visit, demonstration and model availability."
+  },
+  "sources": [
+    "Client-supplied INNO-F1 story architecture and homepage strategy",
+    "https://www.innoxone.com/about/",
+    "https://innodesignproducts.com/about/",
+    "Supplied Golf Authority interview with Young Kim, PGA Show 2024",
+    "Supplied Harold / Hal Peabody owner interview"
+  ]
+}
