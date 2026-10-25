@@ -25,7 +25,6 @@ const html=`<!doctype html>
 <link rel="preload" as="image" media="(max-width:767px)" href="assets/hero-mobile-480.webp" imagesrcset="assets/hero-mobile-480.webp 480w, assets/hero-mobile-768.webp 768w" imagesizes="100vw" fetchpriority="high">
 <style>${css}</style>
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 </head><body id="top"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="inno-wordmark" viewBox="${DATA.logo.viewBox}"><path fill="currentColor" fill-rule="evenodd" d="${DATA.logo.ink}"/><path fill="var(--green)" fill-rule="evenodd" d="${DATA.logo.green}"/></symbol></defs></svg><div id="app">${markup}</div><script>
 const DATA = ${JSON.stringify({config:DATA.config,labels:DATA.labels,hero:DATA.hero,variants:DATA.variants,contact:DATA.contact}).replace(/</g,'\\u003c')};
 ${runtime}

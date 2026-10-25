@@ -118,7 +118,7 @@
   "futureModels": [
     {
       "name": "INNO F1",
-      "href": "/inno-f1/",
+      "href": "golf-carts-products/#lineup",
       "image": "assets/f1-original.webp",
       "chip": "Single rider"
     }
@@ -261,11 +261,11 @@
           },
           {
             "name": "Events",
-            "href": "/events/"
+            "href": "https://www.innoxone.com/events/"
           },
           {
             "name": "Blog",
-            "href": "/blog/"
+            "href": "https://www.innoxone.com/blog/"
           },
           {
             "name": "Golf Gallery",
@@ -282,7 +282,7 @@
           },
           {
             "name": "Product support",
-            "href": "/support/"
+            "href": "https://www.innoxone.com/support/"
           },
           {
             "name": "Delivery questions",
@@ -311,8 +311,12 @@
     ],
     "legal": [
       {
-        "name": "Privacy inquiries",
-        "href": "contact/?interest=privacy-request"
+        "name": "Privacy Policy",
+        "href": "https://www.innoxone.com/privacy-policy/"
+      },
+      {
+        "name": "Terms of Service",
+        "href": "https://www.innoxone.com/terms-of-service/"
       },
       {
         "name": "Contact INNOXONE",
@@ -381,7 +385,7 @@
         "q": "How do I get help with an INNO-F1 I already own?",
         "a": "Visit our Support page or email info@innoxone.com with your model and a description of what you need. The team can direct your product, service and warranty questions.",
         "link": "Product support",
-        "href": "/support/"
+        "href": "https://www.innoxone.com/support/"
       },
       {
         "q": "Where can I learn more about INNO-F2?",

@@ -18,11 +18,24 @@
       "width": 1200,
       "height": 700,
       "alt": "Green INNO-F1 Original single-rider electric golf cart with an orange seat and rear golf-bag holder.",
-      "facts": ["Single rider", "Electric", "Golf-bag holder"],
+      "facts": [
+        "Single rider",
+        "Electric",
+        "Golf-bag holder"
+      ],
       "features": [
-        {"title": "A seat of your own", "text": "A single seat with armrests, arranged around the individual golfer."},
-        {"title": "Clubs within reach", "text": "Dedicated golf-bag space travels with you from shot to shot."},
-        {"title": "Your own route", "text": "Move independently to your ball while following your course’s cart rules."}
+        {
+          "title": "A seat of your own",
+          "text": "A single seat with armrests, arranged around the individual golfer."
+        },
+        {
+          "title": "Clubs within reach",
+          "text": "Dedicated golf-bag space travels with you from shot to shot."
+        },
+        {
+          "title": "Your own route",
+          "text": "Move independently to your ball while following your course’s cart rules."
+        }
       ],
       "inquiry": "inno-f1-original"
     },
@@ -39,11 +52,24 @@
       "width": 1200,
       "height": 700,
       "alt": "Red-orange INNO-F1 Light single-rider electric golf cart with slim roof uprights and a rear golf bag.",
-      "facts": ["Single rider", "Electric", "Slim roof frame"],
+      "facts": [
+        "Single rider",
+        "Electric",
+        "Slim roof frame"
+      ],
       "features": [
-        {"title": "An open-sided layout", "text": "A slim roof frame keeps the design open around the seat."},
-        {"title": "One golfer, one cart", "text": "Your own controls and your own route to the next shot."},
-        {"title": "Room for your clubs", "text": "A dedicated golf-bag holder keeps your equipment with you."}
+        {
+          "title": "An open-sided layout",
+          "text": "A slim roof frame keeps the design open around the seat."
+        },
+        {
+          "title": "One golfer, one cart",
+          "text": "Your own controls and your own route to the next shot."
+        },
+        {
+          "title": "Room for your clubs",
+          "text": "A dedicated golf-bag holder keeps your equipment with you."
+        }
       ],
       "inquiry": "inno-f1-light"
     },
@@ -60,11 +86,24 @@
       "width": 1200,
       "height": 700,
       "alt": "White INNO-F1 Marshal single-seat electric golf cart with an orange seat and gray rear utility box.",
-      "facts": ["Single rider", "Electric", "Utility storage"],
+      "facts": [
+        "Single rider",
+        "Electric",
+        "Utility storage"
+      ],
       "features": [
-        {"title": "For the course team", "text": "A configuration for marshals and staff moving around the course."},
-        {"title": "Rear utility storage", "text": "A rear box provides space for equipment and everyday course essentials."},
-        {"title": "Single-seat design", "text": "An individual vehicle for the team member at the wheel."}
+        {
+          "title": "For the course team",
+          "text": "A configuration for marshals and staff moving around the course."
+        },
+        {
+          "title": "Rear utility storage",
+          "text": "A rear box provides space for equipment and everyday course essentials."
+        },
+        {
+          "title": "Single-seat design",
+          "text": "An individual vehicle for the team member at the wheel."
+        }
       ],
       "inquiry": "inno-f1-marshal"
     },
@@ -81,11 +120,24 @@
       "width": 1400,
       "height": 1519,
       "alt": "White INNO-F2 golf cart viewed from the front quarter, with an orange seat, roof and windshield.",
-      "facts": ["Distinctive roof", "Broad windshield", "Open sides"],
+      "facts": [
+        "Distinctive roof",
+        "Broad windshield",
+        "Open sides"
+      ],
       "features": [
-        {"title": "A distinctive profile", "text": "A sculpted roof and front frame give INNO-F2 its own identity."},
-        {"title": "An open view", "text": "A broad windshield and open sides keep the course in view."},
-        {"title": "Find your fit", "text": "Ask our team about specifications, configurations and availability."}
+        {
+          "title": "A distinctive profile",
+          "text": "A sculpted roof and front frame give INNO-F2 its own identity."
+        },
+        {
+          "title": "An open view",
+          "text": "A broad windshield and open sides keep the course in view."
+        },
+        {
+          "title": "Find your fit",
+          "text": "Ask our team about specifications, configurations and availability."
+        }
       ],
       "inquiry": "inno-f2"
     }
@@ -97,7 +149,7 @@
     },
     {
       "q": "How do I place an order?",
-      "a": "Choose a model and select Inquire in its product details, or call 949-384-XONE (9663). Our team will confirm your configuration, pricing, availability and delivery arrangements before you place an order."
+      "a": "Choose a model and select Request a quote in its product details, or call 949-384-XONE (9663). Our team will confirm your configuration, pricing, availability and delivery arrangements before you place an order."
     },
     {
       "q": "Can I see a golf cart in person?",
