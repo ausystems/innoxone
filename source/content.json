@@ -42,7 +42,7 @@
   ],
   "contact": {
     "name": "Contact",
-    "href": "/contact/",
+    "href": "contact/",
     "phone": "949-384-XONE (9663)",
     "tel": "+19493849663",
     "email": "info@innoxone.com",
@@ -63,7 +63,7 @@
       "mobile": "assets/hero-mobile.mp4"
     },
     "action": "Arrange a test ride",
-    "href": "/contact/?interest=test-ride"
+    "href": "contact/?interest=test-ride"
   },
   "variants": [
     {
@@ -173,7 +173,7 @@
     ],
     "intro": "Your own seat. Controls within reach. Space for the things you bring to the course.",
     "action": "Arrange a test ride",
-    "href": "/contact/?interest=test-ride",
+    "href": "contact/?interest=test-ride",
     "closing": "Explore the details in person."
   },
   "robocaddy": {
@@ -185,7 +185,7 @@
     "promise": "Walk or Ride. The Choice Is Yours.",
     "show": "Orlando, Florida · January 2027",
     "action": "Ask about the 2027 reveal",
-    "href": "/contact/?interest=robocaddy-2027",
+    "href": "contact/?interest=robocaddy-2027",
     "caption": "2027 collection preview",
     "storyLabel": "Why ROBOCADDY was born",
     "storyTitle": "Golf has always been a game of movement.",
@@ -212,20 +212,20 @@
         "title": "For golfers",
         "name": "Find your personal golf cart",
         "text": "Arrange a test ride or Gallery visit. Ask about the right model, current pricing and delivery to your location.",
-        "href": "/contact/?interest=test-ride",
+        "href": "contact/?interest=test-ride",
         "action": "Arrange a test ride"
       },
       {
         "title": "For course operators",
         "name": "Bring INNO-F1 to your course",
         "text": "Discuss a course demonstration, rental fleet, member program or electric carts for your course team.",
-        "href": "/contact/?interest=personal-ride-upgrade",
+        "href": "contact/?interest=course-demonstration",
         "action": "Discuss a course demonstration"
       }
     ],
     "partner": "For dealers, resorts and business partners",
     "partnerText": "Let’s talk about product sales, mobility services and the opportunities ahead.",
-    "partnerHref": "/contact/?interest=business-partnership",
+    "partnerHref": "contact/?interest=business-partnership",
     "help": "Share your location and what you have in mind. Our team will help you plan the next step.",
     "call": "Prefer a conversation? Call or text us."
   },
@@ -290,7 +290,7 @@
           },
           {
             "name": "Warranty assistance",
-            "href": "/contact/?interest=warranty"
+            "href": "contact/?interest=warranty"
           }
         ]
       }
@@ -312,11 +312,11 @@
     "legal": [
       {
         "name": "Privacy inquiries",
-        "href": "/contact/?interest=privacy-request"
+        "href": "contact/?interest=privacy-request"
       },
       {
         "name": "Contact INNOXONE",
-        "href": "/contact/"
+        "href": "contact/"
       }
     ]
   },
@@ -339,13 +339,13 @@
         "q": "Can I try an INNO-F1 before deciding?",
         "a": "Contact us to arrange a test ride or a visit to the INNOXONE Golf Gallery. Tell us where you are based and which model interests you so we can confirm the available options.",
         "link": "Arrange a test ride",
-        "href": "/contact/?interest=test-ride"
+        "href": "contact/?interest=test-ride"
       },
       {
         "q": "Can my course introduce single-rider golf?",
         "a": "Yes, you can speak with INNOXONE about demonstrations, premium rental options, member programs and mobility for course teams. Share your course location and goals. Program scope, availability and any operational benefits should be evaluated for your course.",
         "link": "Explore a course program",
-        "href": "/contact/?interest=personal-ride-upgrade"
+        "href": "contact/?interest=course-demonstration"
       },
       {
         "q": "What is ROBOCADDY?",
@@ -357,13 +357,13 @@
         "q": "How do I confirm price, delivery and availability?",
         "a": "Contact INNOXONE with your preferred model, quantity and delivery location. Our team can discuss the appropriate configuration and confirm current pricing, shipping arrangements and timing before you make a purchase.",
         "link": "Ask about pricing and delivery",
-        "href": "/contact/"
+        "href": "contact/"
       },
       {
         "q": "What are CONNECT and Intelligent Golf Operations?",
         "a": "INNOXONE CONNECT is our vision for linking golfers, intelligent vehicles and course operators. Intelligent Golf Operations is the broader direction combining mobility products, services and connected operations. Ask our team about development, course collaboration and future availability.",
         "link": "Talk about CONNECT",
-        "href": "/contact/?interest=connect-igo"
+        "href": "contact/?interest=connect-igo"
       },
       {
         "q": "Where is the INNOXONE Golf Gallery?",
@@ -387,7 +387,7 @@
         "q": "Where can I learn more about INNO-F2?",
         "a": "Explore the INNO-F2 preview on this page, then contact INNOXONE to discuss specifications, available configurations and timing. Our team can help you understand the options for your own golf or your course.",
         "link": "Ask about INNO-F2",
-        "href": "/contact/?interest=inno-f2"
+        "href": "contact/?interest=inno-f2"
       }
     ]
   },
@@ -404,7 +404,7 @@
       "That is why INNOXONE exists: to design personal golf mobility around the way people play, and give more golfers the freedom Harold found."
     ],
     "action": "Experience INNO-F1",
-    "href": "/contact/?interest=test-ride",
+    "href": "contact/?interest=test-ride",
     "source": "https://www.linkedin.com/posts/young-kim-b773788_innof1-innoxone-bettergolf-activity-7507247988986003456-ol5l",
     "film": "assets/harold-story.mp4",
     "poster": "assets/harold-poster.webp",
@@ -432,7 +432,7 @@
         }
       ],
       "action": "Arrange your test ride",
-      "href": "/contact/?interest=personal-ride-experience"
+      "href": "contact/?interest=personal-ride-experience"
     },
     "operators": {
       "title": "Better for operators.",
@@ -456,7 +456,7 @@
         }
       ],
       "action": "Discuss a course demonstration",
-      "href": "/contact/?interest=personal-ride-upgrade"
+      "href": "contact/?interest=course-demonstration"
     },
     "image": "assets/course-life-1600.webp",
     "alt": "A green INNO-F1 beside the fairway, with a single orange seat and rear storage."
@@ -509,7 +509,7 @@
     ],
     "note": "CONNECT is a platform vision. Ask about development and future availability.",
     "action": "Explore CONNECT for your course",
-    "href": "/contact/?interest=connect-igo"
+    "href": "contact/?interest=connect-igo"
   },
   "gallery": {
     "headline": "Try INNO-F1 in San Juan Capistrano.",
@@ -536,7 +536,7 @@
       }
     ],
     "action": "Plan a Gallery visit",
-    "href": "/contact/?interest=gallery-visit"
+    "href": "contact/?interest=gallery-visit"
   },
   "origin": {
     "headline": [
@@ -575,7 +575,7 @@
     ],
     "closing": "Your own seat. Your own clubs. Your own way to the next shot.",
     "action": "Arrange a test ride",
-    "href": "/contact/?interest=test-ride",
+    "href": "contact/?interest=test-ride",
     "label": "The story of INNO-F1",
     "designerTitle": "A designer’s eye. A golfer’s freedom.",
     "designerText": "In his PGA Show interview, Young Kim connects his experience designing everyday products with his lifelong interest in cars. For INNO-F1, he brought that thinking to a simple question: why should a golf cart always be built for two?",
@@ -595,7 +595,7 @@
     "description": "Meet INNO-F2, another way to experience INNOXONE personal golf mobility. A distinctive roof, wide windshield and open sides give its design a character of its own.",
     "note": "Speak with our team about specifications, availability and the right fit for you or your course.",
     "action": "Ask about INNO-F2",
-    "href": "/contact/?interest=inno-f2",
+    "href": "contact/?interest=inno-f2",
     "image": "assets/inno-f2-1400.webp",
     "alt": "Front three-quarter view of the white INNO-F2 golf cart with an orange seat, roof and windshield.",
     "details": [

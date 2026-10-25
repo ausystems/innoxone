@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Contact INNOXONE | Golf Cart Inquiries, Test Rides & Support",
+    "description": "Contact INNOXONE about electric golf carts, test rides, technical support or partnerships. Call 949-384-9663 or plan a visit to our California Golf Gallery.",
+    "canonical": "https://ausystems.github.io/innoxone/contact/"
+  },
+  "hero": {
+    "label": "Contact INNOXONE",
+    "headline": [
+      "Let’s talk",
+      "golf."
+    ],
+    "text": "Ask about golf carts, arrange a test ride or get support from our California team."
+  },
+  "form": {
+    "heading": "Your inquiry.",
+    "categories": [
+      {
+        "value": "general",
+        "label": "General Inquiry"
+      },
+      {
+        "value": "support",
+        "label": "Technical Support"
+      },
+      {
+        "value": "partnership",
+        "label": "Partnership Inquiries"
+      }
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full Name",
+        "type": "text",
+        "autocomplete": "name",
+        "maxlength": 100
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "autocomplete": "email",
+        "maxlength": 254
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "autocomplete": "tel",
+        "maxlength": 40
+      },
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "text",
+        "autocomplete": "off",
+        "maxlength": 160
+      },
+      {
+        "name": "message",
+        "label": "Your Message",
+        "type": "textarea",
+        "maxlength": 2000
+      }
+    ]
+  },
+  "delivery": {
+    "mode": "email",
+    "email": "info@innoxone.com",
+    "originalFormURL": "https://www.innoxone.com/contact/",
+    "privacyURL": "https://www.innoxone.com/privacy-policy/"
+  },
+  "interests": {
+    "test-ride": {
+      "subject": "Arrange an INNO-F1 test ride",
+      "category": "general"
+    },
+    "personal-ride-experience": {
+      "subject": "Find my personal golf cart",
+      "category": "general"
+    },
+    "personal-ride-upgrade": {
+      "subject": "Arrange a golf course demonstration",
+      "category": "general"
+    },
+    "gallery-visit": {
+      "subject": "Plan an INNOXONE Golf Gallery visit",
+      "category": "general"
+    },
+    "showroom-visit": {
+      "subject": "Plan an INNOXONE Golf Gallery visit",
+      "category": "general"
+    },
+    "course-demonstration": {
+      "subject": "Arrange a golf course demonstration",
+      "category": "general"
+    },
+    "connect-igo": {
+      "subject": "INNOXONE CONNECT for my golf course",
+      "category": "general"
+    },
+    "business-partnership": {
+      "subject": "INNOXONE business partnership",
+      "category": "partnership"
+    },
+    "warranty": {
+      "subject": "Warranty support",
+      "category": "support"
+    },
+    "privacy-request": {
+      "subject": "Privacy request",
+      "category": "general"
+    },
+    "inno-f1-original": {
+      "subject": "INNO-F1 Original inquiry",
+      "category": "general"
+    },
+    "inno-f1-light": {
+      "subject": "INNO-F1 Light inquiry",
+      "category": "general"
+    },
+    "inno-f1-marshal": {
+      "subject": "INNO-F1 Marshal inquiry",
+      "category": "general"
+    },
+    "inno-f2": {
+      "subject": "INNO-F2 inquiry",
+      "category": "general"
+    },
+    "robocaddy-2027": {
+      "subject": "ROBOCADDY 2027 preview inquiry",
+      "category": "general"
+    },
+    "robocaddy": {
+      "subject": "ROBOCADDY 2027 preview inquiry",
+      "category": "general"
+    }
+  },
+  "source": "https://www.innoxone.com/contact/"
+}

@@ -14,7 +14,7 @@ const plus = '<span class="plus" aria-hidden="true"></span>';
 const close = '<button class="dialog-close" type="button" data-close aria-label="Close product details" autofocus><span class="cross" aria-hidden="true"></span></button>';
 const mark = `<svg viewBox="${common.logo.viewBox}" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="${common.logo.ink}"/><path fill="var(--green)" fill-rule="evenodd" d="${common.logo.green}"/></svg>`;
 const logo = `<a class="wordmark" href="../" aria-label="INNOXONE home">${mark}</a>`;
-const contactURL = interest => 'https://www.innoxone.com/contact/' + (interest ? '?interest=' + encodeURIComponent(interest) : '');
+const contactURL = interest => '../contact/' + (interest ? '?interest=' + encodeURIComponent(interest) : '');
 const mailURL = product => 'mailto:' + common.contact.email + '?subject=' + encodeURIComponent(product + ' inquiry');
 const inquiry = (label, interest, cls = 'pill') => `<a class="${cls}" href="${contactURL(interest)}" data-inquiry="${esc(interest || 'general')}">${esc(label)}</a>`;
 const photo = (product, extra = '') => `<img src="${asset(product.image)}" srcset="${srcset(product.srcset)}" sizes="(max-width:599px) 90vw, 45vw" width="${product.width}" height="${product.height}" alt="${esc(product.alt)}" loading="lazy" decoding="async" ${extra}>`;
@@ -71,5 +71,5 @@ const html = `<!doctype html><html lang="en-US"><head>
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-24</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-25</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');
