@@ -101,10 +101,10 @@ main section[id],main article[id],main [tabindex="-1"]{scroll-margin-top:20px}
 .nav-left>a:hover,.nav-right>a:not(.pill):hover,.nav-left>a[aria-current]{text-decoration:none}
 .nav-left>a:hover:after,.nav-left>a[aria-current]:after,.nav-right>a:not(.pill):hover:after,.nav-right>a[aria-current]:after{transform:scaleX(1)}
 .nav-left>a[aria-current]:after,.nav-right>a[aria-current]:after{background:var(--green-ink);height:2px}
-.menu-dialog[open] nav a,.mobile-menu:not([hidden]) nav a{animation:menu-arrive .24s ease-out both}
-.menu-dialog[open] nav a:nth-child(2),.mobile-menu:not([hidden]) nav a:nth-child(2){animation-delay:25ms}
-.menu-dialog[open] nav a:nth-child(3),.mobile-menu:not([hidden]) nav a:nth-child(3){animation-delay:50ms}
-.menu-dialog[open] nav a:nth-child(4),.mobile-menu:not([hidden]) nav a:nth-child(4){animation-delay:75ms}
+.menu-dialog[open] nav a,.mobile-menu:not([hidden]) nav a{animation:menu-arrive .38s cubic-bezier(.22,1,.36,1) both}
+.menu-dialog[open] nav a:nth-child(2),.mobile-menu:not([hidden]) nav a:nth-child(2){animation-delay:50ms}
+.menu-dialog[open] nav a:nth-child(3),.mobile-menu:not([hidden]) nav a:nth-child(3){animation-delay:100ms}
+.menu-dialog[open] nav a:nth-child(4),.mobile-menu:not([hidden]) nav a:nth-child(4){animation-delay:150ms}
 @keyframes menu-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.title-letter{opacity:1!important}}
 @media print{.title-letter{opacity:1!important}}
@@ -112,6 +112,30 @@ main section[id],main article[id],main [tabindex="-1"]{scroll-margin-top:20px}
 .site-header{background:#fff}
 [data-letter-title] .title-word:before,[data-letter-title] .title-letter:before{content:none}
 .inno-header.on-dark .nav-left>a[aria-current]:after{background:var(--green)}.mobile-menu nav a[aria-current]{color:var(--green-ink)}
+
+/* Quiet, consistent feedback across the showroom, story and inquiry journeys. */
+main p{text-wrap:pretty}
+.pill,.card-detail-link,.dialog-close,.film-play{transition:background-color .3s ease,color .3s ease,opacity .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}
+.pill:hover{opacity:1;transform:none}
+:is(.pill,.text-link,.footer-directions)>.arrow{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.global-footer li>a{transition:color .25s ease}
+.product-dialog[open]{animation:showroom-arrive .44s cubic-bezier(.22,1,.36,1)}
+.product-dialog[open]::backdrop{animation:showroom-backdrop .3s ease-out}
+.faq-item[open] .faq-answer{animation:answer-arrive .32s ease-out}
+@keyframes showroom-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes showroom-backdrop{from{opacity:0}to{opacity:1}}
+@keyframes answer-arrive{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){
+  .pill:hover{transform:translateY(-1px)}
+  :is(.pill,.text-link,.footer-directions):hover>.arrow{transform:translateX(4px)}
+  .card-detail-link:hover{background:var(--ink);color:#fff}
+  .global-footer li>a:hover{color:var(--ink)}
+}
+:is(.pill,.card-detail-link,.dialog-close,.film-play):active{transform:scale(.98)}
+@media(prefers-reduced-motion:reduce){
+  .pill:hover,:is(.pill,.card-detail-link,.dialog-close,.film-play):active{transform:none}
+  :is(.pill,.text-link,.footer-directions):hover>.arrow{transform:none}
+}
 
 .dialog-fallback .product-dialog:not([open]){display:block;position:static;width:calc(100% - 40px);max-width:1152px;max-height:none;margin:32px auto;background:#fff;border:1px solid var(--line)}.dialog-fallback .product-dialog .dialog-close,.dialog-fallback .menu-button{display:none}.dialog-fallback .dialog-order{position:static}.dialog-fallback .site-header .nav-left{display:flex;gap:16px}.dialog-fallback .site-header .nav-left>a:not([aria-current]){display:none}.dialog-fallback .site-header .nav-left>a{font-size:11px}.dialog-fallback .site-header .wordmark{width:110px}.dialog-fallback .site-header .nav-right{display:none}.dialog-fallback .site-header .header-inner{grid-template-columns:1fr auto}</style><noscript><style>.product-dialog:not([open]){display:block;position:static;width:calc(100% - 40px);max-width:1152px;max-height:none;margin:32px auto;background:#fff;border:1px solid var(--line)}.product-dialog .dialog-close,.menu-button{display:none}.dialog-order{position:static}.site-header .nav-left{display:flex;gap:16px}.site-header .nav-left>a:not([aria-current]){display:none}.site-header .nav-left>a{font-size:11px}.site-header .wordmark{width:110px}.site-header .nav-right{display:none}.site-header .header-inner{grid-template-columns:1fr auto}</style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.innoxone.com/#organization","name":"INNOXONE","url":"https://www.innoxone.com/","logo":"https://ausystems.github.io/innoxone/assets/innoxone-logo.svg","telephone":"+19493849663","email":"info@innoxone.com","sameAs":["https://www.instagram.com/innoxone.golf","https://www.tiktok.com/@innoxone","https://www.youtube.com/@innodesign6980"]},{"@type":"CollectionPage","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#webpage","url":"https://ausystems.github.io/innoxone/golf-carts-products/","name":"Golf Carts & Products | INNO-F1, INNO-F2 & ROBOCADDY | INNOXONE","description":"Explore INNOXONE golf carts: INNO-F1 Original, Light and Marshal, plus INNO-F2 and the ROBOCADDY preview. View model details and contact our team to order.","inLanguage":"en-US","publisher":{"@id":"https://www.innoxone.com/#organization"},"mainEntity":{"@id":"https://ausystems.github.io/innoxone/golf-carts-products/#collection"}},{"@type":"ItemList","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#collection","name":"INNOXONE golf carts","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f1-original","name":"INNO-F1 Original","description":"A single-rider electric golf cart with your own seat and space for your clubs.","image":"https://ausystems.github.io/innoxone/assets/f1-original.webp","brand":{"@type":"Brand","name":"INNOXONE"},"category":"Golf carts","url":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f1-original"}},{"@type":"ListItem","position":2,"item":{"@type":"Product","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f1-light","name":"INNO-F1 Light","description":"Single-rider electric golf mobility with an open-sided layout and slim roof frame.","image":"https://ausystems.github.io/innoxone/assets/f1-light.webp","brand":{"@type":"Brand","name":"INNOXONE"},"category":"Golf carts","url":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f1-light"}},{"@type":"ListItem","position":3,"item":{"@type":"Product","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f1-marshal","name":"INNO-F1 Marshal","description":"Electric mobility for marshals and course staff, with a rear utility box.","image":"https://ausystems.github.io/innoxone/assets/f1-marshal.webp","brand":{"@type":"Brand","name":"INNOXONE"},"category":"Golf carts","url":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f1-marshal"}},{"@type":"ListItem","position":4,"item":{"@type":"Product","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f2","name":"INNO-F2","description":"A distinctive roof, broad windshield and open-sided golf cart design.","image":"https://ausystems.github.io/innoxone/assets/inno-f2-1000.webp","brand":{"@type":"Brand","name":"INNOXONE"},"category":"Golf carts","url":"https://ausystems.github.io/innoxone/golf-carts-products/#product-inno-f2"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ausystems.github.io/innoxone/"},{"@type":"ListItem","position":2,"name":"Golf Carts & Products","item":"https://ausystems.github.io/innoxone/golf-carts-products/"}]},{"@type":"FAQPage","@id":"https://ausystems.github.io/innoxone/golf-carts-products/#questions","mainEntity":[{"@type":"Question","name":"Which INNO-F1 is right for me?","acceptedAnswer":{"@type":"Answer","text":"Original and Light are single-rider electric golf carts with dedicated golf-bag space. Light has a slim roof frame and an open-sided layout. Marshal is configured for course staff, with a rear utility box. Our team can help you choose."}},{"@type":"Question","name":"How do I place an order?","acceptedAnswer":{"@type":"Answer","text":"Choose a model and select Request a quote in its product details, or call 949-384-XONE (9663). Our team will confirm your configuration, pricing, availability and delivery arrangements before you place an order."}},{"@type":"Question","name":"Can I see a golf cart in person?","acceptedAnswer":{"@type":"Answer","text":"Contact us to arrange a showroom visit at 31896 Plaza Dr Suite D2, San Juan Capistrano, California. Ask which models are available to see and whether a demonstration can be arranged for your visit."}},{"@type":"Question","name":"When will ROBOCADDY be revealed?","acceptedAnswer":{"@type":"Answer","text":"The ROBOCADDY collection is coming to the 2027 Orlando PGA Show in January 2027. The silhouettes are a collection preview. Contact our team with questions about the reveal and future availability."}}]}]}</script>
@@ -196,7 +220,7 @@ main section[id],main article[id],main [tabindex="-1"]{scroll-margin-top:20px}
   });
 })();
 
-// Fast, once-only title fades. Layout and accessible names remain stable.
+// Soft, once-only title fades. Layout and accessible names remain stable.
 (() => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   if (reduced.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
@@ -210,6 +234,8 @@ main section[id],main article[id],main [tabindex="-1"]{scroll-margin-top:20px}
     title.setAttribute('aria-label', (title.innerText || title.textContent).replace(/\s+/g,' ').trim());
     const walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT), nodes=[];
     while(walker.nextNode()) nodes.push(walker.currentNode);
+    const characterCount=nodes.reduce((count,node)=>count+letters(node.textContent.replace(/\s/g,'')).length,0);
+    const stagger=Math.min(22,720/Math.max(1,characterCount-1));
     let index=0;
     for(const node of nodes){
       const fragment=document.createDocumentFragment();
@@ -218,7 +244,7 @@ main section[id],main article[id],main [tabindex="-1"]{scroll-margin-top:20px}
         const group=document.createElement('span');group.className='title-word';group.setAttribute('aria-hidden','true');
         for(const letter of letters(word)){
           const character=document.createElement('span');character.className='title-letter';character.textContent=letter;group.append(character);
-          const animation=character.animate([{opacity:0},{opacity:1}],{duration:260,delay:Math.min(index++*8,320),easing:'ease-out',fill:'backwards'});
+          const animation=character.animate([{opacity:0},{opacity:1}],{duration:560,delay:index++*stagger,easing:'cubic-bezier(.25,.1,.25,1)',fill:'backwards'});
           animations.add(animation);animation.onfinish=()=>animations.delete(animation);
         }
         fragment.append(group);

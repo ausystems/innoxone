@@ -19,7 +19,7 @@ The About Us page uses `source/about.json`, `source/build-about.cjs`, `source/ab
 
 The Contact page uses `source/contact.json`, `source/build-contact.cjs`, `source/contact.css` and `source/contact.js`. It preserves Full Name, Email Address, Phone Number, Subject and Your Message, plus General Inquiry, Technical Support and Partnership Inquiries. Product and experience links prefill a known subject and category, while keeping the fields editable.
 
-The products, About and Contact pages share navigation and base styles through `source/site-shell.cjs` and `source/site.css`. All four pages use the shared footer in `source/site-shell.cjs` and `source/footer.css`, including the visible sitemap and an XML sitemap link. `source/motion.js` and `source/motion.css` provide quick, once-only title letter fades and restrained image and menu animation. Reduced-motion preferences are respected, and all content remains visible without JavaScript.
+The products, About and Contact pages share navigation and base styles through `source/site-shell.cjs` and `source/site.css`. All four pages use the shared footer in `source/site-shell.cjs` and `source/footer.css`, including the visible sitemap and an XML sitemap link. `source/motion.js` and `source/motion.css` provide soft, once-only title letter fades, capped at 1.28 seconds, with restrained image, menu and product-dialog animation. Button and arrow feedback stays consistent across all four pages. Reduced-motion preferences are respected, and all content remains visible without JavaScript.
 
 Build all four pages with:
 

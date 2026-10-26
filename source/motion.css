@@ -6,10 +6,10 @@
 .nav-left>a:hover,.nav-right>a:not(.pill):hover,.nav-left>a[aria-current]{text-decoration:none}
 .nav-left>a:hover:after,.nav-left>a[aria-current]:after,.nav-right>a:not(.pill):hover:after,.nav-right>a[aria-current]:after{transform:scaleX(1)}
 .nav-left>a[aria-current]:after,.nav-right>a[aria-current]:after{background:var(--green-ink);height:2px}
-.menu-dialog[open] nav a,.mobile-menu:not([hidden]) nav a{animation:menu-arrive .24s ease-out both}
-.menu-dialog[open] nav a:nth-child(2),.mobile-menu:not([hidden]) nav a:nth-child(2){animation-delay:25ms}
-.menu-dialog[open] nav a:nth-child(3),.mobile-menu:not([hidden]) nav a:nth-child(3){animation-delay:50ms}
-.menu-dialog[open] nav a:nth-child(4),.mobile-menu:not([hidden]) nav a:nth-child(4){animation-delay:75ms}
+.menu-dialog[open] nav a,.mobile-menu:not([hidden]) nav a{animation:menu-arrive .38s cubic-bezier(.22,1,.36,1) both}
+.menu-dialog[open] nav a:nth-child(2),.mobile-menu:not([hidden]) nav a:nth-child(2){animation-delay:50ms}
+.menu-dialog[open] nav a:nth-child(3),.mobile-menu:not([hidden]) nav a:nth-child(3){animation-delay:100ms}
+.menu-dialog[open] nav a:nth-child(4),.mobile-menu:not([hidden]) nav a:nth-child(4){animation-delay:150ms}
 @keyframes menu-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.title-letter{opacity:1!important}}
 @media print{.title-letter{opacity:1!important}}
@@ -17,3 +17,27 @@
 .site-header{background:#fff}
 [data-letter-title] .title-word:before,[data-letter-title] .title-letter:before{content:none}
 .inno-header.on-dark .nav-left>a[aria-current]:after{background:var(--green)}.mobile-menu nav a[aria-current]{color:var(--green-ink)}
+
+/* Quiet, consistent feedback across the showroom, story and inquiry journeys. */
+main p{text-wrap:pretty}
+.pill,.card-detail-link,.dialog-close,.film-play{transition:background-color .3s ease,color .3s ease,opacity .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}
+.pill:hover{opacity:1;transform:none}
+:is(.pill,.text-link,.footer-directions)>.arrow{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.global-footer li>a{transition:color .25s ease}
+.product-dialog[open]{animation:showroom-arrive .44s cubic-bezier(.22,1,.36,1)}
+.product-dialog[open]::backdrop{animation:showroom-backdrop .3s ease-out}
+.faq-item[open] .faq-answer{animation:answer-arrive .32s ease-out}
+@keyframes showroom-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes showroom-backdrop{from{opacity:0}to{opacity:1}}
+@keyframes answer-arrive{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){
+  .pill:hover{transform:translateY(-1px)}
+  :is(.pill,.text-link,.footer-directions):hover>.arrow{transform:translateX(4px)}
+  .card-detail-link:hover{background:var(--ink);color:#fff}
+  .global-footer li>a:hover{color:var(--ink)}
+}
+:is(.pill,.card-detail-link,.dialog-close,.film-play):active{transform:scale(.98)}
+@media(prefers-reduced-motion:reduce){
+  .pill:hover,:is(.pill,.card-detail-link,.dialog-close,.film-play):active{transform:none}
+  :is(.pill,.text-link,.footer-directions):hover>.arrow{transform:none}
+}

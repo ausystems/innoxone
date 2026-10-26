@@ -1,4 +1,4 @@
-// Fast, once-only title fades. Layout and accessible names remain stable.
+// Soft, once-only title fades. Layout and accessible names remain stable.
 (() => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   if (reduced.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
@@ -12,6 +12,8 @@
     title.setAttribute('aria-label', (title.innerText || title.textContent).replace(/\s+/g,' ').trim());
     const walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT), nodes=[];
     while(walker.nextNode()) nodes.push(walker.currentNode);
+    const characterCount=nodes.reduce((count,node)=>count+letters(node.textContent.replace(/\s/g,'')).length,0);
+    const stagger=Math.min(22,720/Math.max(1,characterCount-1));
     let index=0;
     for(const node of nodes){
       const fragment=document.createDocumentFragment();
@@ -20,7 +22,7 @@
         const group=document.createElement('span');group.className='title-word';group.setAttribute('aria-hidden','true');
         for(const letter of letters(word)){
           const character=document.createElement('span');character.className='title-letter';character.textContent=letter;group.append(character);
-          const animation=character.animate([{opacity:0},{opacity:1}],{duration:260,delay:Math.min(index++*8,320),easing:'ease-out',fill:'backwards'});
+          const animation=character.animate([{opacity:0},{opacity:1}],{duration:560,delay:index++*stagger,easing:'cubic-bezier(.25,.1,.25,1)',fill:'backwards'});
           animations.add(animation);animation.onfinish=()=>animations.delete(animation);
         }
         fragment.append(group);
