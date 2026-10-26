@@ -4,7 +4,7 @@ const ROOT = path.resolve(__dirname, '..');
 const common = JSON.parse(fs.readFileSync(path.join(__dirname, 'content.json'), 'utf8'));
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'products.json'), 'utf8'));
 const shell = require('./site-shell.cjs');
-const css = fs.readFileSync(path.join(__dirname, 'site.css'), 'utf8') + fs.readFileSync(path.join(__dirname, 'products.css'), 'utf8');
+const css = fs.readFileSync(path.join(__dirname, 'site.css'), 'utf8') + fs.readFileSync(path.join(__dirname, 'products.css'), 'utf8') + fs.readFileSync(path.join(__dirname,'footer.css'),'utf8') + fs.readFileSync(path.join(__dirname,'motion.css'),'utf8');
 const runtime = fs.readFileSync(path.join(__dirname, 'products.js'), 'utf8');
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 const asset = name => '../assets/' + name;
@@ -17,18 +17,18 @@ const logo = `<a class="wordmark" href="../" aria-label="INNOXONE home">${mark}<
 const contactURL = interest => '../contact/' + (interest ? '?interest=' + encodeURIComponent(interest) : '');
 const mailURL = product => 'mailto:' + common.contact.email + '?subject=' + encodeURIComponent(product + ' inquiry');
 const inquiry = (label, interest, cls = 'pill') => `<a class="${cls}" href="${contactURL(interest)}" data-inquiry="${esc(interest || 'general')}">${esc(label)}</a>`;
-const photo = (product, extra = '') => `<img src="${asset(product.image)}" srcset="${srcset(product.srcset)}" sizes="(max-width:599px) 90vw, 45vw" width="${product.width}" height="${product.height}" alt="${esc(product.alt)}" loading="lazy" decoding="async" ${extra}>`;
+const photo = (product, extra = '') => `<img src="${asset(product.image)}" srcset="${srcset(product.srcset)}" sizes="(max-width:599px) 90vw, 45vw" width="${product.width}" height="${product.height}" alt="${esc(product.alt)}" loading="${product.id==='inno-f1-original'||product.id==='inno-f1-light'?'eager':'lazy'}" decoding="async" ${extra}>`;
 
 function header() { return shell.header('products'); }
 function intro() {
-  return `<section class="collection-intro wrap" aria-labelledby="page-title"><div class="collection-heading"><h1 id="page-title"><span>Golf carts &amp;</span><span>products.</span></h1><p><strong>Personal golf mobility.</strong><br>For your game. For your course.</p></div><div class="hero-stage"><div class="hero-copy"><p class="hero-family">INNO-F1</p><h2><span>One player.</span><span>One cart.</span></h2><p>Single-rider electric golf carts that give every golfer a ride of their own.</p><a class="text-link" href="#lineup">Explore the lineup${arrow}</a></div><div class="hero-product"><img src="${asset('f1-original.webp')}" srcset="${srcset('f1-original-600.webp 600w, f1-original-900.webp 900w, f1-original.webp 1200w')}" sizes="(max-width:767px) 95vw, 65vw" width="1200" height="700" alt="Green INNO-F1 Original electric golf cart, designed for one golfer and their clubs." fetchpriority="high" decoding="async"></div><p class="hero-caption">INNO-F1 Original</p></div><nav class="collection-jumps" aria-label="Product families"><a href="#lineup">INNO-F1${arrow}</a><a href="#inno-f2">INNO-F2${arrow}</a><a href="#robocaddy">ROBOCADDY${arrow}</a></nav></section>`;
+  return `<section class="collection-intro wrap" aria-labelledby="page-title"><div class="collection-heading"><h1 id="page-title">Golf carts &amp; products.</h1><p>Find a personal golf cart for your game or your course team.</p></div><nav class="collection-jumps" aria-label="Product families"><a href="#inno-f1-original">INNO-F1${arrow}</a><a href="#inno-f2">INNO-F2${arrow}</a><a href="#robocaddy">ROBOCADDY${arrow}</a></nav></section>`;
 }
 function card(product) {
   const id = 'product-' + product.id;
-  return `<article class="product-card" data-model="${product.id}" id="${product.id}"><div class="card-top"><p class="card-audience">${esc(product.audience)}</p><a class="card-detail-link" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View ${esc(product.name)} details">${plus}</a></div><a class="card-visual" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="Explore ${esc(product.name)}">${photo(product)}</a><h3>${esc(product.name)}</h3><p class="card-description">${esc(product.summary)}</p><div class="card-actions"><a class="pill pill-dark" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View details for ${esc(product.name)}">View details</a><a class="text-link" href="${contactURL(product.inquiry)}" data-inquiry="${product.id}" aria-label="Inquire about ${esc(product.name)}">Inquire${arrow}</a></div></article>`;
+  return `<article class="product-card" data-model="${product.id}" id="${product.id}"><div class="card-top"><p class="card-audience">${esc(product.audience)}</p><a class="card-detail-link" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View ${esc(product.name)} details">${plus}</a></div><a class="card-visual" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="Explore ${esc(product.name)}">${photo(product, product.id === 'inno-f1-original' ? 'fetchpriority="high"' : '')}</a><h3>${esc(product.name)}</h3><p class="card-description">${esc(product.summary)}</p><div class="card-actions"><a class="pill pill-dark" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View details for ${esc(product.name)}">View details</a><a class="text-link" href="${contactURL(product.inquiry)}" data-inquiry="${product.id}" aria-label="Get a quote for ${esc(product.name)}">Get a quote${arrow}</a></div></article>`;
 }
 function lineup() {
-  return `<section class="product-lineup wrap" id="lineup" aria-labelledby="lineup-title"><div class="section-heading"><h2 id="lineup-title">Find your ride.</h2><p>Explore each model. Find the right fit for you or your course team.</p></div><div class="product-grid">${data.products.map(card).join('')}</div><p class="lineup-note">Contact our team for pricing, specifications and availability.</p></section>`;
+  return `<section class="product-lineup wrap" id="lineup" aria-labelledby="lineup-title"><h2 class="sr-only" id="lineup-title">Explore our golf carts</h2><div class="product-grid">${data.products.map(card).join('')}</div><p class="lineup-note">Contact our team for pricing, specifications and availability.</p></section>`;
 }
 function productDialog(product) {
   const id = 'product-' + product.id;
@@ -61,13 +61,14 @@ const fallbackCSS = '.product-dialog:not([open]){display:block;position:static;w
 const html = `<!doctype html><html lang="en-US"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff">
 <title>${esc(data.meta.title)}</title><meta name="description" content="${esc(data.meta.description)}"><meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="${data.meta.canonical}"><link rel="icon" href="../assets/innoxone-logo.svg" type="image/svg+xml">
+<link rel="canonical" href="${data.meta.canonical}"><link rel="sitemap" type="application/xml" href="../sitemap.xml"><link rel="icon" href="../assets/innoxone-logo.svg" type="image/svg+xml">
 <meta property="og:type" content="website"><meta property="og:site_name" content="INNOXONE"><meta property="og:locale" content="en_US"><meta property="og:title" content="${esc(data.meta.title)}"><meta property="og:description" content="${esc(data.meta.description)}"><meta property="og:url" content="${data.meta.canonical}"><meta property="og:image" content="https://ausystems.github.io/innoxone/assets/products-social.webp"><meta property="og:image:alt" content="INNO-F1 Original single-rider electric golf cart by INNOXONE"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(data.meta.title)}"><meta name="twitter:description" content="${esc(data.meta.description)}"><meta name="twitter:image" content="https://ausystems.github.io/innoxone/assets/products-social.webp">
 <link rel="preload" href="../assets/mona-sans-homepage.woff2" as="font" type="font/woff2" crossorigin>
 <style>${css}\n${fallbackCSS.split('}').filter(Boolean).map(rule => {const [selectors,body]=rule.split('{'); return selectors.split(',').map(selector => '.dialog-fallback '+selector).join(',')+'{'+body+'}';}).join('')}</style><noscript><style>${fallbackCSS}</style></noscript>
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
-</head><body>${header()}<main id="main">${intro()}${lineup()}${data.products.map(productDialog).join('')}${robo()}${roboDialog()}${visit()}${questions()}</main>${footer()}${menu()}<script>${runtime}</script></body></html>`;
+</head><body id="top">${header()}<main id="main">${intro()}${lineup()}${data.products.map(productDialog).join('')}${robo()}${roboDialog()}${visit()}${questions()}</main>${footer()}${menu()}<script>${runtime}
+${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></html>`;
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);

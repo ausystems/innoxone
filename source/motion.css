@@ -1,0 +1,19 @@
+/* Keep every word intact and readable while its letters appear. */
+[data-letter-title] .title-word{display:inline-block;white-space:nowrap}[data-letter-title] .title-letter{display:inline}
+.hero-content .line-mask>span{animation:none}
+.nav-left>a,.nav-right>a:not(.pill){position:relative}
+.nav-left>a:after,.nav-right>a:not(.pill):after{content:'';position:absolute;left:0;right:0;bottom:9px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-left>a:hover,.nav-right>a:not(.pill):hover,.nav-left>a[aria-current]{text-decoration:none}
+.nav-left>a:hover:after,.nav-left>a[aria-current]:after,.nav-right>a:not(.pill):hover:after,.nav-right>a[aria-current]:after{transform:scaleX(1)}
+.nav-left>a[aria-current]:after,.nav-right>a[aria-current]:after{background:var(--green-ink);height:2px}
+.menu-dialog[open] nav a,.mobile-menu:not([hidden]) nav a{animation:menu-arrive .24s ease-out both}
+.menu-dialog[open] nav a:nth-child(2),.mobile-menu:not([hidden]) nav a:nth-child(2){animation-delay:25ms}
+.menu-dialog[open] nav a:nth-child(3),.mobile-menu:not([hidden]) nav a:nth-child(3){animation-delay:50ms}
+.menu-dialog[open] nav a:nth-child(4),.mobile-menu:not([hidden]) nav a:nth-child(4){animation-delay:75ms}
+@keyframes menu-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.title-letter{opacity:1!important}}
+@media print{.title-letter{opacity:1!important}}
+
+.site-header{background:#fff}
+[data-letter-title] .title-word:before,[data-letter-title] .title-letter:before{content:none}
+.inno-header.on-dark .nav-left>a[aria-current]:after{background:var(--green)}.mobile-menu nav a[aria-current]{color:var(--green-ink)}

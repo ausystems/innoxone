@@ -19,7 +19,7 @@ The About Us page uses `source/about.json`, `source/build-about.cjs`, `source/ab
 
 The Contact page uses `source/contact.json`, `source/build-contact.cjs`, `source/contact.css` and `source/contact.js`. It preserves Full Name, Email Address, Phone Number, Subject and Your Message, plus General Inquiry, Technical Support and Partnership Inquiries. Product and experience links prefill a known subject and category, while keeping the fields editable.
 
-The products, About and Contact pages share their navigation, footer and base styles through `source/site-shell.cjs` and `source/site.css`.
+The products, About and Contact pages share navigation and base styles through `source/site-shell.cjs` and `source/site.css`. All four pages use the shared footer in `source/site-shell.cjs` and `source/footer.css`, including the visible sitemap and an XML sitemap link. `source/motion.js` and `source/motion.css` provide quick, once-only title letter fades and restrained image and menu animation. Reduced-motion preferences are respected, and all content remains visible without JavaScript.
 
 Build all four pages with:
 
@@ -39,7 +39,11 @@ The site uses responsive WebP photography, captioned video on the homepage and A
 
 Scrolling stays native on all four pages. The homepage product showcase uses direct model tabs on desktop and a swipeable track on mobile, without a pinned scroll sequence or external animation libraries. Persistent navigation, larger touch targets, compact landscape layouts, reduced-motion support and verified legal links are shared across the journey. Phone and email are available before the Contact form on mobile. Offscreen videos use lazy loading where supported, with native video fallbacks elsewhere.
 
-The homepage canonical remains https://www.innoxone.com/. The products, About and Contact pages use their actual GitHub Pages URLs as their canonicals until they are deployed to the primary domain. Update `source/products.json`, `source/about.json`, `source/contact.json` and the structured-data asset URLs when migrating domains. Inquiry actions lead to the new Contact page with model or visit context, while phone and direct email links remain available.
+All four pages use their actual GitHub Pages URLs as their canonicals, matching `sitemap.xml`. The organization’s official URL remains https://www.innoxone.com/. Update the `meta.canonical` values in `source/content.json`, `source/products.json`, `source/about.json`, `source/contact.json`, the sitemap base and structured-data asset URLs when migrating domains. Inquiry actions lead to the new Contact page with model or visit context, while phone and direct email links remain available.
+
+The Products page opens directly with the model cards. Each card offers product details in a dialog and a context-specific quote inquiry.
+
+The homepage background uses an unchanged copy of the original INNOXONE hero film from https://www.innoxone.com/wp-content/uploads/2026/05/Innoxone-Home-Page-Vid-Final.mp4. The 1920 × 1080, 71.98-second film is 12,025,440 bytes, with SHA-256 `95e6705a2932c45c5afd700dd8a282bced4bc660f987c1f192e955a55a95d6b6`. Responsive WebP poster frames are taken from the same film.
 
 No speculative pricing, stock claims or product specifications are included. ROBOCADDY is a 2027 collection preview. Photography, product footage and brand assets are supplied for this INNOXONE project. The font license is in `assets/Mona-Sans-OFL.txt`.
 

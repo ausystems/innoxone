@@ -22,3 +22,13 @@
 @media(max-width:359px){.dialog-order h3{font-size:12px}.dialog-contact{gap:10px;font-size:11px}.dialog-order{padding-inline:18px}}
 @media(orientation:landscape) and (max-height:500px){.product-dialog{width:calc(100% - 32px);max-height:calc(100dvh - 24px)}.dialog-body{display:grid;grid-template-columns:1fr 1fr}.dialog-visual{position:sticky;top:0;height:300px;padding:42px 12px 20px;align-self:start}.dialog-visual>img{height:210px;max-width:100%;width:100%}.dialog-copy{padding:52px 30px 28px}.dialog-order{position:static;grid-template-columns:1fr auto}.dialog-order>div{display:block}.dialog-order p{display:none}.dialog-close{top:12px;margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.product-dialog{scroll-behavior:auto}}
+
+/* Product-first collection: the carts are the first visual on the page. */
+.collection-intro{padding-top:46px}.collection-heading{grid-template-columns:1.7fr 1fr;gap:40px;margin-bottom:20px}.collection-heading h1{font-size:clamp(46px,4.9vw,72px);max-width:900px;line-height:1.05}.collection-heading>p{font-size:17px;max-width:285px;padding-bottom:3px}
+.collection-jumps{justify-content:flex-start;gap:32px;padding:0;font-size:13px}.collection-jumps a{min-height:48px}
+.product-lineup{padding-top:28px}.product-card{padding-top:28px}.card-visual{height:clamp(240px,20vw,300px);margin-bottom:20px}.card-actions{flex-wrap:wrap;gap:12px 24px}.card-actions .text-link{font-size:14px}
+.lineup-note{margin-top:28px}
+@media(max-width:900px){.collection-heading{grid-template-columns:1.5fr 1fr;gap:28px}.collection-heading h1{font-size:50px}.collection-heading>p{font-size:16px}.card-visual{height:240px}}
+@media(max-width:767px){.collection-intro{padding-top:32px}.collection-heading{display:block;margin-bottom:12px}.collection-heading h1{font-size:clamp(40px,9.7vw,58px);max-width:600px}.collection-heading>p{font-size:16px;max-width:360px;margin-top:16px}.collection-jumps{justify-content:flex-start;gap:24px;font-size:12px}.product-lineup{padding-top:20px}.card-visual{height:230px}.product-card{padding-top:24px}.card-actions .text-link{font-size:13px}}
+@media(max-width:359px){.collection-heading h1{font-size:38px}.collection-heading>p{font-size:15px}.collection-jumps{gap:20px}.card-visual{height:210px}.card-actions{gap:14px}.card-actions .pill{font-size:12px;padding-inline:17px}.card-actions .text-link{font-size:12px;gap:6px}}
+@media(min-width:768px) and (max-height:800px){.card-visual{height:220px}.card-description{min-height:48px}}

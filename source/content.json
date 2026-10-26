@@ -28,16 +28,17 @@
   },
   "nav": [
     {
+      "name": "Home",
+      "href": "./",
+      "current": true
+    },
+    {
       "name": "Golf Carts & Products",
       "href": "golf-carts-products/"
     },
     {
       "name": "About Us",
       "href": "about/"
-    },
-    {
-      "name": "CONNECT",
-      "href": "#connect"
     }
   ],
   "contact": {
@@ -56,11 +57,11 @@
       "Every Golfer"
     ],
     "description": "INNOXONE makes single-rider electric golf carts for golfers, golf courses and resorts. With INNO-F1, drive to your own ball and carry your clubs in a cart built for one.",
-    "poster": "assets/hero-1920.webp",
-    "alt": "Golfers driving their own INNO-F1 electric golf carts across the fairway.",
+    "poster": "assets/hero-gallery-1920.webp",
+    "alt": "INNO-F1 Original on display in the INNOXONE Golf Gallery.",
     "video": {
-      "desktop": "assets/hero-1080.mp4",
-      "mobile": "assets/hero-mobile.mp4"
+      "desktop": "assets/innoxone-original-hero.mp4",
+      "mobile": "assets/innoxone-original-hero.mp4"
     },
     "action": "Arrange a test ride",
     "href": "contact/?interest=test-ride"
@@ -397,7 +398,8 @@
   },
   "meta": {
     "title": "INNOXONE | Single-Rider Electric Golf Carts & Golf Mobility",
-    "description": "Explore INNO-F1 electric golf carts, discover INNO-F2 and preview ROBOCADDY. Personal golf mobility for golfers and courses. Arrange a test ride."
+    "description": "Explore INNO-F1 electric golf carts, discover INNO-F2 and preview ROBOCADDY. Personal golf mobility for golfers and courses. Arrange a test ride.",
+    "canonical": "https://ausystems.github.io/innoxone/"
   },
   "harold": {
     "headline": "Better golf starts with how you move.",

@@ -77,7 +77,7 @@
     window.dispatchEvent(new CustomEvent('innoxone:conversion',{detail:{action:link.protocol==='tel:'?'phone':link.protocol==='mailto:'?'email':'inquiry',interest:link.dataset.inquiry,section:'about'}}));
   });
   window.INNO_ABOUT_REVIEW = {prepare:() => {
-    films.forEach(film => film.pause());animations.forEach(animation=>animation.finish());
+    window.INNO_MOTION?.finish();films.forEach(film => film.pause());animations.forEach(animation=>animation.finish());
     document.querySelectorAll('img').forEach(image=>image.loading='eager');
     document.querySelectorAll('.film').forEach(frame=>frame.classList.remove('is-playing'));
     window.scrollTo({top:0,behavior:'instant'});
