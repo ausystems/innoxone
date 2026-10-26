@@ -1,4 +1,5 @@
 /* Keep every word intact and readable while its letters appear. */
+html.title-motion-ready [data-reveal-title]:not([data-title-started]){opacity:0}
 [data-letter-title] .title-word{display:inline-block;white-space:nowrap}[data-letter-title] .title-letter{display:inline}
 .hero-content .line-mask>span{animation:none}
 .nav-left>a,.nav-right>a:not(.pill){position:relative}
@@ -11,8 +12,8 @@
 .menu-dialog[open] nav a:nth-child(3),.mobile-menu:not([hidden]) nav a:nth-child(3){animation-delay:100ms}
 .menu-dialog[open] nav a:nth-child(4),.mobile-menu:not([hidden]) nav a:nth-child(4){animation-delay:150ms}
 @keyframes menu-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.title-letter{opacity:1!important}}
-@media print{.title-letter{opacity:1!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}[data-reveal-title],.title-letter{opacity:1!important}}
+@media print{[data-reveal-title],.title-letter{opacity:1!important}}
 
 .site-header{background:#fff}
 [data-letter-title] .title-word:before,[data-letter-title] .title-letter:before{content:none}

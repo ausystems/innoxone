@@ -1,7 +1,8 @@
 // Soft, once-only title fades. Layout and accessible names remain stable.
 (() => {
+  const boot = window.INNO_TITLE_BOOT;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  if (reduced.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  if (!boot?.active || reduced.matches) { boot?.release(); return; }
   const played = new WeakSet(), animations = new Set();
   const graphemes = typeof Intl.Segmenter === 'function' ? new Intl.Segmenter('en', {granularity:'grapheme'}) : null;
   const letters = text => graphemes ? [...graphemes.segment(text)].map(item=>item.segment) : Array.from(text);
@@ -29,13 +30,23 @@
       }
       node.replaceWith(fragment);
     }
+    // The parent becomes visible only after every letter has its hidden start state.
+    title.setAttribute('data-title-started','');
   }
   const titleObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-    if(entry.isIntersecting){titleFade(entry.target);titleObserver.unobserve(entry.target);}
+    if(entry.isIntersecting){
+      try{titleFade(entry.target);}catch(error){finish();console.error('Title reveal could not start.',error);}
+      titleObserver.unobserve(entry.target);
+    }
   }),{threshold:.18});
-  document.querySelectorAll('main h1,main h2,[data-reveal-title]').forEach(title=>{
-    if(!title.matches('.sr-only')&&!title.querySelector('a,button'))titleObserver.observe(title);
-  });
+  const titles=[...document.querySelectorAll('[data-reveal-title]')];
+  function begin(){
+    if(!boot.active || reduced.matches)return;
+    titles.forEach(title=>titleObserver.observe(title));
+    clearTimeout(boot.timer);
+  }
+  // Let the display font settle, without making slow connections wait indefinitely.
+  Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,600))]).then(begin);
   // Photos gently settle into place without delaying their visibility.
   const mediaObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
     if(!entry.isIntersecting)return;
@@ -43,8 +54,12 @@
     animations.add(animation);animation.onfinish=()=>animations.delete(animation);mediaObserver.unobserve(entry.target);
   }),{threshold:.2});
   document.querySelectorAll('.visit-image img,.contact-gallery-photo img,.gallery-photo img,.benefit-photo img').forEach(image=>mediaObserver.observe(image));
-  function finish(){animations.forEach(animation=>animation.finish());animations.clear();}
-  reduced.addEventListener('change',()=>{if(reduced.matches){titleObserver.disconnect();mediaObserver.disconnect();finish();}});
+  function finish(){
+    titleObserver.disconnect();mediaObserver.disconnect();
+    animations.forEach(animation=>animation.finish());animations.clear();
+    boot.release();
+  }
+  reduced.addEventListener('change',()=>{if(reduced.matches)finish();});
   window.addEventListener('beforeprint',finish);
   window.addEventListener('pageshow',event=>{if(event.persisted)finish();});
   window.INNO_MOTION={finish};

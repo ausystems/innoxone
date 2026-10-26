@@ -24,11 +24,11 @@ const html=`<!doctype html>
 <link rel="icon" href="assets/innoxone-logo.svg" type="image/svg+xml"><link rel="preload" href="assets/mona-sans-homepage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" media="(min-width:768px)" href="assets/hero-gallery-1920.webp" imagesrcset="assets/hero-gallery-768.webp 768w, assets/hero-gallery-1280.webp 1280w, assets/hero-gallery-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" media="(max-width:767px)" href="assets/hero-gallery-mobile-480.webp" imagesrcset="assets/hero-gallery-mobile-480.webp 480w, assets/hero-gallery-mobile-768.webp 768w" imagesizes="100vw" fetchpriority="high">
-<style>${css}</style>
+<script>${fs.readFileSync(path.join(__dirname,'motion-head.js'),'utf8')}</script><style>${css}</style>
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
 </head><body id="top"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="inno-wordmark" viewBox="${DATA.logo.viewBox}"><path fill="currentColor" fill-rule="evenodd" d="${DATA.logo.ink}"/><path fill="var(--green)" fill-rule="evenodd" d="${DATA.logo.green}"/></symbol></defs></svg><div id="app">${markup}</div><script>
 const DATA = ${JSON.stringify({config:DATA.config,labels:DATA.labels,hero:DATA.hero,variants:DATA.variants,contact:DATA.contact}).replace(/</g,'\\u003c')};
-${runtime}
+${runtime}</script><script>
 ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}
 </script></body></html>`;
 fs.writeFileSync(path.join(ROOT,'index.html'),html);
