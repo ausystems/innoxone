@@ -9,6 +9,12 @@ Responsive pages for INNOXONE personal golf mobility.
 - About Us: https://ausystems.github.io/innoxone/about/
 - Contact Us: https://ausystems.github.io/innoxone/contact/
 
+## Three-page visual redesign
+
+The product collection uses an asymmetrical vehicle gallery, persistent model shortcuts, redesigned native product dialogs, a full-width ROBOCADDY silhouette reveal, a Gallery invitation and a compact FAQ layout. Every cart remains available through its existing dialog and quote path.
+
+About Us is an editorial sequence with a founder portrait and quote, a large interview film with chapter navigation, an offset design-photo composition, Harold’s owner film, the mobility vision and a Gallery invitation. Contact uses an open masthead, direct phone and email links, a spacious inquiry form and a Gallery panel. The five original fields, categories, validation and honest email handoff remain intact.
+
 ## Editing and building
 
 Homepage content, rendering and styles live in `source/content.json`, `source/page.js` and `source/style.css`.
