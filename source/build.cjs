@@ -2,9 +2,9 @@ const fs=require('fs'),vm=require('vm'),path=require('path');
 const ROOT=path.resolve(__dirname,'..');
 const shell=require('./site-shell.cjs');
 const DATA=JSON.parse(fs.readFileSync(path.join(__dirname,'content.json'),'utf8'));
-const css=fs.readFileSync(path.join(__dirname,'style.css'),'utf8')+fs.readFileSync(path.join(__dirname,'footer.css'),'utf8')+fs.readFileSync(path.join(__dirname,'motion.css'),'utf8'),js=fs.readFileSync(path.join(__dirname,'page.js'),'utf8');
+const css=fs.readFileSync(path.join(__dirname,'style.css'),'utf8')+fs.readFileSync(path.join(__dirname,'footer.css'),'utf8')+fs.readFileSync(path.join(__dirname,'editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'home-editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'motion.css'),'utf8'),js=fs.readFileSync(path.join(__dirname,'page.js'),'utf8');
 const pure=js.split('// ENHANCE:')[0];
-const markup=vm.runInNewContext('const DATA='+JSON.stringify(DATA)+';'+pure+';renderHeader()+`<main id="main">${renderHero()+renderHarold()+renderOrigin()+renderBenefits()+renderWhy()+renderLineup()+renderDetails()+renderF2()+renderRobo()+renderConnect()+renderGallery()+renderSister()+renderFaq()+renderInquiry()}</main>`+renderFooter()+renderQuickContact()',{SHARED_FOOTER:shell.footer('home')});
+const markup=vm.runInNewContext('const DATA='+JSON.stringify(DATA)+';'+pure+';renderHeader()+`<main id="main">${renderHero()+renderHarold()+renderOrigin()+renderBenefits()+renderWhy()+renderLineup()+renderDetails()+renderF2()+renderRobo()+renderConnect()+renderGallery()+renderSister()+renderFaq()+renderInquiry()}</main>`+renderFooter()+renderQuickContact()',{SHARED_FOOTER:shell.footer('home'),SHARED_MENU_STORY:shell.menuStory('home')});
 const url=DATA.meta.canonical;
 const assetBase='https://ausystems.github.io/innoxone/';
 const organization={'@type':'Organization','@id':DATA.config.canonical+'#organization',name:'INNOXONE',url:DATA.config.canonical,logo:assetBase+'assets/innoxone-logo.svg',telephone:DATA.contact.tel,email:DATA.contact.email,address:{'@type':'PostalAddress',streetAddress:'31896 Plaza Dr Suite D2',addressLocality:'San Juan Capistrano',addressRegion:'CA',postalCode:'92675',addressCountry:'US'},contactPoint:{'@type':'ContactPoint',telephone:DATA.contact.tel,email:DATA.contact.email,contactType:'sales and support'},sameAs:DATA.footer.socials.map(s=>s.href)};
@@ -26,13 +26,13 @@ const html=`<!doctype html>
 <link rel="preload" as="image" media="(max-width:767px)" href="assets/hero-gallery-mobile-480.webp" imagesrcset="assets/hero-gallery-mobile-480.webp 480w, assets/hero-gallery-mobile-768.webp 768w" imagesizes="100vw" fetchpriority="high">
 <script>${fs.readFileSync(path.join(__dirname,'motion-head.js'),'utf8')}</script><style>${css}</style>
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
-</head><body id="top"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="inno-wordmark" viewBox="${DATA.logo.viewBox}"><path fill="currentColor" fill-rule="evenodd" d="${DATA.logo.ink}"/><path fill="var(--green)" fill-rule="evenodd" d="${DATA.logo.green}"/></symbol></defs></svg><div id="app">${markup}</div><script>
+</head><body id="top" class="home-page"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="inno-wordmark" viewBox="${DATA.logo.viewBox}"><path fill="currentColor" fill-rule="evenodd" d="${DATA.logo.ink}"/><path fill="var(--green)" fill-rule="evenodd" d="${DATA.logo.green}"/></symbol></defs></svg><div id="app">${markup}</div><script>
 const DATA = ${JSON.stringify({config:DATA.config,labels:DATA.labels,hero:DATA.hero,variants:DATA.variants,contact:DATA.contact}).replace(/</g,'\\u003c')};
 ${runtime}</script><script>
 ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}
 </script></body></html>`;
 fs.writeFileSync(path.join(ROOT,'index.html'),html);
-fs.writeFileSync(path.join(ROOT,'sitemap-homepage.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ausystems.github.io/innoxone/</loc><lastmod>2026-10-25</lastmod></url></urlset>\n');
+fs.writeFileSync(path.join(ROOT,'sitemap-homepage.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ausystems.github.io/innoxone/</loc><lastmod>2026-10-27</lastmod></url></urlset>\n');
 console.log('Built static homepage:',Buffer.byteLength(html),'bytes; FAQs:',DATA.faq.items.length);
 
 // Build the shared collection page alongside the homepage.

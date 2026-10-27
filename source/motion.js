@@ -53,7 +53,7 @@
     const animation=entry.target.animate([{transform:'scale(1.025)'},{transform:'scale(1)'}],{duration:850,easing:'cubic-bezier(.22,1,.36,1)'});
     animations.add(animation);animation.onfinish=()=>animations.delete(animation);mediaObserver.unobserve(entry.target);
   }),{threshold:.2});
-  document.querySelectorAll('.visit-image img,.contact-gallery-photo img,.gallery-photo img,.benefit-photo img').forEach(image=>mediaObserver.observe(image));
+  document.querySelectorAll('.visit-image img,.contact-gallery-photo img,.gallery-photo img,.benefit-photo img,.media-reveal img,.origin-road-photo img,.sister-photo img').forEach(image=>mediaObserver.observe(image));
   function finish(){
     titleObserver.disconnect();mediaObserver.disconnect();
     animations.forEach(animation=>animation.finish());animations.clear();

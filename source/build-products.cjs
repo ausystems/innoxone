@@ -4,7 +4,7 @@ const ROOT = path.resolve(__dirname, '..');
 const common = JSON.parse(fs.readFileSync(path.join(__dirname, 'content.json'), 'utf8'));
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'products.json'), 'utf8'));
 const shell = require('./site-shell.cjs');
-const css = fs.readFileSync(path.join(__dirname, 'site.css'), 'utf8') + fs.readFileSync(path.join(__dirname, 'products.css'), 'utf8') + fs.readFileSync(path.join(__dirname,'footer.css'),'utf8') + fs.readFileSync(path.join(__dirname,'motion.css'),'utf8');
+const css = fs.readFileSync(path.join(__dirname, 'site.css'), 'utf8') + fs.readFileSync(path.join(__dirname, 'products.css'), 'utf8') + fs.readFileSync(path.join(__dirname,'footer.css'),'utf8') + fs.readFileSync(path.join(__dirname,'editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'products-editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'motion.css'),'utf8');
 const runtime = fs.readFileSync(path.join(__dirname, 'products.js'), 'utf8');
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 const asset = name => '../assets/' + name;
@@ -29,6 +29,9 @@ function card(product) {
 }
 function lineup() {
   return `<section class="product-lineup wrap" id="lineup" aria-labelledby="lineup-title"><h2 class="sr-only" id="lineup-title">Explore our golf carts</h2><div class="product-grid">${data.products.map(card).join('')}</div><p class="lineup-note">Contact our team for pricing, specifications and availability.</p></section>`;
+}
+function comparison() {
+  return `<section class="model-guide wrap" aria-labelledby="model-guide-title"><details class="model-comparison"><summary><span><span class="guide-label">A closer look</span><span id="model-guide-title">Which INNO-F1 fits your round?</span></span><span class="guide-toggle">Compare models${plus}</span></summary><div class="comparison-content"><table><caption class="sr-only">INNO-F1 model comparison</caption><thead><tr><th scope="col">Model</th><th scope="col">Designed for</th><th scope="col">Configuration</th><th scope="col"><span class="sr-only">Product details</span></th></tr></thead><tbody>${data.products.filter(p=>p.family==='INNO-F1').map(p=>`<tr><th scope="row">${esc(p.name)}</th><td>${p.id==='inno-f1-marshal'?'Marshals and course staff':'Individual golfers'}</td><td>${p.id==='inno-f1-original'?'Single seat, armrests and golf-bag space':p.id==='inno-f1-light'?'Single seat, slim roof frame and golf-bag space':'Single seat and rear utility box'}</td><td><a class="text-link" href="#product-${p.id}" data-open="product-${p.id}" aria-haspopup="dialog" aria-label="View ${esc(p.name)} details">View details${arrow}</a></td></tr>`).join('')}</tbody></table><p>Our team can help you confirm the right configuration for your needs.</p></div></details></section>`;
 }
 function productDialog(product) {
   const id = 'product-' + product.id;
@@ -67,10 +70,10 @@ const html = `<!doctype html><html lang="en-US"><head>
 <link rel="preload" href="../assets/mona-sans-homepage.woff2" as="font" type="font/woff2" crossorigin>
 <script>${fs.readFileSync(path.join(__dirname,'motion-head.js'),'utf8')}</script><style>${css}\n${fallbackCSS.split('}').filter(Boolean).map(rule => {const [selectors,body]=rule.split('{'); return selectors.split(',').map(selector => '.dialog-fallback '+selector).join(',')+'{'+body+'}';}).join('')}</style><noscript><style>${fallbackCSS}</style></noscript>
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
-</head><body id="top">${header()}<main id="main">${intro()}${lineup()}${data.products.map(productDialog).join('')}${robo()}${roboDialog()}${visit()}${questions()}</main>${footer()}${menu()}<script>${runtime}</script><script>
+</head><body id="top" class="products-page">${header()}<main id="main">${intro()}${lineup()}${comparison()}${data.products.map(productDialog).join('')}${robo()}${roboDialog()}${visit()}${questions()}</main>${footer()}${menu()}<script>${runtime}</script><script>
 ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></html>`;
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-25</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-27</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');

@@ -9,11 +9,15 @@ Responsive pages for INNOXONE personal golf mobility.
 - About Us: https://ausystems.github.io/innoxone/about/
 - Contact Us: https://ausystems.github.io/innoxone/contact/
 
-## Three-page visual redesign
+## Editorial design across all four pages
 
 The product collection uses an asymmetrical vehicle gallery, persistent model shortcuts, redesigned native product dialogs, a full-width ROBOCADDY silhouette reveal, a Gallery invitation and a compact FAQ layout. Every cart remains available through its existing dialog and quote path.
 
 About Us is an editorial sequence with a founder portrait and quote, a large interview film with chapter navigation, an offset design-photo composition, Harold’s owner film, the mobility vision and a Gallery invitation. Contact uses an open masthead, direct phone and email links, a spacious inquiry form and a Gallery panel. The five original fields, categories, validation and honest email handoff remain intact.
+
+The homepage now uses a composed founder cinema, a tighter F2 product spread, an inset CONNECT caption and clearer inquiry panels. The collection adds an expandable INNO-F1 comparison with links into the existing dialogs. About pairs ROBOCADDY and CONNECT with their own photography. The Contact Gallery appears alongside the opening invitation on desktop, with the form first on mobile. A photographic menu and larger footer signature connect the four pages.
+
+Shared refinements live in `source/editorial.css`. Each page loads only its own additional styles from `source/home-editorial.css`, `source/products-editorial.css`, `source/about-editorial.css` or `source/contact-editorial.css`. No new client-side libraries are required.
 
 ## Editing and building
 
@@ -59,4 +63,6 @@ The GitHub Pages preview uses an explicit email handoff to `info@innoxone.com`. 
 
 The existing WordPress form uses Elementor on page 47. It does not allow the GitHub preview origin to read its form responses. No WordPress endpoint, CORS policy, or production recipient was changed, and no real test inquiry was sent. Direct web submission needs an approved form-service connection or integration on the primary domain; the email handoff is not a direct-submission backend.
 
-Contact validation completed at 320, 390, 768, 1024 and 1440 pixels, including required-field and email validation, inquiry categories, sixteen subject mappings, long-message handling, clipboard fallback, keyboard navigation, reduced motion and JavaScript-free access. The contact page’s local mobile and desktop audits scored 100 in performance, accessibility, best practices and SEO. Email handoff tests intercepted the email link without sending messages.
+Contact validation completed at 320, 390, 768, 1024 and 1440 pixels, including required-field and email validation, inquiry categories, sixteen subject mappings, long-message handling, clipboard fallback, keyboard navigation, reduced motion and JavaScript-free access. Local audits verify performance, accessibility, best practices and SEO; these are laboratory checks rather than field results. Email handoff tests intercepted the email link without sending messages.
+
+The latest editorial release was checked in Chromium and WebKit at phone, tablet and desktop widths. Verification covers the new comparison disclosure, modal focus restoration, navigation, no-flash headline setup, reduced motion, JavaScript-free content, video chapters and inquiry prefills.

@@ -1,0 +1,59 @@
+/* Products editorial refinement. Keep the established palette and native interactions. */
+.products-page .product-lineup{padding-bottom:32px}
+.products-page .product-card{border-radius:var(--photo-radius);transition:background-color .4s ease}
+.products-page .product-card:nth-child(2){background:#f3f4f1}
+.products-page .product-card:nth-child(3){background:#eef1ef}
+.products-page .product-card:nth-child(4){background:#f3f4f2}
+.products-page .card-detail-link{background:#fff9}
+.model-guide{padding-bottom:88px}
+.model-comparison{border-block:1px solid #d6dad1}
+.model-comparison>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:28px;padding:30px 0;cursor:pointer}
+.model-comparison>summary::-webkit-details-marker{display:none}
+.model-comparison>summary>span:first-child{display:grid;gap:10px}
+.guide-label{font-size:12px;color:#62675e}
+#model-guide-title{font-size:clamp(26px,2.6vw,38px);font-stretch:90%;font-weight:400;line-height:1.12;letter-spacing:-.03em}
+.guide-toggle{display:inline-flex;align-items:center;gap:22px;font-size:13px;flex:none;min-height:44px}
+.model-comparison[open] .plus:after{transform:rotate(0)}
+.comparison-content{padding:4px 0 30px}
+.comparison-content table{border-collapse:collapse;width:100%;text-align:left}
+.comparison-content thead th{font-size:12px;font-weight:400;color:#62675e;padding:12px 24px 16px 0}
+.comparison-content tbody th{font-size:18px;font-weight:500;letter-spacing:-.02em;width:23%}
+.comparison-content td{font-size:14px;color:#626269}
+.comparison-content tbody th,.comparison-content td{padding:24px 24px 24px 0;border-top:1px solid var(--line)}
+.comparison-content td:last-child{padding-right:0;text-align:right;color:var(--ink)}
+.comparison-content .text-link{font-size:13px;white-space:nowrap}
+.comparison-content>p{font-size:12px;line-height:1.6;color:#626269;margin-top:16px}
+.products-page .robo-heading h2{max-width:1050px;margin-inline:auto}
+.products-page .robo-image{margin-top:32px}
+.products-page .visit-section{padding-block:var(--editorial-space)}
+.products-page .visit-copy{border-radius:10px 0 0 10px}
+.products-page .questions-intro h2{max-width:900px}
+.products-page .dialog-visual{background:#eff2ed}
+.products-page .robo-dialog .dialog-visual{background:#090a0b}
+@media(max-width:767px){
+.model-guide{padding-bottom:64px}
+.model-comparison>summary{padding:24px 0;align-items:start;gap:18px}
+#model-guide-title{font-size:28px;max-width:250px}
+.guide-label{font-size:11px}
+.guide-toggle{font-size:0;gap:0;min-width:44px;justify-content:center;margin-top:22px}
+.comparison-content table,.comparison-content tbody{display:block}
+.comparison-content thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.comparison-content tr{display:grid;grid-template-columns:1fr auto;gap:8px 20px;padding:22px 0;border-top:1px solid var(--line)}
+.comparison-content tbody th,.comparison-content td{display:block;border:0;padding:0;width:auto;text-align:left}
+.comparison-content tbody th{grid-column:1/-1;font-size:21px;margin-bottom:4px}
+.comparison-content td:nth-child(2){grid-column:1/-1;font-size:13px;color:var(--ink)}
+.comparison-content td:nth-child(3){font-size:13px;max-width:235px;line-height:1.6}
+.comparison-content td:last-child{align-self:center}
+.comparison-content .text-link{font-size:12px;gap:7px}
+.comparison-content .arrow{width:16px}
+}
+@media(max-width:359px){
+#model-guide-title{font-size:26px}
+.comparison-content tr{gap:8px 12px}
+}
+@media(prefers-reduced-motion:reduce){
+.products-page .product-card{transition:none}
+}
+@media print{
+.model-comparison{break-inside:avoid}
+}

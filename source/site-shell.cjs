@@ -10,8 +10,12 @@ const nav = current => pages.filter(page => page.id !== 'contact').map(page => `
 function header(current) {
   return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><nav class="nav-left" aria-label="Main navigation">${nav(current)}</nav><button class="menu-button" type="button" data-open="site-menu" aria-controls="site-menu" aria-expanded="false"><span class="menu-lines" aria-hidden="true"></span>Menu</button>${logo}<div class="nav-right"><a href="${contactURL}"${current === 'contact' ? ' aria-current="page"' : ''}>Contact</a><a class="pill" href="${current === 'contact' ? '#contact-form' : contactURL}" data-inquiry="general"><span class="cta-wide">${current === 'contact' ? 'Start an inquiry' : 'Request a quote'}</span><span class="cta-short">Inquire</span></a></div></div></header>`;
 }
+function menuStory(current) {
+  const base=current==='home'?'':'../';
+  return `<a class="menu-story" href="${base}golf-carts-products/"><figure><img src="${base}assets/origin-drive-960.webp" width="960" height="640" alt="An orange INNO-F1 parked outside the clubhouse." loading="lazy" decoding="async"></figure><span class="menu-story-copy"><span>Find your own way around the course.</span><span class="menu-story-action">Explore the collection <span aria-hidden="true">↗</span></span></span></a>`;
+}
 function menu(current) {
-  return `<dialog class="menu-dialog" id="site-menu" aria-label="Main menu">${logo}<button class="dialog-close" type="button" data-close aria-label="Close menu" autofocus><span class="cross" aria-hidden="true"></span></button><nav aria-label="Mobile navigation">${nav(current)}<a href="${contactURL}"${current === 'contact' ? ' aria-current="page"' : ''}>Contact / Request a quote</a></nav><div class="menu-contact"><a href="tel:${common.contact.tel}">${common.contact.phone}</a><a href="mailto:${common.contact.email}">${common.contact.email}</a><p>${common.contact.address}</p></div></dialog>`;
+  return `<dialog class="menu-dialog" id="site-menu" aria-label="Main menu">${logo}<button class="dialog-close" type="button" data-close aria-label="Close menu" autofocus><span class="cross" aria-hidden="true"></span></button><div class="menu-layout"><div class="menu-primary"><nav aria-label="Mobile navigation">${nav(current)}<a href="${contactURL}"${current === 'contact' ? ' aria-current="page"' : ''}>Contact / Request a quote</a></nav><div class="menu-contact"><a href="tel:${common.contact.tel}">${common.contact.phone}</a><a href="mailto:${common.contact.email}">${common.contact.email}</a><p>${common.contact.address}</p></div></div>${menuStory(current)}</div></dialog>`;
 }
 function footer(current) {
   const base = current === 'home' ? '' : '../';
@@ -29,4 +33,4 @@ function footer(current) {
     <div class="footer-last"><nav class="footer-utility" aria-label="Legal and sitemap"><a href="https://www.innoxone.com/privacy-policy/">Privacy Policy</a><a href="https://www.innoxone.com/terms-of-service/">Terms of Service</a><a href="${base}sitemap.xml">XML Sitemap</a></nav><nav class="footer-networks" aria-label="Social media">${common.footer.socials.map(social=>`<a href="${esc(social.href)}">${esc(social.name)}</a>`).join('')}</nav><a class="back-top" href="#top">Back to top${arrow}</a></div><p class="footer-copyright">© 2026 INNOXONE. All rights reserved.</p>
   </div></footer>`;
 }
-module.exports = {header, menu, footer, esc, mark, logo};
+module.exports = {header, menu, menuStory, footer, esc, mark, logo};

@@ -1,0 +1,69 @@
+/* Shared editorial refinement. Keep the established palette and native interactions. */
+:root{--editorial-space:clamp(72px,8vw,120px);--photo-radius:10px}
+::selection{background:#c8edb3;color:#1d1d1f}
+.site-header{box-shadow:0 1px 0 #1d1d1f0a}
+.pill-outline:hover{background:#f1f3ef;border-color:#686d65}
+.menu-layout{width:100%;max-width:1280px;margin:64px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:start}
+.menu-primary{min-width:0}
+.menu-dialog .menu-layout nav,.mobile-menu .menu-layout nav{margin-top:0;gap:4px}
+.menu-dialog .menu-layout nav a,.mobile-menu .menu-layout nav a{font-size:clamp(28px,3.6vw,52px);font-weight:400;font-stretch:90%;letter-spacing:-.04em;line-height:1.12;min-height:64px;padding-block:10px}
+.menu-dialog .menu-contact,.mobile-menu .menu-contact{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);gap:2px;font-size:14px}
+.menu-layout .menu-contact p{font-size:12px;line-height:1.7;margin-top:12px}
+.menu-story{display:block;align-self:start;color:var(--ink)}
+.menu-story figure{margin:0;aspect-ratio:1.2;border-radius:var(--photo-radius);overflow:hidden}
+.menu-story img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transition:transform .8s var(--ease)}
+.menu-story-copy{display:block;margin-top:20px}
+.menu-story-copy>span:first-child{display:block;font-size:clamp(23px,2.5vw,36px);font-stretch:90%;letter-spacing:-.03em;line-height:1.15;max-width:390px}
+.menu-story-action{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-top:14px;min-height:44px}
+.menu-story-action>span{font-size:23px;font-weight:400}
+.menu-story:hover .menu-story-action{text-decoration:underline;text-underline-offset:5px}
+@media(hover:hover) and (pointer:fine){
+.menu-story:hover img{transform:scale(1.025)}
+}
+.global-footer{padding-top:72px;background:#f2f3f0}
+.global-footer .footer-signature{padding-bottom:56px;align-items:end}
+.global-footer .footer-brand{width:180px}
+.global-footer .footer-promise{font-size:clamp(36px,4.4vw,66px);line-height:1.04;max-width:850px;margin-top:32px;letter-spacing:-.04em}
+.global-footer .footer-signature>.text-link{gap:20px;font-size:14px}
+.global-footer .footer-signature>.text-link .arrow{width:46px;height:46px;padding:12px;border:1px solid #999f94;border-radius:50%}
+.global-footer .footer-map{grid-template-columns:1fr 1fr 1.2fr;gap:8%;border-color:#d7dbd2;padding-block:40px}
+.global-footer li>a{min-height:40px}
+@media(max-width:767px){
+.menu-layout{grid-template-columns:1fr;margin-top:36px;gap:28px}
+.menu-dialog .menu-layout nav a,.mobile-menu .menu-layout nav a{font-size:32px;min-height:54px;line-height:1.15;padding-block:8px}
+.menu-dialog .menu-contact,.mobile-menu .menu-contact{margin-top:22px;padding-top:18px}
+.menu-story{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:20px;align-items:center}
+.menu-story figure{aspect-ratio:1.2;border-radius:6px}
+.menu-story-copy{margin:0}
+.menu-story-copy>span:first-child{font-size:23px;line-height:1.12}
+.menu-story-action{font-size:11px;gap:10px;margin-top:8px;min-height:44px}
+.menu-story-action>span{font-size:19px}
+.global-footer{padding-top:48px}
+.global-footer .footer-signature{padding-bottom:36px}
+.global-footer .footer-promise{font-size:38px;max-width:450px;margin-top:28px}
+.global-footer .footer-map{gap:32px 24px;grid-template-columns:1fr 1fr;padding-block:28px}
+.global-footer li>a{min-height:44px}
+.global-footer .footer-contact{grid-column:1/-1}
+}
+@media(max-width:359px){
+.menu-story{gap:14px}
+.menu-story-copy>span:first-child{font-size:20px}
+.menu-story-action{font-size:10px;gap:5px}
+.global-footer .footer-promise{font-size:32px}
+}
+@media(orientation:landscape) and (max-height:500px){
+.menu-layout{margin-top:28px;grid-template-columns:1fr .7fr;gap:8%}
+.menu-dialog .menu-layout nav a,.mobile-menu .menu-layout nav a{font-size:26px;min-height:44px;padding-block:6px}
+.menu-story{display:block}
+.menu-story figure{aspect-ratio:1.7}
+.menu-story-copy{margin-top:16px}
+.menu-story-copy>span:first-child{font-size:24px}
+.menu-story-action{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+.menu-story img{transition:none}
+.menu-story:hover img{transform:none}
+}
+@media print{
+.menu-layout{display:none}
+}

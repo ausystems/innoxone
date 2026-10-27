@@ -5,7 +5,7 @@ const shell = require('./site-shell.cjs');
 const common = require('./content.json');
 const data = require('./about.json');
 const {esc} = shell;
-const css = fs.readFileSync(path.join(__dirname,'site.css'),'utf8') + fs.readFileSync(path.join(__dirname,'about.css'),'utf8') + fs.readFileSync(path.join(__dirname,'footer.css'),'utf8') + fs.readFileSync(path.join(__dirname,'motion.css'),'utf8');
+const css = fs.readFileSync(path.join(__dirname,'site.css'),'utf8') + fs.readFileSync(path.join(__dirname,'about.css'),'utf8') + fs.readFileSync(path.join(__dirname,'footer.css'),'utf8') + fs.readFileSync(path.join(__dirname,'editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'about-editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'motion.css'),'utf8');
 const js = fs.readFileSync(path.join(__dirname,'about.js'),'utf8');
 const arrow = '<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>';
 const play = '<span class="play-circle" aria-hidden="true"></span>';
@@ -34,7 +34,7 @@ function owner() {
 }
 function future() {
   const d=data.future;
-  return `<section class="future-section" aria-labelledby="future-title"><div class="wrap future-intro"><h2 id="future-title" data-reveal-title>${lines(d.headline)}</h2><p>${esc(d.text)}</p></div><figure class="future-image media-reveal"><img src="${asset('connect-golfer-1600.webp')}" srcset="${set('connect-golfer-640.webp 640w, connect-golfer-1000.webp 1000w, connect-golfer-1600.webp 1600w')}" sizes="100vw" width="1600" height="900" alt="Golfers moving independently in their INNO-F1 carts across a green fairway." loading="lazy" decoding="async"></figure><div class="wrap future-paths"><article><p class="path-label">More choice for golfers</p><h3>ROBOCADDY®</h3><p>${esc(d.robo)}</p><a class="text-link" href="../golf-carts-products/#product-robocaddy">Explore the 2027 preview${arrow}</a></article><article><p class="path-label">A vision for courses</p><h3>INNOXONE CONNECT</h3><p>${esc(d.connect)}</p><p class="future-note">CONNECT is a platform vision. Ask about development and future availability.</p>${inquiry('Talk about your course','connect-igo','text-link')}</article></div></section>`;
+  return `<section class="future-section" aria-labelledby="future-title"><div class="wrap future-intro"><h2 id="future-title" data-reveal-title>${lines(d.headline)}</h2><p>${esc(d.text)}</p></div><div class="wrap future-paths"><article><figure class="future-preview future-preview-robo media-reveal"><img src="${asset('robocaddy-teaser-1280.webp')}" srcset="${set('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w')}" sizes="(max-width:767px) 90vw, 48vw" width="1280" height="512" alt="The upcoming ROBOCADDY family shown in silhouette." loading="lazy" decoding="async"></figure><p class="path-label">More choice for golfers</p><h3>ROBOCADDY®</h3><p>${esc(d.robo)}</p><a class="text-link" href="../golf-carts-products/#product-robocaddy">Explore the 2027 preview${arrow}</a></article><article><figure class="future-preview media-reveal"><img src="${asset('connect-golfer-1000.webp')}" srcset="${set('connect-golfer-640.webp 640w, connect-golfer-1000.webp 1000w, connect-golfer-1600.webp 1600w')}" sizes="(max-width:767px) 90vw, 40vw" width="1600" height="900" alt="Golfers moving independently in INNO-F1 carts across a green fairway." loading="lazy" decoding="async"></figure><p class="path-label">A vision for courses</p><h3>INNOXONE CONNECT</h3><p>${esc(d.connect)}</p><p class="future-note">CONNECT is a platform vision. Ask about development and future availability.</p>${inquiry('Talk about your course','connect-igo','text-link')}</article></div></section>`;
 }
 function gallery() {
   const d=data.visit;
@@ -56,5 +56,5 @@ const html = `<!doctype html><html lang="en-US"><head><meta charset="utf-8"><met
 ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></html>`;
 fs.mkdirSync(path.join(ROOT,'about'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'about/index.html'),html);
-fs.writeFileSync(path.join(ROOT,'sitemap-about.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-25</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT,'sitemap-about.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-27</lastmod></url></urlset>\n`);
 console.log('Built About Us:',Buffer.byteLength(html),'bytes; founder and owner films with captions');
