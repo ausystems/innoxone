@@ -21,7 +21,7 @@ Shared refinements live in `source/editorial.css`. Each page loads only its own 
 
 ## Editing and building
 
-Homepage content, rendering and styles live in `source/content.json`, `source/page.js` and `source/style.css`.
+Homepage content, rendering and styles live in `source/content.json`, `source/page.js` and `source/style.css`. The INNO-F1 model stage has its own `source/lineup.css`.
 
 The products collection uses `source/products.json`, `source/build-products.cjs`, `source/products.css` and `source/products.js`. Product details open in native dialogs on the collection page. Product anchors support shared links, browser Back and Forward, and focus restoration when a card closes. JavaScript-free visitors can read the details inline. No individual product pages or checkout are created.
 
@@ -47,7 +47,7 @@ Commit generated HTML and sitemaps with their source changes. GitHub Pages publi
 
 The site uses responsive WebP photography, captioned video on the homepage and About page, and self-hosted Mona Sans. Navigation and assets support the GitHub Pages project subpath.
 
-Scrolling stays native on all four pages. The homepage product showcase uses direct model tabs on desktop and a swipeable track on mobile, without a pinned scroll sequence or external animation libraries. Persistent navigation, larger touch targets, compact landscape layouts, reduced-motion support and verified legal links are shared across the journey. Phone and email are available before the Contact form on mobile. Offscreen videos use lazy loading where supported, with native video fallbacks elsewhere.
+Scrolling stays native on all four pages. The homepage INNO-F1 showcase uses a native CSS sticky stage with three scroll chapters. Original, Light and Marshal each have a large backdrop name. A thumbnail selector shows all three carts at once, and model details and quote links follow the selection. Intersection observers update chapters without intercepting wheel or vertical touch gestures. Direct tabs, arrow-key navigation and horizontal touch swipes remain available. Reduced motion and short landscape layouts use manual selection; JavaScript-free visitors see all three models in a vertical sequence. No external animation libraries are needed. Persistent navigation, larger touch targets, compact landscape layouts, reduced-motion support and verified legal links are shared across the journey. Phone and email are available before the Contact form on mobile. Offscreen videos use lazy loading where supported, with native video fallbacks elsewhere.
 
 All four pages use their actual GitHub Pages URLs as their canonicals, matching `sitemap.xml`. The organization’s official URL remains https://www.innoxone.com/. Update the `meta.canonical` values in `source/content.json`, `source/products.json`, `source/about.json`, `source/contact.json`, the sitemap base and structured-data asset URLs when migrating domains. Inquiry actions lead to the new Contact page with model or visit context, while phone and direct email links remain available.
 
@@ -66,3 +66,5 @@ The existing WordPress form uses Elementor on page 47. It does not allow the Git
 Contact validation completed at 320, 390, 768, 1024 and 1440 pixels, including required-field and email validation, inquiry categories, sixteen subject mappings, long-message handling, clipboard fallback, keyboard navigation, reduced motion and JavaScript-free access. Local audits verify performance, accessibility, best practices and SEO; these are laboratory checks rather than field results. Email handoff tests intercepted the email link without sending messages.
 
 The latest editorial release was checked in Chromium and WebKit at phone, tablet and desktop widths. Verification covers the new comparison disclosure, modal focus restoration, navigation, no-flash headline setup, reduced motion, JavaScript-free content, video chapters and inquiry prefills.
+
+The INNO-F1 scroll update was checked across 12 Chromium and WebKit viewport configurations, including 320px phones, portrait tablets, short landscape and wide desktop. Checks cover forward/reverse scrolling, direct tabs, keyboard focus, chapter jumps, sticky release, reduced motion, resize, JavaScript-free content and model-specific dialog links. Native touch scrolling and horizontal swipes were checked in Chromium, with touch selection in both browsers. All 14 homepage sections passed layout and image checks at 320, 390, 430 and 768px. The broader 28-case site checks passed, with no automated accessibility violations in the audited views. Mobile interview chapters now remain visible in a vertical list, and the XONE Golf Club invitation has clear spacing above its photo.

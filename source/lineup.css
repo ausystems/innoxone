@@ -1,0 +1,112 @@
+/* A single editorial stage, with a native scroll chapter for each INNO-F1. */
+.home-page .inno-lineup{--lineup-top:80px;--lineup-height:min(760px,calc(100svh - 112px));--lineup-step:58svh}
+.home-page .lineup-intro{align-items:end;justify-content:space-between;gap:48px;margin-bottom:40px}
+.home-page .lineup-intro h2{max-width:760px;font-size:clamp(38px,4.6vw,68px);text-wrap:balance}
+.home-page .lineup-intro .section-intro{max-width:390px;margin:0;font-size:16px;line-height:1.6}
+.home-page .lineup-journey{position:relative}
+.home-page .lineup-scroll-stops{display:none;pointer-events:none}
+.home-page .lineup-scroll-enabled .lineup-journey{height:calc(var(--lineup-height) + 3 * var(--lineup-step))}
+.home-page .lineup-scroll-enabled .lineup-scroll-stops{position:absolute;inset:calc(var(--lineup-height) / 2) 0 auto;display:grid;grid-auto-rows:var(--lineup-step)}
+.home-page .lineup-scroll-enabled .lineup-stage{position:sticky;top:var(--lineup-top)}
+.home-page .lineup-stage{margin:0;padding:0;background:#f3f4f3;border-radius:16px;overflow:hidden;isolation:isolate}
+.home-page .lineup-topline{position:absolute;top:28px;left:40px;right:40px;z-index:3;display:flex;align-items:center;gap:20px;font-size:12px;font-weight:500;color:#565d59;pointer-events:none}
+.home-page .lineup-scroll-hint{display:none;margin-left:auto;font-weight:400}
+.home-page .lineup-scroll-enabled .lineup-scroll-hint{display:block}
+.home-page .lineup-counter{position:static;display:block;margin-left:auto;font-size:12px;font-variant-numeric:tabular-nums;color:#303833}
+.home-page .lineup-scroll-enabled .lineup-counter{margin-left:0}
+.home-page .lineup-counter>span+span{color:#69716c}
+.home-page .lineup-enhanced .lineup-track{position:relative;display:block;height:var(--lineup-height);min-height:0;max-height:none;overflow:visible;scroll-snap-type:none;touch-action:pan-y pinch-zoom}
+.home-page .lineup-pane{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:20px;min-height:0;padding:58px 40px 112px}
+.home-page .lineup-enhanced .lineup-pane{position:absolute;inset:0;height:100%;opacity:0!important;visibility:hidden;pointer-events:none;transition:opacity .65s var(--ease),visibility .65s}
+.home-page .lineup-enhanced .lineup-pane.is-active{opacity:1!important;visibility:visible;pointer-events:auto;z-index:1}
+.home-page .variant-visual{position:relative;min-height:0;isolation:isolate}
+.home-page .variant-backdrop{position:absolute;inset:-12px 0 auto;z-index:0;text-align:center;font-size:clamp(120px,17.5vw,248px);font-weight:500;letter-spacing:-.065em;line-height:1.05;font-stretch:88%;color:#c9d0cb;user-select:none;transform:translateY(20px);transition:transform .9s var(--ease)}
+.home-page .lineup-pane.is-active .variant-backdrop{transform:translateY(0)}
+.home-page .lineup-stage .product-layer{position:absolute;inset:48px -20px -10px;z-index:1;display:flex;align-items:center;justify-content:center;transform:translateX(32px) scale(.98);transition:transform .9s var(--ease)}
+.home-page .lineup-pane.is-active .product-layer{transform:translateX(0) scale(1)}
+.home-page .lineup-stage .product-layer img{width:100%;height:100%;max-width:1100px;object-fit:contain;object-position:center;filter:none}
+.home-page .variant-heading{position:static;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;padding:0;overflow:visible;align-items:end;z-index:2}
+.home-page .lineup-enhanced .lineup-pane .variant-heading>div{transform:none}
+.home-page .variant-name{font-size:clamp(25px,2.3vw,34px);font-weight:500;line-height:1.15;letter-spacing:-.035em}
+.home-page .variant-descriptor{font-size:15px;line-height:1.5;color:#58615a;max-width:510px;margin-top:9px;text-wrap:pretty}
+.home-page .variant-benefits{display:grid;gap:3px;margin:0;font-size:12px;line-height:1.65;color:#58615a;text-align:right;list-style:none}
+.home-page .variant-benefits li{padding:0;margin:0}
+.home-page .variant-benefits li+li:before{display:none}
+.home-page .lineup-controls{position:absolute;left:40px;right:40px;bottom:28px;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.home-page .variant-tabs{position:static;display:flex;gap:4px;padding:4px;margin:0;transform:none;border:0;border-radius:32px;background:#e6e9e6;box-shadow:none}
+.home-page .variant-tabs button{height:44px;min-height:44px;padding:0 26px;border-radius:24px;background:transparent;box-shadow:none;font-size:13px;font-weight:500;transition:background .3s,color .3s}
+.home-page .variant-tabs button[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:none}
+.home-page .variant-tabs button:before{display:none}
+.home-page .lineup-actions{position:static;display:flex;align-items:center;gap:30px}
+.home-page .lineup-actions .text-link{display:inline-flex;font-size:14px;min-height:44px;align-items:center;white-space:nowrap}
+.home-page .lineup-actions .pill{min-width:136px;height:48px;white-space:nowrap}
+.home-page .lineup-pane:focus-visible{outline:2px solid #303833;outline-offset:-4px;border-radius:16px}
+@media(hover:hover){.home-page .variant-tabs button:hover{background:#f8f9f8}.home-page .variant-tabs button[aria-selected=true]:hover{background:#fff}}
+@media(min-width:768px) and (max-height:720px){.home-page .inno-lineup{--lineup-height:600px}.home-page .lineup-scroll-enabled{--lineup-height:calc(100svh - 112px)}.home-page .lineup-pane{padding-top:48px;padding-bottom:100px;gap:12px}.home-page .variant-backdrop{font-size:clamp(110px,14vw,190px)}.home-page .variant-descriptor{font-size:14px}.home-page .lineup-controls{bottom:22px}}
+@media(max-width:1000px) and (min-width:768px){.home-page .lineup-intro{gap:32px}.home-page .lineup-intro .section-intro{max-width:310px}.home-page .lineup-topline{left:28px;right:28px}.home-page .lineup-pane{padding-inline:28px}.home-page .lineup-controls{left:28px;right:28px;gap:18px}.home-page .variant-tabs button{padding-inline:20px}.home-page .lineup-actions{gap:20px}.home-page .lineup-actions .text-link{font-size:12px}.home-page .lineup-actions .pill{min-width:120px}.home-page .variant-heading{gap:24px}.home-page .variant-benefits{max-width:170px}}
+@media(max-width:767px){
+ .home-page .inno-lineup{--lineup-top:68px;--lineup-height:clamp(480px,calc(100svh - 148px),700px);--lineup-step:62svh}
+ .home-page .inno-lineup>.wrap{width:auto;margin-inline:12px}
+ .home-page .lineup-intro{display:block;padding:0 8px;margin-bottom:28px}
+ .home-page .lineup-intro h2{font-size:clamp(36px,9.5vw,52px);max-width:520px}
+ .home-page .lineup-intro .section-intro{margin-top:18px;font-size:15px;max-width:510px}
+ .home-page .lineup-topline{top:20px;left:20px;right:20px;font-size:10px;gap:12px}
+ .home-page .lineup-counter{display:block;font-size:11px}
+ .home-page .lineup-scroll-hint{font-size:10px}
+ .home-page .lineup-pane{gap:12px;padding:54px 20px 148px}
+ .home-page .variant-backdrop{top:0;font-size:clamp(64px,21.5vw,160px);letter-spacing:-.06em;line-height:1.1}
+ .home-page .lineup-stage .product-layer{inset:40px -18% -12px}
+ .home-page .lineup-stage .product-layer img{max-width:none;width:100%;height:100%;object-fit:contain}
+ .home-page .variant-heading{display:block}
+ .home-page .variant-name{font-size:25px;line-height:1.15}
+ .home-page .variant-descriptor{font-size:14px;line-height:1.5;margin-top:8px;max-width:430px}
+ .home-page .variant-benefits{display:none}
+ .home-page .lineup-controls{left:20px;right:20px;bottom:20px;display:grid;grid-template-columns:1fr;gap:16px}
+ .home-page .variant-tabs{justify-self:center;width:100%;max-width:390px;justify-content:stretch;gap:2px;padding:4px}
+ .home-page .variant-tabs button{flex:1;min-width:0;padding:0 14px;font-size:13px}
+ .home-page .lineup-actions{display:flex;position:static;justify-content:space-between;gap:16px}
+ .home-page .lineup-actions .text-link{font-size:12px;gap:9px;min-height:44px}
+ .home-page .lineup-actions .arrow{width:18px;height:18px}
+ .home-page .lineup-actions .pill{min-width:120px;font-size:13px;height:44px;padding-inline:20px}
+}
+@media(max-width:359px){.home-page .lineup-topline{left:16px;right:16px}.home-page .lineup-pane{padding-inline:16px}.home-page .variant-name{font-size:23px}.home-page .variant-descriptor{font-size:13px}.home-page .lineup-controls{left:16px;right:16px}.home-page .lineup-actions{gap:12px}.home-page .lineup-actions .pill{min-width:108px;padding-inline:16px}.home-page .lineup-actions .text-link{font-size:12px;gap:6px}.home-page .lineup-scroll-hint{font-size:9px}}
+@media(max-height:639px){.home-page .inno-lineup{--lineup-height:600px}}
+/* Without scripting every model remains visible and readable. */
+.home-page .lineup-unenhanced .lineup-topline{display:none}
+.home-page .lineup-unenhanced .lineup-track{display:grid;gap:0;height:auto;overflow:visible}
+.home-page .lineup-unenhanced .lineup-pane{position:relative;height:680px;min-height:0;padding-bottom:48px}
+.home-page .lineup-unenhanced .variant-backdrop,.home-page .lineup-unenhanced .product-layer{transform:none}
+.home-page .lineup-unenhanced .lineup-controls{position:static;padding:0 40px 32px;justify-content:flex-end}
+.home-page .lineup-unenhanced .variant-tabs{display:none}
+@media(max-width:767px){.home-page .lineup-unenhanced .lineup-pane{height:550px;padding-top:28px;padding-bottom:32px}.home-page .lineup-unenhanced .lineup-controls{padding:0 20px 24px}}
+@media(prefers-reduced-motion:reduce){.home-page .lineup-enhanced .lineup-pane,.home-page .variant-backdrop,.home-page .lineup-stage .product-layer{transition:none;transform:none}}
+@media print{.home-page .lineup-journey{height:auto!important}.home-page .lineup-stage{position:relative!important;top:auto!important}.home-page .lineup-scroll-stops,.home-page .lineup-scroll-hint{display:none!important}}
+@media(max-width:767px) and (min-height:760px){.home-page .variant-backdrop{top:56px}}
+/* A compact side-by-side layout keeps manual browsing usable in landscape. */
+@media(min-width:640px) and (max-height:639px){
+ .home-page .inno-lineup{--lineup-height:clamp(320px,calc(100svh - 80px),480px)}
+ .home-page .lineup-topline{top:16px;left:24px;right:24px}
+ .home-page .lineup-pane{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);grid-template-rows:1fr;padding:46px 24px 86px;gap:24px}
+ .home-page .variant-backdrop{top:-18px;font-size:clamp(90px,13vw,150px)}
+ .home-page .lineup-stage .product-layer{inset:22px -30px -12px}
+ .home-page .variant-heading{display:block;align-self:center}
+ .home-page .variant-name{font-size:24px}
+ .home-page .variant-descriptor{font-size:13px;line-height:1.5}
+ .home-page .variant-benefits{display:none}
+ .home-page .lineup-controls{display:flex;left:24px;right:24px;bottom:16px;gap:18px}
+ .home-page .variant-tabs{width:auto;max-width:none}
+ .home-page .variant-tabs button{padding-inline:20px}
+ .home-page .lineup-actions{gap:20px}
+ .home-page .lineup-actions .text-link{font-size:12px}
+ .home-page .lineup-actions .pill{min-width:120px}
+}
+
+/* All three cart silhouettes are visible in the selector, before choosing a model. */
+.home-page .variant-tabs button{display:flex;align-items:center;justify-content:center;gap:8px;height:56px;padding-inline:16px}
+.home-page .variant-tabs button img{width:64px;height:42px;object-fit:contain;flex:none}
+.home-page .lineup-pane{padding-bottom:124px}
+@media(min-width:768px) and (max-width:1100px){.home-page .variant-tabs button{padding-inline:10px;gap:5px}.home-page .variant-tabs button img{width:44px;height:32px}}
+@media(max-width:767px){.home-page .lineup-pane{padding-bottom:176px}.home-page .variant-tabs button{display:grid;grid-template-rows:42px 20px;gap:1px;height:76px;padding:4px 8px}.home-page .variant-tabs button img{width:76px;height:42px;max-width:100%;justify-self:center}.home-page .variant-tabs button span{line-height:20px}.home-page .variant-tabs{border-radius:24px}.home-page .variant-tabs button{border-radius:20px}}
+@media(min-width:640px) and (max-height:639px){.home-page .lineup-pane{padding-bottom:98px}.home-page .variant-tabs button{display:flex;height:56px;padding:0 10px;gap:4px}.home-page .variant-tabs button img{width:40px;height:30px}}
+.home-page .lineup-unenhanced .lineup-pane{padding-bottom:48px}
+@media(max-width:767px){.home-page .lineup-unenhanced .lineup-pane{padding-bottom:32px}}

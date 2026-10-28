@@ -9,7 +9,7 @@ const link=(label,href,cls='text-link',arr=true)=>`<a class="${cls}" href="${esc
 const inquire=()=>link(DATA.labels.inquire,DATA.contact.href,'pill',false);
 function renderHeader(){return `<a class="skip-link" href="#main">${DATA.labels.skip}</a><header class="inno-header on-dark" id="site-header"><nav class="nav-inner wrap" aria-label="Main navigation"><div class="nav-left">${DATA.nav.map(n=>n.product&&DATA.config.expandedModels?`<button id="models-toggle" aria-expanded="false" aria-controls="models-flyout">${DATA.labels.models}</button>`:link(n.name,n.href,'',false).replace('<a ',n.current?'<a aria-current="page" ':'<a ')).join('')}</div><button class="menu-button" aria-controls="mobile-menu" aria-expanded="false"><span class="menu-icon" aria-hidden="true"></span>${DATA.labels.menu}</button><a class="wordmark" href="#top" aria-label="INNOXONE home">${mark()}</a><div class="nav-right">${link(DATA.contact.name,DATA.contact.href,'',false)}<a class="pill" href="${DATA.contact.href}"><span class="cta-wide">Request a quote</span><span class="cta-short">Inquire</span></a></div></nav></header><div id="models-flyout" class="models-flyout" hidden><div class="models-grid">${DATA.futureModels.map(m=>`<a href="${m.href}"><h3>${m.name}</h3><img src="${m.image}" width="1200" height="700" alt="${m.name} side profile" loading="lazy" decoding="async"><span class="model-chip">${m.chip}</span></a>`).join('')}</div></div><div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Main menu" hidden><div class="menu-top"><a href="#top" class="wordmark" aria-label="INNOXONE home">${mark()}</a><button class="menu-close">${DATA.labels.close} <span aria-hidden="true">×</span></button></div><div class="menu-layout"><div class="menu-primary"><nav aria-label="Mobile navigation">${[...DATA.nav,{name:DATA.contact.name,href:DATA.contact.href}].map(n=>link(n.name,n.href,'',false).replace('<a ',n.current?'<a aria-current="page" ':'<a ')).join('')}</nav><div class="menu-contact"><a href="tel:${DATA.contact.tel}">${DATA.contact.phone}</a><a href="mailto:${DATA.contact.email}">${DATA.contact.email}</a><p>${DATA.contact.address}</p></div></div>${SHARED_MENU_STORY}</div></div>`}
 function renderHero(){return `<section id="hero" class="inno-hero on-dark" aria-labelledby="hero-title"><picture><source media="(max-width:767px)" srcset="assets/hero-gallery-mobile-480.webp 480w, assets/hero-gallery-mobile-768.webp 768w" sizes="100vw"><img class="hero-poster" src="${DATA.hero.poster}" srcset="assets/hero-gallery-768.webp 768w, assets/hero-gallery-1280.webp 1280w, assets/hero-gallery-1920.webp 1920w" sizes="100vw" alt="${DATA.hero.alt}" width="1920" height="1080" fetchpriority="high" decoding="async"></picture><video class="hero-video" muted autoplay loop playsinline preload="metadata" aria-hidden="true"></video><div class="hero-content wrap"><h1 class="display" id="hero-title" data-reveal-title>${DATA.hero.headline.map(l=>`<span class="line-mask"><span>${l}</span></span>`).join(' ')}</h1><p>${DATA.hero.description}</p><div class="hero-actions">${link(DATA.hero.action,DATA.hero.href,'pill pill-white')}${link('Explore golf carts','golf-carts-products/','text-link')}</div></div><button class="video-toggle" aria-label="${DATA.labels.play}" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2l9 6-9 6Z"/></svg></button></section>`}
-function renderLineup(){return `<section class="inno-lineup lineup-unenhanced" id="lineup" aria-labelledby="lineup-title"><div class="wrap"><div class="lineup-intro"><h2 class="display" id="lineup-title">${DATA.labels.lineup}</h2><p class="section-intro">${DATA.lineupIntro}</p></div><div class="lineup-stage"><div class="lineup-counter" aria-hidden="true"><span id="variant-count">1</span> / ${DATA.variants.length}</div><div class="lineup-controls"><div class="variant-tabs" role="tablist" aria-label="${DATA.labels.variants}">${DATA.variants.map((v,i)=>`<button role="tab" id="tab-${v.id}" aria-selected="${i===0}" aria-controls="panel-${v.id}" tabindex="${i===0?0:-1}" data-variant="${i}">${v.name}</button>`).join('')}</div><div class="lineup-actions">${link(DATA.labels.explore,'golf-carts-products/#lineup')}${link('Get a quote','contact/?interest=inno-f1-original','pill',false)}</div></div><div class="lineup-track">${DATA.variants.map((v,i)=>`<div class="lineup-pane" id="panel-${v.id}" role="tabpanel" aria-labelledby="tab-${v.id}" tabindex="0"><div class="variant-heading"><div><h3 class="variant-name display">${v.name}</h3><p class="variant-descriptor">${v.descriptor}</p><ul class="variant-benefits">${v.benefits.map(b=>`<li>${b}</li>`).join('')}</ul></div></div><p class="variant-spec">${v.specification}</p><div class="product-layer" data-product-renderer="image"><div class="ground-shadow" aria-hidden="true"></div><img src="${v.image}" srcset="${v.image.replace('.webp','-600.webp')} 600w, ${v.image.replace('.webp','-900.webp')} 900w, ${v.image} 1200w" sizes="(max-width:767px) 100vw, 75vw" width="1200" height="700" alt="${v.alt}" loading="lazy" decoding="async"></div></div>`).join('')}</div></div></div></section>`}
+function renderLineup(){return `<section class="inno-lineup lineup-unenhanced" id="lineup" aria-labelledby="lineup-title"><div class="wrap"><div class="lineup-intro"><h2 class="display" id="lineup-title">${DATA.labels.lineup}</h2><p class="section-intro">${DATA.lineupIntro}</p></div><div class="lineup-journey"><div class="lineup-scroll-stops" aria-hidden="true">${DATA.variants.map((v,i)=>`<span data-lineup-stop="${i}"></span>`).join('')}</div><div class="lineup-stage"><div class="lineup-topline" aria-hidden="true"><span>Three INNO-F1 models</span><span class="lineup-scroll-hint">Scroll to explore</span><span class="lineup-counter"><span id="variant-count">01</span><span> / 03</span></span></div><div class="lineup-track">${DATA.variants.map((v,i)=>`<div class="lineup-pane" id="panel-${v.id}" role="tabpanel" aria-labelledby="tab-${v.id}" tabindex="0"><div class="variant-visual"><p class="variant-backdrop display" aria-hidden="true">${v.name}</p><div class="product-layer" data-product-renderer="image"><img src="${v.image}" srcset="${v.image.replace('.webp','-600.webp')} 600w, ${v.image.replace('.webp','-900.webp')} 900w, ${v.image} 1200w" sizes="(max-width:767px) 120vw, 75vw" width="1200" height="700" alt="${v.alt}" loading="lazy" decoding="async"></div></div><div class="variant-heading"><div><h3 class="variant-name display">INNO-F1 ${v.name}</h3><p class="variant-descriptor">${v.descriptor}</p></div><ul class="variant-benefits">${v.benefits.map(b=>`<li>${b}</li>`).join('')}</ul></div></div>`).join('')}</div><div class="lineup-controls"><div class="variant-tabs" role="tablist" aria-label="${DATA.labels.variants}">${DATA.variants.map((v,i)=>`<button role="tab" id="tab-${v.id}" aria-selected="${i===0}" aria-controls="panel-${v.id}" tabindex="${i===0?0:-1}" data-variant="${i}"><img src="${v.image}" srcset="${v.image.replace('.webp','-600.webp')} 600w, ${v.image.replace('.webp','-900.webp')} 900w, ${v.image} 1200w" sizes="(max-width:767px) 120vw, 75vw" width="1200" height="700" alt="" loading="lazy" decoding="async"><span>${v.name}</span></button>`).join('')}</div><div class="lineup-actions">${link('View model details','golf-carts-products/#product-inno-f1-original')}${link('Get a quote','contact/?interest=inno-f1-original','pill',false)}</div></div></div></div></div></section>`}
 function renderDetails(){const d=DATA.details;return `<section class="inno-detail" id="designed-around-you" aria-labelledby="detail-title"><div class="wrap"><div class="detail-heading"><h2 class="detail-title display reveal-lines" id="detail-title" data-reveal-title>${d.headline}</h2><p>${d.intro}</p></div><div class="detail-grid">${d.items.map(item=>`<figure class="detail-figure detail-${item.id}"><figcaption class="detail-caption"><h3>${item.title}</h3><p>${item.description}</p></figcaption><div class="detail-frame"><img src="${item.image}" srcset="${item.srcset}" sizes="${item.sizes}" width="${item.width}" height="${item.height}" alt="${item.alt}" loading="lazy" decoding="async"></div></figure>`).join('')}</div><div class="detail-next"><p>${d.closing}</p>${link(d.action,d.href,'pill pill-outline')}</div></div></section>`}
 function renderF2(){const d=DATA.f2;return `<section class="inno-f2" id="inno-f2" aria-labelledby="f2-title"><div class="wrap"><div class="f2-editorial"><div class="f2-intro"><p class="f2-label">${d.name}</p><h2 class="display" id="f2-title">${d.headline}</h2><p>${d.description}</p></div><div class="f2-stage"><img src="${d.image}" srcset="assets/inno-f2-640.webp 640w, assets/inno-f2-1000.webp 1000w, assets/inno-f2-1400.webp 1400w" sizes="(max-width:767px) 90vw, 50vw" width="1400" height="1519" alt="${d.alt}" loading="lazy" decoding="async"></div><div class="f2-details">${d.details.map(c=>`<div><h3>${c.title}</h3><p>${c.text}</p></div>`).join('')}</div></div><div class="f2-next"><p>${d.note}</p>${link(d.action,d.href,'pill pill-outline')}</div></div></section>`}
 function renderRobo(){const d=DATA.robocaddy;return `<section class="inno-robocaddy on-dark" id="robocaddy" aria-labelledby="robo-title"><div class="wrap robo-intro"><p class="robo-brand">${d.name}</p><h2 class="display" id="robo-title" data-reveal-title>${d.headline}</h2><p class="robo-description">${d.description}</p></div><figure class="robo-stage"><img src="${d.image}" srcset="assets/robocaddy-teaser-768.webp 768w, assets/robocaddy-teaser-1280.webp 1280w, assets/robocaddy-teaser-1920.webp 1920w" sizes="100vw" width="1920" height="768" alt="${d.alt}" loading="lazy" decoding="async"><figcaption>${d.caption}</figcaption></figure><div class="wrap"><div class="robo-reveal"><p class="robo-show">${d.show}</p>${link(d.action,d.href,'pill pill-white')}</div><div class="robo-story"><div class="robo-story-heading"><p>${d.storyLabel}</p><h3 class="display">${d.storyTitle}</h3></div><div class="robo-story-copy">${d.storyParagraphs.map(p=>`<p>${p}</p>`).join('')}</div></div><div class="robo-choice"><p class="robo-promise display">${d.promise}</p><p>${d.closing}</p>${link('Explore ROBOCADDY with our team',d.href)}</div></div></section>`}
@@ -46,20 +46,54 @@ menu.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();if(e.key==='
 const modelToggle=$('#models-toggle');modelToggle?.addEventListener('click',()=>{const open=modelToggle.getAttribute('aria-expanded')!=='true';modelToggle.setAttribute('aria-expanded',String(open));$('#models-flyout').hidden=!open});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modelToggle){modelToggle.setAttribute('aria-expanded','false');$('#models-flyout').hidden=true;modelToggle.focus()}});
 document.addEventListener('click',e=>{if(modelToggle&&!e.target.closest('#models-flyout,#models-toggle')){$('#models-flyout').hidden=true;modelToggle.setAttribute('aria-expanded','false')}});
-const tabs=$$('.variant-tabs [role=tab]'),panes=$$('.lineup-pane'),lineup=$('.inno-lineup'),track=$('.lineup-track');let active=0;
+// Native sticky presentation: the page keeps its normal wheel and touch scrolling.
+const tabs=$$('.variant-tabs [role=tab]'),panes=$$('.lineup-pane'),lineup=$('.inno-lineup'),track=$('.lineup-track');
+const lineupJourney=$('.lineup-journey'),lineupStage=$('.lineup-stage'),lineupStops=$$('[data-lineup-stop]');
+const lineupTall=matchMedia('(min-height:640px)');
+let active=0,lineupObserver=null,lineupBand=0,lineupResizeFrame=0;
 lineup.classList.replace('lineup-unenhanced','lineup-enhanced');
 function setActive(index){
   active=index;
   tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1});
-  $('#variant-count').textContent=index+1;
-  const action=$('.lineup-actions .pill');
-  action.href=new URL('contact/?interest=inno-f1-'+DATA.variants[index].id,location.href).href;
-  action.setAttribute('aria-label','Get a quote for INNO-F1 '+DATA.variants[index].name);
-  panes.forEach((pane,i)=>{pane.classList.toggle('is-active',i===index);pane.setAttribute('aria-hidden',String(i!==index));pane.tabIndex=i===index?0:-1});
+  $('#variant-count').textContent=String(index+1).padStart(2,'0');
+  const variant=DATA.variants[index],action=$('.lineup-actions .pill'),details=$('.lineup-actions .text-link');
+  action.href=new URL('contact/?interest=inno-f1-'+variant.id,location.href).href;
+  action.setAttribute('aria-label','Get a quote for INNO-F1 '+variant.name);
+  details.href=new URL('golf-carts-products/#product-inno-f1-'+variant.id,location.href).href;
+  details.setAttribute('aria-label','View model details for INNO-F1 '+variant.name);
+  panes.forEach((pane,i)=>{
+    // Never leave keyboard focus inside the outgoing hidden panel.
+    if(i!==index&&pane.contains(document.activeElement))tabs[index].focus({preventScroll:true});
+    pane.classList.toggle('is-active',i===index);pane.setAttribute('aria-hidden',String(i!==index));
+    pane.inert=i!==index;pane.tabIndex=i===index?0:-1;
+  });
+  lineup.dataset.activeModel=variant.id;
+}
+function syncLineupPosition(){
+  const index=lineupStops.findIndex(stop=>stop.getBoundingClientRect().bottom>lineupBand);
+  setActive(index<0?panes.length-1:index);
+}
+function configureLineupScroll(){
+  lineupObserver?.disconnect();lineupObserver=null;
+  const enabled=!reduce.matches&&lineupTall.matches&&!document.documentElement.classList.contains('capture');
+  lineup.classList.toggle('lineup-scroll-enabled',enabled);
+  if(!enabled)return;
+  const top=parseFloat(getComputedStyle(lineupStage).top)||0;
+  lineupBand=Math.round(top+lineupStage.offsetHeight/2);
+  syncLineupPosition();
+  // Pixel margins keep the observation band accurate on portrait and wide screens.
+  lineupObserver=new IntersectionObserver(entries=>{
+    syncLineupPosition();
+  },{rootMargin:`-${lineupBand}px 0px -${Math.max(0,innerHeight-lineupBand-2)}px 0px`,threshold:0});
+  lineupStops.forEach(stop=>lineupObserver.observe(stop));
 }
 function selectVariant(index){
   setActive(index);
-  if(mobile.matches)track.scrollTo({left:panes[index].offsetLeft,behavior:reduce.matches?'instant':'smooth'});
+  if(lineup.classList.contains('lineup-scroll-enabled')){
+    // The sticky scene stays in place while its underlying scroll chapter changes.
+    const top=scrollY+lineupStops[index].getBoundingClientRect().top-lineupBand+2;
+    window.scrollTo({top,behavior:'instant'});
+  }
 }
 tabs.forEach((tab,index)=>{
   tab.addEventListener('click',()=>selectVariant(index));
@@ -68,10 +102,31 @@ tabs.forEach((tab,index)=>{
     if(next===null)return;event.preventDefault();tabs[next].focus({preventScroll:true});selectVariant(next);
   });
 });
-let trackFrame=false;
-track.addEventListener('scroll',()=>{if(!mobile.matches||trackFrame)return;trackFrame=true;requestAnimationFrame(()=>{trackFrame=false;const index=Math.round(track.scrollLeft/track.clientWidth);if(index>=0&&index<panes.length)setActive(index)})},{passive:true});
-mobile.addEventListener('change',()=>{setActive(active);requestAnimationFrame(()=>track.scrollTo({left:mobile.matches?panes[active].offsetLeft:0,behavior:'instant'}))});
-setActive(0);
+// Horizontal swipes choose a model; vertical touch gestures remain native scrolling.
+let lineupPointer=null;
+track.addEventListener('pointerdown',event=>{if(event.pointerType==='touch')lineupPointer={x:event.clientX,y:event.clientY}});
+track.addEventListener('pointercancel',()=>{lineupPointer=null});
+track.addEventListener('pointerup',event=>{
+  if(!lineupPointer)return;
+  const dx=event.clientX-lineupPointer.x,dy=event.clientY-lineupPointer.y;lineupPointer=null;
+  if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5)selectVariant(Math.max(0,Math.min(panes.length-1,active+(dx<0?1:-1))));
+});
+function queueLineupLayout(){
+  if(lineupResizeFrame)return;
+  lineupResizeFrame=requestAnimationFrame(()=>{lineupResizeFrame=0;configureLineupScroll()});
+}
+new ResizeObserver(queueLineupLayout).observe(lineupStage);
+window.addEventListener('resize',queueLineupLayout,{passive:true});
+window.addEventListener('pageshow',queueLineupLayout);
+reduce.addEventListener('change',queueLineupLayout);
+lineupTall.addEventListener('change',queueLineupLayout);
+const lineupPreload=new IntersectionObserver(entries=>{
+  if(!entries.some(entry=>entry.isIntersecting))return;
+  $$('.product-layer img',lineup).forEach(image=>{image.loading='eager';image.decode().catch(()=>{})});
+  lineupPreload.disconnect();
+},{rootMargin:'900px'});
+lineupPreload.observe(lineup);
+setActive(0);configureLineupScroll();
 // Only one narrated film plays at a time; background hero pauses during a film.
 $$('.story-film').forEach(film=>film.addEventListener('play',()=>{video.pause();$$('.story-film').forEach(other=>{if(other!==film)other.pause()})}));
 const founderFilm=$('#founder-film'),founderPlay=$('.founder-play');
@@ -113,7 +168,7 @@ window.INNO_REVIEW={data:DATA,prepare:()=>{
   window.INNO_MOTION?.finish();selectConnect(0);userPaused=true;video.pause();storyAnimations.forEach(animation=>animation.finish());
   document.documentElement.classList.add('capture');quickContact.hidden=true;
   header.classList.remove('is-solid');header.classList.add('on-dark');
-  setActive(0);track.scrollTo({left:0,behavior:'instant'});
+  configureLineupScroll();setActive(0);
   $$('.story-film').forEach(film=>film.pause());$$('img').forEach(image=>image.loading='eager');
   window.scrollTo({top:0,behavior:'instant'});
 }};

@@ -2,7 +2,7 @@ const fs=require('fs'),vm=require('vm'),path=require('path');
 const ROOT=path.resolve(__dirname,'..');
 const shell=require('./site-shell.cjs');
 const DATA=JSON.parse(fs.readFileSync(path.join(__dirname,'content.json'),'utf8'));
-const css=fs.readFileSync(path.join(__dirname,'style.css'),'utf8')+fs.readFileSync(path.join(__dirname,'footer.css'),'utf8')+fs.readFileSync(path.join(__dirname,'editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'home-editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'motion.css'),'utf8'),js=fs.readFileSync(path.join(__dirname,'page.js'),'utf8');
+const css=fs.readFileSync(path.join(__dirname,'style.css'),'utf8')+fs.readFileSync(path.join(__dirname,'footer.css'),'utf8')+fs.readFileSync(path.join(__dirname,'editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'home-editorial.css'),'utf8')+fs.readFileSync(path.join(__dirname,'lineup.css'),'utf8')+fs.readFileSync(path.join(__dirname,'motion.css'),'utf8'),js=fs.readFileSync(path.join(__dirname,'page.js'),'utf8');
 const pure=js.split('// ENHANCE:')[0];
 const markup=vm.runInNewContext('const DATA='+JSON.stringify(DATA)+';'+pure+';renderHeader()+`<main id="main">${renderHero()+renderHarold()+renderOrigin()+renderBenefits()+renderWhy()+renderLineup()+renderDetails()+renderF2()+renderRobo()+renderConnect()+renderGallery()+renderSister()+renderFaq()+renderInquiry()}</main>`+renderFooter()+renderQuickContact()',{SHARED_FOOTER:shell.footer('home'),SHARED_MENU_STORY:shell.menuStory('home')});
 const url=DATA.meta.canonical;
