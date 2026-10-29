@@ -19,6 +19,12 @@
     document.body.classList.add('dialog-open');
     dialog.showModal();
     dialog.scrollTop = 0;
+    const story=dialog.querySelector('.story-scroll');
+    if(story){
+      story.scrollTop=0;
+      story.scrollLeft=0;
+      story.querySelectorAll('img').forEach(image=>{image.loading='eager';image.decode().catch(()=>{})});
+    }
     dialog.querySelector('[data-close]').focus({preventScroll:true});
     if (dialog.id === 'site-menu') menuButton.setAttribute('aria-expanded','true');
     if (dialog.dataset.product) window.dispatchEvent(new CustomEvent('innoxone:product-view',{detail:{product:dialog.dataset.product}}));

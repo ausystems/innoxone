@@ -11,11 +11,11 @@ Responsive pages for INNOXONE personal golf mobility.
 
 ## Editorial design across all four pages
 
-The product collection uses an asymmetrical vehicle gallery, persistent model shortcuts, redesigned native product dialogs, a full-width ROBOCADDY silhouette reveal, a Gallery invitation and a compact FAQ layout. Every cart remains available through its existing dialog and quote path.
+The product collection uses an asymmetrical vehicle gallery, persistent model shortcuts, redesigned native product dialogs, a full-width ROBOCADDY silhouette reveal, a Gallery invitation and a clearly labeled FAQ section. Every cart remains available through its existing dialog and quote path.
 
 About Us is an editorial sequence with a founder portrait and quote, a large interview film with chapter navigation, an offset design-photo composition, Harold’s owner film, the mobility vision and a Gallery invitation. Contact uses an open masthead, direct phone and email links, a spacious inquiry form and a Gallery panel. The five original fields, categories, validation and honest email handoff remain intact.
 
-The homepage now uses a composed founder cinema, a tighter F2 product spread, an inset CONNECT caption and clearer inquiry panels. The collection adds an expandable INNO-F1 comparison with links into the existing dialogs. About pairs ROBOCADDY and CONNECT with their own photography. The Contact Gallery appears alongside the opening invitation on desktop, with the form first on mobile. A photographic menu and larger footer signature connect the four pages.
+The homepage now uses a composed founder cinema, a tighter F2 product spread, an inset CONNECT caption and clearer inquiry panels. The collection includes an INNO-F1 comparison, expanded by default, with links into the existing dialogs. About pairs ROBOCADDY and CONNECT with their own photography. The Contact Gallery appears alongside the opening invitation on desktop, with the form first on mobile. A photographic menu and larger footer signature connect the four pages.
 
 Shared refinements live in `source/editorial.css`. Each page loads only its own additional styles from `source/home-editorial.css`, `source/products-editorial.css`, `source/about-editorial.css` or `source/contact-editorial.css`. No new client-side libraries are required.
 
@@ -23,7 +23,7 @@ Shared refinements live in `source/editorial.css`. Each page loads only its own 
 
 Homepage content, rendering and styles live in `source/content.json`, `source/page.js` and `source/style.css`. The INNO-F1 model stage has its own `source/lineup.css`.
 
-The products collection uses `source/products.json`, `source/build-products.cjs`, `source/products.css` and `source/products.js`. Product details open in native dialogs on the collection page. Product anchors support shared links, browser Back and Forward, and focus restoration when a card closes. JavaScript-free visitors can read the details inline. No individual product pages or checkout are created.
+The products collection uses `source/products.json`, `source/build-products.cjs`, `source/products.css`, `source/product-stories.css` and `source/products.js`. Product details open in native dialogs on the collection page. Product anchors support shared links, browser Back and Forward, and focus restoration when a card closes. JavaScript-free visitors can read the details inline. No individual product pages or checkout are created.
 
 The About Us page uses `source/about.json`, `source/build-about.cjs`, `source/about.css` and `source/about.js`. It includes the founder portrait, Young Kim’s chaptered interview, Harold’s owner film, the company’s mobility vision and a Gallery invitation. Both films use English captions and load only after the visitor chooses to play.
 
@@ -68,3 +68,11 @@ Contact validation completed at 320, 390, 768, 1024 and 1440 pixels, including r
 The latest editorial release was checked in Chromium and WebKit at phone, tablet and desktop widths. Verification covers the new comparison disclosure, modal focus restoration, navigation, no-flash headline setup, reduced motion, JavaScript-free content, video chapters and inquiry prefills.
 
 The INNO-F1 scroll update was checked across 12 Chromium and WebKit viewport configurations, including 320px phones, portrait tablets, short landscape and wide desktop. Checks cover forward/reverse scrolling, direct tabs, keyboard focus, chapter jumps, sticky release, reduced motion, resize, JavaScript-free content and model-specific dialog links. Native touch scrolling and horizontal swipes were checked in Chromium, with touch selection in both browsers. All 14 homepage sections passed layout and image checks at 320, 390, 430 and 768px. The broader 28-case site checks passed, with no automated accessibility violations in the audited views. Mobile interview chapters now remain visible in a vertical list, and the XONE Golf Club invitation has clear spacing above its photo.
+
+## Product stories
+
+Every product dialog now includes an individual design story, golfer or course use cases, considered details and a personal invitation. Original explains the one-golfer design approach, Light focuses on essential personal mobility, Marshal recognizes the people supporting each round, and INNO-F2 invites a conversation about the model without inventing specifications. ROBOCADDY tells Young Kim’s Walk & Ride origin story and introduces the future F1, F2, SOLO and DUO concepts while preserving the silhouette preview. Product details are based on the supplied company brief; unconfirmed specifications, prices and performance claims are not added.
+
+Dialog stories scroll between a persistent close control and inquiry bar. The comparison opens by default, the Gallery invitation uses separate photo and text columns without overlap, and the first FAQ answer is visible. A single desktop header inquiry action avoids duplicate Contact links; the mobile menu and footer retain Contact. The product-story update adds no dependencies or external tracking.
+
+Product stories were verified in 60 model/viewport combinations across Chromium and WebKit at 320, 390, 768, 844 (landscape), 1024 and 1440px. Checks cover complete image loading, reachable content, persistent close/inquiry controls, keyboard scrolling, focus trapping and restoration, reopening at the beginning, contextual quote links, reduced motion, JavaScript-free access and the native-dialog fallback. Automated accessibility checks passed for every product story at mobile and desktop sizes. The broader 28-case site checks and 399-reference internal link/asset check also passed.

@@ -10,9 +10,9 @@
       "name": "INNO-F1 Original",
       "family": "INNO-F1",
       "audience": "For your round",
-      "headline": "Your own way around the course.",
+      "headline": "Your ball. Your rhythm.",
       "summary": "A single-rider electric golf cart with your own seat and space for your clubs.",
-      "description": "Go straight to your ball with your clubs close by. INNO-F1 Original gives each golfer a seat, a set of controls and a ride of their own.",
+      "description": "Golf brings people together. Every shot still belongs to you. INNO-F1 Original gives you a single-rider electric golf cart, so you can head to your own ball with your clubs close by.",
       "image": "f1-original.webp",
       "srcset": "f1-original-600.webp 600w, f1-original-720.webp 720w, f1-original-900.webp 900w, f1-original.webp 1200w",
       "width": 1200,
@@ -37,16 +37,54 @@
           "text": "Move independently to your ball while following your course’s cart rules."
         }
       ],
-      "inquiry": "inno-f1-original"
+      "inquiry": "inno-f1-original",
+      "story": {
+        "label": "The idea behind Original",
+        "title": "It began with one golfer.",
+        "paragraphs": [
+          "Young Kim and the INNOXONE team designed INNO-F1 from the ground up around one golfer, one golf bag and the freedom to move independently. That personal starting point shaped the whole idea.",
+          "Picture the moment after a tee shot. Your playing partner heads one way. Your ball is the other way. With a ride of your own, you can each find your next shot, choose where to stop and meet again as the round unfolds."
+        ],
+        "image": "course-life-1600.webp",
+        "srcset": "course-life-640.webp 640w, course-life-960.webp 960w, course-life-1600.webp 1600w",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Green INNO-F1 Original parked beside a fairway.",
+        "caption": "One player. One cart. A personal way to experience the course."
+      },
+      "perspectives": [
+        {
+          "label": "For your round",
+          "title": "More attention for your next shot.",
+          "text": "Your clubs, your route and your place to pause. Original lets you move to your own ball while staying part of the group. It is a small change in how you travel, with a very personal place in how you play."
+        },
+        {
+          "label": "For your course",
+          "title": "Give your golfers another choice.",
+          "text": "From private clubs to public courses, resorts and golf communities, personal mobility can become part of your offering. Explore private ownership, member programs, premium rentals or a demonstration with our team."
+        }
+      ],
+      "founder": {
+        "quote": "It was designed around one golfer, one golf bag, and the freedom to move independently.",
+        "name": "Young Kim",
+        "role": "Founder, inventor and designer, INNOXONE"
+      },
+      "invitation": {
+        "title": "See where your own ride takes you.",
+        "text": "Tell us how and where you play. We can talk through Original, answer your questions and arrange an INNO-F1 test ride at our San Juan Capistrano Gallery.",
+        "action": "Arrange a test ride",
+        "interest": "test-ride"
+      },
+      "orderTitle": "Make your next round personal."
     },
     {
       "id": "inno-f1-light",
       "name": "INNO-F1 Light",
       "family": "INNO-F1",
       "audience": "For your round",
-      "headline": "An open view of every round.",
+      "headline": "Keep the focus on your game.",
       "summary": "Single-rider electric golf mobility with an open-sided layout and slim roof frame.",
-      "description": "An open-sided take on personal golf mobility. INNO-F1 Light pairs a single seat with a slim roof frame and dedicated space for your golf bag.",
+      "description": "Your own ride. Your own route to the next shot. INNO-F1 Light brings the idea of personal golf mobility into a simplified single-rider configuration.",
       "image": "f1-light.webp",
       "srcset": "f1-light-600.webp 600w, f1-light-720.webp 720w, f1-light-900.webp 900w, f1-light.webp 1200w",
       "width": 1200,
@@ -71,16 +109,49 @@
           "text": "A dedicated golf-bag holder keeps your equipment with you."
         }
       ],
-      "inquiry": "inno-f1-light"
+      "inquiry": "inno-f1-light",
+      "story": {
+        "label": "The idea behind Light",
+        "title": "The essentials. Made personal.",
+        "paragraphs": [
+          "The reason for a personal golf cart is wonderfully simple: your ball has its own place on the course. Light keeps that reason at the center, with essential single-rider mobility and an open-sided layout.",
+          "Imagine heading out for a round with your clubs, a few familiar faces and the freedom to move independently. You can follow your own line to the ball, settle into the next shot and keep the company you came for."
+        ],
+        "statement": [
+          "Your ball.",
+          "Your pace.",
+          "Your way."
+        ],
+        "caption": "INNO-F1 Light · Essential single-rider mobility"
+      },
+      "perspectives": [
+        {
+          "label": "For your round",
+          "title": "A straightforward way to make it yours.",
+          "text": "If the idea of a ride of your own feels right, Light is a configuration to explore. See its slim roof frame and dedicated golf-bag space, then talk with us about how it compares with Original."
+        },
+        {
+          "label": "For your course",
+          "title": "Start with the golfers you know.",
+          "text": "Some members want more independence. Others are curious about a different way to enjoy their regular round. Light gives your team another single-rider option to discuss as you consider a personal mobility program."
+        }
+      ],
+      "invitation": {
+        "title": "Let’s find your kind of ride.",
+        "text": "Tell us what matters to you on the course. Our team can explain the Light configuration, compare it with Original and help you plan the next step.",
+        "action": "Talk about Light",
+        "interest": "inno-f1-light"
+      },
+      "orderTitle": "Find your fit with Light."
     },
     {
       "id": "inno-f1-marshal",
       "name": "INNO-F1 Marshal",
       "family": "INNO-F1",
       "audience": "For your course team",
-      "headline": "A different role. The same personal approach.",
+      "headline": "For the people behind every round.",
       "summary": "Electric mobility for marshals and course staff, with a rear utility box.",
-      "description": "Keep your course team moving. INNO-F1 Marshal brings the single-rider format to course duties, with rear utility storage for the things staff need to carry.",
+      "description": "Before the first tee time, your team is already on the move. INNO-F1 Marshal brings personal electric mobility to course operations and player assistance.",
       "image": "f1-marshal.webp",
       "srcset": "f1-marshal-600.webp 600w, f1-marshal-720.webp 720w, f1-marshal-900.webp 900w, f1-marshal.webp 1200w",
       "width": 1200,
@@ -105,16 +176,49 @@
           "text": "An individual vehicle for the team member at the wheel."
         }
       ],
-      "inquiry": "inno-f1-marshal"
+      "inquiry": "inno-f1-marshal",
+      "story": {
+        "label": "The idea behind Marshal",
+        "title": "A different role. The same care.",
+        "paragraphs": [
+          "A good day on the course depends on more than the players. It also depends on the people checking in with groups, answering a question and helping the next part of the round go smoothly.",
+          "Marshal takes the INNO-F1 single-rider idea into that working day. A vehicle for the team member at the wheel, with rear utility storage for the essentials they need to bring along."
+        ],
+        "statement": [
+          "The course.",
+          "The players.",
+          "Your people."
+        ],
+        "caption": "INNO-F1 Marshal · Course operations and player assistance"
+      },
+      "perspectives": [
+        {
+          "label": "For your team",
+          "title": "Their own way to get there.",
+          "text": "A marshal, a staff member or a colleague helping a player: each has a reason to be out on the course. Marshal gives that person an individual vehicle and space for everyday course essentials."
+        },
+        {
+          "label": "For your golfers",
+          "title": "The human side of course service.",
+          "text": "A welcome, a useful direction or a conversation at the right moment can shape a golfer’s day. Marshal is designed for the team behind those moments, with a focus on course duties and player assistance."
+        }
+      ],
+      "invitation": {
+        "title": "Tell us about your course day.",
+        "text": "Share the routes your team covers and what they carry. We can discuss the Marshal configuration, your course requirements and a possible demonstration.",
+        "action": "Discuss your course",
+        "interest": "course-demo"
+      },
+      "orderTitle": "Put your course team first."
     },
     {
       "id": "inno-f2",
       "name": "INNO-F2",
       "family": "INNO-F2",
       "audience": "Explore INNO-F2",
-      "headline": "A fresh perspective on golf mobility.",
+      "headline": "A fresh perspective. A personal choice.",
       "summary": "A distinctive roof, broad windshield and open-sided golf cart design.",
-      "description": "Meet another expression of INNOXONE personal golf mobility. INNO-F2 brings a distinctive front profile, broad windshield and open sides to the collection.",
+      "description": "The right golf cart should feel like a considered choice. INNO-F2 brings another distinctive design to the INNOXONE collection, with a sculpted roof, broad windshield and open sides.",
       "image": "inno-f2-1000.webp",
       "srcset": "inno-f2-640.webp 640w, inno-f2-1000.webp 1000w, inno-f2-1400.webp 1400w",
       "width": 1400,
@@ -139,7 +243,40 @@
           "text": "Ask our team about specifications, configurations and availability."
         }
       ],
-      "inquiry": "inno-f2"
+      "inquiry": "inno-f2",
+      "story": {
+        "label": "Explore INNO-F2",
+        "title": "Look closer. Picture your own day.",
+        "paragraphs": [
+          "A golf cart becomes part of the way you experience a course. The view from the seat, the shape around you and the feeling of arriving all become part of the day.",
+          "INNOXONE’s story begins with people and how they want to move. With INNO-F2, that conversation continues through another design in the collection. Take a closer look, ask what makes it different and explore whether it fits the experience you have in mind."
+        ],
+        "image": "gallery-1600.webp",
+        "srcset": "gallery-640.webp 640w, gallery-1600.webp 1600w",
+        "width": 1600,
+        "height": 900,
+        "alt": "The INNOXONE collection displayed at the San Juan Capistrano Golf Gallery.",
+        "caption": "Explore the collection with our team at the INNOXONE Golf Gallery."
+      },
+      "perspectives": [
+        {
+          "label": "For your own choice",
+          "title": "Start with what matters to you.",
+          "text": "Tell us where you play and what you want from your next golf cart. We will walk you through INNO-F2’s configuration, specifications and availability so you can make an informed choice."
+        },
+        {
+          "label": "For your course",
+          "title": "Consider the experience you want to offer.",
+          "text": "Your golfers, setting and daily operation are the starting point. Discuss INNO-F2 with our team to understand the model and the practical questions that matter before bringing it to your course."
+        }
+      ],
+      "invitation": {
+        "title": "Meet INNO-F2 through a conversation.",
+        "text": "We would like to hear what you are looking for. Ask about the current configuration and availability, or plan a Gallery visit to explore the collection.",
+        "action": "Explore INNO-F2 with us",
+        "interest": "inno-f2"
+      },
+      "orderTitle": "Let’s talk about INNO-F2."
     }
   ],
   "faq": [
@@ -159,5 +296,68 @@
       "q": "When will ROBOCADDY be revealed?",
       "a": "The ROBOCADDY collection is coming to the 2027 Orlando PGA Show in January 2027. The silhouettes are a collection preview. Contact our team with questions about the reveal and future availability."
     }
-  ]
+  ],
+  "robocaddy": {
+    "id": "robocaddy",
+    "name": "ROBOCADDY®",
+    "audience": "Coming January 2027",
+    "headline": "Walk or Ride. The Choice Is Yours.",
+    "description": "A new family of personal golf mobility, born from a golfer’s wish to choose how the next nine holes feel. Coming soon at the 2027 Orlando PGA Show.",
+    "story": {
+      "label": "The story behind ROBOCADDY",
+      "title": "Nine holes. One simple question.",
+      "paragraphs": [
+        "Several years ago, Young Kim was walking Palo Alto Hills Golf & Country Club in California with a powered caddy carrying his bag. After nine holes, he felt tired. He wanted to ride the remaining nine.",
+        "That moment stayed with him. At the 2025 PGA Show, he asked golfers whether they would rather walk or ride. The more revealing question was whether they wanted the freedom to do both during the same round. That idea became the heart of ROBOCADDY."
+      ],
+      "statement": [
+        "Walk.",
+        "Ride.",
+        "Choose."
+      ],
+      "caption": "The next chapter of Walk & Ride Golf."
+    },
+    "founder": {
+      "quote": "Why can’t golfers walk when they want to walk, and ride when they want to ride?",
+      "name": "Young Kim",
+      "role": "Founder, inventor and designer, INNOXONE"
+    },
+    "perspectives": [
+      {
+        "label": "For golfers",
+        "title": "Your round can change as you do.",
+        "text": "Enjoy the walk. Choose the ride. The ROBOCADDY vision is personal mobility that gives golfers more choice within the same round, with purpose-built designs for different ways to play."
+      },
+      {
+        "label": "For course operators",
+        "title": "A broader way to think about mobility.",
+        "text": "The longer-term vision pairs ROBOCADDY with INNOXONE CONNECT AI, a planned platform linking golfers, vehicles and course teams. Improvements to fleet use and course operations are goals to explore through course pilots."
+      }
+    ],
+    "family": [
+      {
+        "name": "F1",
+        "text": "Personal single-rider mobility for golfers who want to ride independently."
+      },
+      {
+        "name": "F2",
+        "text": "Intelligent two-person mobility, designed around walking, riding or a combination of both."
+      },
+      {
+        "name": "SOLO",
+        "text": "A personal robotic golf companion envisioned to follow one walking golfer and carry their equipment."
+      },
+      {
+        "name": "DUO",
+        "text": "An intelligent robotic caddy envisioned to support two walking golfers and their equipment."
+      }
+    ],
+    "invitation": {
+      "title": "Be part of the conversation.",
+      "text": "The family stays in silhouette ahead of its introduction. Tell us how you like to play, or what your course needs, and ask our team about the January 2027 reveal.",
+      "action": "Ask about the reveal",
+      "interest": "robocaddy-2027"
+    },
+    "orderTitle": "Discover the next chapter."
+  }
 }
