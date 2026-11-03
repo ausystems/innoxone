@@ -118,3 +118,55 @@
 @media(orientation:landscape) and (max-height:500px){.products-page .story-dialog{height:calc(100dvh - 12px);max-height:calc(100dvh - 12px);width:calc(100% - 24px)}.story-topbar{padding-block:4px}.story-dialog .dialog-order{padding-block:10px}.story-dialog .order-summary{display:none}.story-dialog .dialog-order-actions{width:100%;justify-content:space-between}.dialog-story-hero{min-height:0}.story-dialog .dialog-copy{padding-block:32px}.story-dialog .dialog-visual{position:relative;top:auto;height:auto}.story-dialog .dialog-body{display:block}}
 @media(prefers-reduced-motion:reduce){.story-dialog .dialog-body{scroll-behavior:auto}}
 @media print{.story-dialog[open]{display:block!important;height:auto!important;max-height:none!important;overflow:visible!important}.story-dialog .dialog-body{overflow:visible}.story-topbar{display:none}}
+
+/* Keep the four F1 benefits together between the opening story and the course use cases. */
+.f1-story .story-chapter { padding-bottom: clamp(32px, 4vw, 56px); }
+.model-benefits { padding: 0 clamp(32px, 4.5vw, 56px) clamp(48px, 5vw, 72px); }
+.benefit-spread {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px clamp(32px, 4.5vw, 56px);
+}
+.benefit-visual {
+  grid-row: span 2;
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  background: #eff2ed;
+  border-radius: 12px;
+}
+.benefit-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.f1-story[data-product="inno-f1-original"] .benefit-visual { align-self: center; aspect-ratio: 16 / 9; min-height: 0; }
+.f1-story[data-product="inno-f1-light"] .benefit-visual img,
+.f1-story[data-product="inno-f1-marshal"] .benefit-visual img { object-fit: contain; }
+.f1-story[data-product="inno-f1-light"] .benefit-visual img { transform: scale(1.56); transform-origin: 39% 45%; }
+.f1-story[data-product="inno-f1-marshal"] .benefit-visual img { transform: scale(1.65); transform-origin: 71% 48%; }
+.model-benefit { padding-block: 20px 4px; border-top: 1px solid #dce1d8; }
+.model-benefit h3 { margin: 0; font-size: clamp(25px, 2.45vw, 34px); font-weight: 400; line-height: 1.12; letter-spacing: -.035em; text-wrap: balance; }
+.model-benefit p { margin: 14px 0 0; max-width: 60ch; font-size: 16px; line-height: 1.65; color: #50574f; text-wrap: pretty; }
+.model-specifications { margin-top: 36px; border-block: 1px solid #d6dcd1; }
+.model-specifications summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 4px; min-height: 56px; cursor: pointer; list-style: none; font-weight: 500; }
+.model-specifications summary::-webkit-details-marker { display: none; }
+.model-specifications[open] .plus::after { transform: rotate(0deg); }
+.model-specifications dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; margin: 0 4px 20px; }
+.model-specifications dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-block: 11px; border-top: 1px solid #e5e8e2; font-size: 14px; line-height: 1.5; }
+.model-specifications dt { color: #565d53; }
+.model-specifications dd { margin: 0; text-align: right; font-weight: 500; }
+.model-closing { background: linear-gradient(160deg, #f5f6f3, #e9eee7); }
+.model-closing .story-invitation .pill { min-height: 48px; }
+.model-closing .story-email {
+  min-height: 48px; padding-inline: 22px; border: 1px solid #9aa596; border-radius: 100px;
+  text-decoration: none; font-size: 14px; font-weight: 500; color: #263221;
+}
+.model-closing .story-email:hover { background: #fff; }
+.model-closing .story-invitation > div { gap: 12px 16px; }
+@media (max-width: 767px) {
+  .model-benefits { padding: 0 24px 44px; }
+  .benefit-spread { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .benefit-visual { grid-row: auto; aspect-ratio: 1.65; min-height: 0; border-radius: 8px; }
+  .model-benefit { padding-top: 20px; }
+  .model-benefit h3 { font-size: 27px; }
+  .model-benefit p { margin-top: 10px; font-size: 15px; }
+  .model-specifications dl { grid-template-columns: 1fr; }
+  .model-closing .story-invitation > div { gap: 12px; }
+}

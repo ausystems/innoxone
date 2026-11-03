@@ -10,9 +10,9 @@
       "name": "INNO-F1 Original",
       "family": "INNO-F1",
       "audience": "For your round",
-      "headline": "Your ball. Your rhythm.",
+      "headline": "Designed for a better golf experience",
       "summary": "A single-rider electric golf cart with your own seat and space for your clubs.",
-      "description": "Golf brings people together. Every shot still belongs to you. INNO-F1 Original gives you a single-rider electric golf cart, so you can head to your own ball with your clubs close by.",
+      "description": "The INNO F1 is a single-rider electric golf cart that takes you straight to your ball. No need to share a cart, wait on your partner's shot, or zig-zag across the fairway.",
       "image": "f1-original.webp",
       "srcset": "f1-original-600.webp 600w, f1-original-720.webp 720w, f1-original-900.webp 900w, f1-original.webp 1200w",
       "width": 1200,
@@ -23,27 +23,12 @@
         "Electric",
         "Golf-bag holder"
       ],
-      "features": [
-        {
-          "title": "A seat of your own",
-          "text": "A single seat with armrests, arranged around the individual golfer."
-        },
-        {
-          "title": "Clubs within reach",
-          "text": "Dedicated golf-bag space travels with you from shot to shot."
-        },
-        {
-          "title": "Your own route",
-          "text": "Move independently to your ball while following your course’s cart rules."
-        }
-      ],
       "inquiry": "inno-f1-original",
       "story": {
         "label": "The idea behind Original",
-        "title": "It began with one golfer.",
+        "title": "The Story",
         "paragraphs": [
-          "Young Kim and the INNOXONE team designed INNO-F1 from the ground up around one golfer, one golf bag and the freedom to move independently. That personal starting point shaped the whole idea.",
-          "Picture the moment after a tee shot. Your playing partner heads one way. Your ball is the other way. With a ride of your own, you can each find your next shot, choose where to stop and meet again as the round unfolds."
+          "A two-seat cart ties two golfers to one pace. The F1 gives each player their own ride, so the whole group moves at once. Golfers spend the day playing instead of waiting, and the course gets rounds that finish on time."
         ],
         "image": "course-life-1600.webp",
         "srcset": "course-life-640.webp 640w, course-life-960.webp 960w, course-life-1600.webp 1600w",
@@ -75,16 +60,102 @@
         "action": "Arrange a test ride",
         "interest": "test-ride"
       },
-      "orderTitle": "Make your next round personal."
+      "orderTitle": "Make your next round personal.",
+      "benefits": [
+        {
+          "title": "Play on your own terms",
+          "text": "With a two-seat cart, your round runs on someone else’s schedule. The INNO F1 takes you straight to your ball on every shot, with no drop-offs or detours. You set the pace and play your own game."
+        },
+        {
+          "title": "Less waiting, more golf",
+          "text": "When every player has their own cart, nobody sits waiting for a partner to hit. The whole group moves across the course at the same time. Rounds flow better, and golfers spend more of the day swinging, and less of it parked."
+        },
+        {
+          "title": "A ride you'll enjoy",
+          "text": "The INNO F1 is made to be ridden all day. A big, comfortable seat and a smooth ride carry you from tee to green, with a spot for your drink and a charger for your phone."
+        },
+        {
+          "title": "A new way to play",
+          "text": "Getting around the course becomes part of the fun. The INNO F1 turns the drive between shots into something you look forward to. It's a fresh and effective way to play the game you already love."
+        }
+      ],
+      "specifications": [
+        {
+          "label": "Body frame",
+          "value": "Heavy-duty space frame"
+        },
+        {
+          "label": "Vehicle weight",
+          "value": "720 lb"
+        },
+        {
+          "label": "Battery",
+          "value": "2 × 48 V, 30 Ah"
+        },
+        {
+          "label": "Parts warranty",
+          "value": "2 years"
+        },
+        {
+          "label": "Battery warranty",
+          "value": "2 years"
+        },
+        {
+          "label": "Motor power",
+          "value": "2,000 W"
+        },
+        {
+          "label": "Travel range",
+          "value": "36 holes"
+        },
+        {
+          "label": "Hill climb capability",
+          "value": "20% at 6 mph"
+        },
+        {
+          "label": "Brakes",
+          "value": "Hydraulic brake + EM brake"
+        },
+        {
+          "label": "Golf bag rack",
+          "value": "Included"
+        },
+        {
+          "label": "Oversize seat",
+          "value": "Included"
+        },
+        {
+          "label": "Front suspension",
+          "value": "MacPherson"
+        },
+        {
+          "label": "Drink holder",
+          "value": "Included"
+        },
+        {
+          "label": "Smartphone charging port",
+          "value": "Included"
+        },
+        {
+          "label": "Charging time",
+          "value": "3 to 4 hours"
+        }
+      ],
+      "benefitImage": {
+        "src": "pace-poster.webp",
+        "alt": "Four single-rider INNO-F1 carts spread out across the fairway.",
+        "width": 960,
+        "height": 540
+      }
     },
     {
       "id": "inno-f1-light",
       "name": "INNO-F1 Light",
       "family": "INNO-F1",
       "audience": "For your round",
-      "headline": "Keep the focus on your game.",
+      "headline": "Lighter. Simpler. Same freedom.",
       "summary": "Single-rider electric golf mobility with an open-sided layout and slim roof frame.",
-      "description": "Your own ride. Your own route to the next shot. INNO-F1 Light brings the idea of personal golf mobility into a simplified single-rider configuration.",
+      "description": "The INNO F1 Light is a lightweight single-rider electric golf cart built for easy handling. You still get your own ride straight to your ball, in a simpler build that fits more courses.",
       "image": "f1-light.webp",
       "srcset": "f1-light-600.webp 600w, f1-light-720.webp 720w, f1-light-900.webp 900w, f1-light.webp 1200w",
       "width": 1200,
@@ -95,27 +166,12 @@
         "Electric",
         "Slim roof frame"
       ],
-      "features": [
-        {
-          "title": "An open-sided layout",
-          "text": "A slim roof frame keeps the design open around the seat."
-        },
-        {
-          "title": "One golfer, one cart",
-          "text": "Your own controls and your own route to the next shot."
-        },
-        {
-          "title": "Room for your clubs",
-          "text": "A dedicated golf-bag holder keeps your equipment with you."
-        }
-      ],
       "inquiry": "inno-f1-light",
       "story": {
         "label": "The idea behind Light",
-        "title": "The essentials. Made personal.",
+        "title": "Built for courses where space is tight",
         "paragraphs": [
-          "The reason for a personal golf cart is wonderfully simple: your ball has its own place on the course. Light keeps that reason at the center, with essential single-rider mobility and an open-sided layout.",
-          "Imagine heading out for a round with your clubs, a few familiar faces and the freedom to move independently. You can follow your own line to the ball, settle into the next shot and keep the company you came for."
+          "Resorts, urban courses and smaller properties don't have room for big fleets. The INNO F1 Light gives you the same single-rider experience in a lighter, simpler package. More courses can offer it, and more golfers get to play their way."
         ],
         "statement": [
           "Your ball.",
@@ -142,16 +198,34 @@
         "action": "Talk about Light",
         "interest": "inno-f1-light"
       },
-      "orderTitle": "Find your fit with Light."
+      "orderTitle": "Find your fit with Light.",
+      "benefits": [
+        {
+          "title": "Easy to handle",
+          "text": "Light and compact, the INNO F1 Light is easy to steer, park and move around. Golfers feel comfortable behind the wheel from the first hole. No learning curve, just get on and go."
+        },
+        {
+          "title": "Just the essentials",
+          "text": "Everything you need for a great round and nothing you don't. A simple setup keeps the ride straightforward and the focus on your game. Less to think about, more time to play."
+        },
+        {
+          "title": "Play on your own terms",
+          "text": "Your own cart, straight to your ball on every shot. No drop-offs, no detours and no waiting on a partner. You set the pace for your round."
+        },
+        {
+          "title": "Your way, more places",
+          "text": "Great golf shouldn't depend on how big the course is. The INNO F1 Light brings the INNO experience to resorts, urban courses and tight properties. Wherever you play, you can play your way."
+        }
+      ]
     },
     {
       "id": "inno-f1-marshal",
       "name": "INNO-F1 Marshal",
       "family": "INNO-F1",
       "audience": "For your course team",
-      "headline": "For the people behind every round.",
+      "headline": "Keep every round moving",
       "summary": "Electric mobility for marshals and course staff, with a rear utility box.",
-      "description": "Before the first tee time, your team is already on the move. INNO-F1 Marshal brings personal electric mobility to course operations and player assistance.",
+      "description": "The INNO Marshal is a single-rider utility cart built for course staff. It gets marshals across the course fast, carries what they need and makes them easy to spot.",
       "image": "f1-marshal.webp",
       "srcset": "f1-marshal-600.webp 600w, f1-marshal-720.webp 720w, f1-marshal-900.webp 900w, f1-marshal.webp 1200w",
       "width": 1200,
@@ -162,27 +236,12 @@
         "Electric",
         "Utility storage"
       ],
-      "features": [
-        {
-          "title": "For the course team",
-          "text": "A configuration for marshals and staff moving around the course."
-        },
-        {
-          "title": "Rear utility storage",
-          "text": "A rear box provides space for equipment and everyday course essentials."
-        },
-        {
-          "title": "Single-seat design",
-          "text": "An individual vehicle for the team member at the wheel."
-        }
-      ],
       "inquiry": "inno-f1-marshal",
       "story": {
         "label": "The idea behind Marshal",
-        "title": "A different role. The same care.",
+        "title": "Get help there before the backup starts",
         "paragraphs": [
-          "A good day on the course depends on more than the players. It also depends on the people checking in with groups, answering a question and helping the next part of the round go smoothly.",
-          "Marshal takes the INNO-F1 single-rider idea into that working day. A vehicle for the team member at the wheel, with rear utility storage for the essentials they need to bring along."
+          "One slow group can back up an entire course. When marshals can't get across the course quickly, small delays turn into crowded tee boxes and frustrated golfers. The INNO F1 Marshal gets your staff to the right hole fast, so every round stays on schedule."
         ],
         "statement": [
           "The course.",
@@ -209,7 +268,25 @@
         "action": "Discuss your course",
         "interest": "course-demo"
       },
-      "orderTitle": "Put your course team first."
+      "orderTitle": "Put your course team first.",
+      "benefits": [
+        {
+          "title": "Faster response",
+          "text": "Your staff get across the course quickly, wherever they're needed. Slow groups get handled early, and problems get solved on the spot. The groups behind barely notice a thing."
+        },
+        {
+          "title": "Easy to spot",
+          "text": "Golfers know who's coming the moment the Marshal rolls up. Its high-visibility design makes staff stand out across the course. That makes every conversation quicker and easier."
+        },
+        {
+          "title": "Room for the essentials",
+          "text": "Tools, radios and first-aid kits ride along in the rear cargo space. Your team shows up ready to handle whatever the day throws at them."
+        },
+        {
+          "title": "Built for every shift",
+          "text": "The Marshal is built on the proven INNO F1 platform. It's made to handle long days on the course and stays easy to maintain. Your team gets a cart they can count on."
+        }
+      ]
     },
     {
       "id": "inno-f2",

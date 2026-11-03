@@ -48,14 +48,52 @@ function founderNote(product) {
 }
 function storyInvitation(product) {
   const invite=product.invitation;
-  return `<section class="story-invitation" aria-labelledby="${product.id}-invitation-title"><p class="story-label">A personal introduction</p><h3 id="${product.id}-invitation-title">${esc(invite.title)}</h3><p>${esc(invite.text)}</p><div>${inquiry(invite.action,invite.interest,'text-link')}${`<a class="story-email" href="${esc(mailURL(product.name))}" data-inquiry="${product.id}">Email our team</a>`}</div></section>`;
+  const buttonClass = product.benefits ? 'pill pill-dark' : 'text-link';
+  return `<section class="story-invitation" aria-labelledby="${product.id}-invitation-title"><p class="story-label">A personal introduction</p><h3 id="${product.id}-invitation-title">${esc(invite.title)}</h3><p>${esc(invite.text)}</p><div>${inquiry(invite.action,invite.interest,buttonClass)}<a class="story-email" href="${esc(mailURL(product.name))}" data-inquiry="${product.id}">Email our team</a></div></section>`;
 }
 function storyOrder(product,robo=false) {
   return `<div class="dialog-order"><div class="order-summary"><h3>${esc(product.orderTitle)}</h3><p>${robo?'2027 collection preview':'Let’s talk about your golf cart.'}</p></div><div class="dialog-order-actions"><div class="dialog-contact"><a href="tel:${common.contact.tel}" data-inquiry="${product.id}" aria-label="Call our team about ${esc(product.name)}">Call our team</a></div><a class="pill" href="${contactURL(robo?'robocaddy-2027':product.inquiry)}" data-inquiry="${product.id}" aria-label="${robo?'Ask about 2027: the ROBOCADDY reveal':'Request a quote for '+esc(product.name)}">${robo?'Ask about 2027':'Request a quote'}${arrow}</a></div></div>`;
 }
+function specificationDisclosure(product) {
+  if (!product.specifications) return '';
+  const rows = product.specifications.map(({label, value}) =>
+    `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`
+  ).join('');
+  return `<details class="model-specifications">
+    <summary>${esc(product.name)} specifications${plus}</summary>
+    <dl>${rows}</dl>
+  </details>`;
+}
+
+function modelBenefits(product) {
+  const image = product.benefitImage;
+  const visual = image
+    ? `<img src="${asset(image.src)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="lazy" decoding="async">`
+    : photo(product, '', true);
+  const sections = product.benefits.map(({title, text}, index) => {
+    const headingId = `${product.id}-benefit-${index + 1}`;
+    return `<section class="model-benefit" aria-labelledby="${headingId}">
+      <h3 id="${headingId}">${esc(title)}</h3>
+      <p>${esc(text)}</p>
+    </section>`;
+  }).join('');
+  return `<section class="model-benefits" aria-label="${esc(product.name)} features and benefits">
+    <div class="benefit-spread">
+      <div class="benefit-visual">${visual}</div>
+      ${sections}
+    </div>${specificationDisclosure(product)}
+  </section>`;
+}
+
+function modelDetails(product) {
+  if (product.benefits) return modelBenefits(product) + storyPerspectives(product);
+  return `${storyPerspectives(product)}<section class="story-details" aria-labelledby="${product.id}-details-title"><p class="story-label">A closer look</p><h3 id="${product.id}-details-title">The details around your day.</h3><dl class="dialog-features">${product.features.map(f=>`<div><dt>${esc(f.title)}</dt><dd>${esc(f.text)}</dd></div>`).join('')}</dl></section>`;
+}
 function productDialog(product) {
   const id='product-'+product.id;
-  return `<dialog class="product-dialog story-dialog" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual${product.id==='inno-f2'?' is-f2':''}">${photo(product,'',true)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${storyPerspectives(product)}<section class="story-details" aria-labelledby="${product.id}-details-title"><p class="story-label">A closer look</p><h3 id="${product.id}-details-title">${product.id==='inno-f1-marshal'?'Considered for course duties.':'The details around your day.'}</h3><dl class="dialog-features">${product.features.map(f=>`<div><dt>${esc(f.title)}</dt><dd>${esc(f.text)}</dd></div>`).join('')}</dl></section>${founderNote(product)}${storyInvitation(product)}</div>${storyOrder(product)}</dialog>`;
+  const invitation = founderNote(product) + storyInvitation(product);
+  const closing = product.benefits ? `<div class="model-closing">${invitation}</div>` : invitation;
+  return `<dialog class="product-dialog story-dialog${product.benefits ? ' f1-story' : ''}" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual${product.id==='inno-f2'?' is-f2':''}">${photo(product,'',true)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${modelDetails(product)}${closing}</div>${storyOrder(product)}</dialog>`;
 }
 function robo() {
   return `<section class="robo-section on-dark" id="robocaddy" aria-labelledby="robo-title"><div class="wrap robo-heading"><p class="robo-brand">ROBOCADDY<sup>®</sup></p><h2 id="robo-title" data-reveal-title>Coming soon at the<br>2027 Orlando PGA Show</h2></div><figure class="robo-image"><img src="${asset('robocaddy-teaser-1920.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="Four ROBOCADDY product concepts shown in dark silhouette for the 2027 collection preview." loading="lazy" decoding="async"></figure><div class="wrap robo-bottom"><div><p class="robo-promise">Walk or Ride.<br>The Choice Is Yours.</p><p class="robo-date">Orlando, Florida · January 2027</p></div><div class="robo-invitation"><p>A new family of personal golf mobility. Preview the silhouettes ahead of the reveal.</p><a class="text-link" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">Discover what’s next${arrow}</a></div></div></section>`;
@@ -96,5 +134,5 @@ ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></htm
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-10-29</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-03</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');
