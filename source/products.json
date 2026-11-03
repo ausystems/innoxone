@@ -266,7 +266,7 @@
         "title": "Tell us about your course day.",
         "text": "Share the routes your team covers and what they carry. We can discuss the Marshal configuration, your course requirements and a possible demonstration.",
         "action": "Discuss your course",
-        "interest": "course-demo"
+        "interest": "course-demonstration"
       },
       "orderTitle": "Put your course team first.",
       "benefits": [
