@@ -146,6 +146,13 @@
         "alt": "Four single-rider INNO-F1 carts spread out across the fairway.",
         "width": 960,
         "height": 540
+      },
+      "cardImage": {
+        "image": "lineup-inno-f1-original-640.webp",
+        "srcset": "lineup-inno-f1-original-360.webp 360w, lineup-inno-f1-original-640.webp 640w, lineup-inno-f1-original-960.webp 960w",
+        "width": 640,
+        "height": 694,
+        "alt": "Front three-quarter rendering of the green INNO-F1 Original with a cognac seat and rear golf bag."
       }
     },
     {
@@ -216,7 +223,14 @@
           "title": "Your way, more places",
           "text": "Great golf shouldn't depend on how big the course is. The INNO F1 Light brings the INNO experience to resorts, urban courses and tight properties. Wherever you play, you can play your way."
         }
-      ]
+      ],
+      "cardImage": {
+        "image": "lineup-inno-f1-light-640.webp",
+        "srcset": "lineup-inno-f1-light-360.webp 360w, lineup-inno-f1-light-640.webp 640w, lineup-inno-f1-light-960.webp 960w",
+        "width": 640,
+        "height": 694,
+        "alt": "Front three-quarter rendering of the red-orange INNO-F1 Light with a black canopy and rear golf bag."
+      }
     },
     {
       "id": "inno-f1-marshal",
@@ -286,7 +300,14 @@
           "title": "Built for every shift",
           "text": "The Marshal is built on the proven INNO F1 platform. It's made to handle long days on the course and stays easy to maintain. Your team gets a cart they can count on."
         }
-      ]
+      ],
+      "cardImage": {
+        "image": "lineup-inno-f1-marshal-640.webp",
+        "srcset": "lineup-inno-f1-marshal-360.webp 360w, lineup-inno-f1-marshal-640.webp 640w, lineup-inno-f1-marshal-960.webp 960w",
+        "width": 640,
+        "height": 694,
+        "alt": "Front three-quarter rendering of the white INNO-F1 Marshal with a windshield placard and rear cargo box."
+      }
     },
     {
       "id": "inno-f2",

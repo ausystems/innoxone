@@ -17,7 +17,14 @@ const logo = `<a class="wordmark" href="../" aria-label="INNOXONE home">${mark}<
 const contactURL = interest => '../contact/' + (interest ? '?interest=' + encodeURIComponent(interest) : '');
 const mailURL = product => 'mailto:' + common.contact.email + '?subject=' + encodeURIComponent(product + ' inquiry');
 const inquiry = (label, interest, cls = 'pill') => `<a class="${cls}" href="${contactURL(interest)}" data-inquiry="${esc(interest || 'general')}">${esc(label)}</a>`;
-const photo = (product, extra = '', dialog = false) => `<img src="${asset(product.image)}" srcset="${srcset(product.srcset)}" sizes="${product.id==='inno-f2'?'(max-width:767px) 280px, 340px':dialog?'(max-width:767px) 360px, 620px':'(max-width:359px) 280px, (max-width:767px) 360px, (max-width:1100px) 420px, 500px'}" width="${product.width}" height="${product.height}" alt="${esc(product.alt)}" loading="${product.id==='inno-f1-original'?'eager':'lazy'}" decoding="async" ${extra}>`;
+function photo(product, lineup = false) {
+  const image = lineup && product.cardImage ? product.cardImage : product;
+  const firstCard = lineup && product.id === 'inno-f1-original';
+  const sizes = lineup
+    ? '(max-width:767px) min(67vw, 277px), (max-width:1100px) 258px, (min-width:1700px) 323px, 286px'
+    : product.id === 'inno-f2' ? '(max-width:767px) 280px, 340px' : '(max-width:767px) 360px, 620px';
+  return `<img src="${asset(image.image)}" srcset="${srcset(image.srcset)}" sizes="${sizes}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="${firstCard ? 'eager' : 'lazy'}" decoding="async"${firstCard ? ' fetchpriority="high"' : ''}>`;
+}
 
 function header() { return shell.header('products'); }
 function intro() {
@@ -25,7 +32,7 @@ function intro() {
 }
 function card(product) {
   const id = 'product-' + product.id;
-  return `<article class="product-card" data-model="${product.id}" id="${product.id}"><div class="card-top"><div><p class="card-audience">${esc(product.audience)}</p><h3>${esc(product.name)}</h3></div><a class="card-detail-link" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View ${esc(product.name)} details">${plus}</a></div><a class="card-visual" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="Explore ${esc(product.name)}">${photo(product, product.id === 'inno-f1-original' ? 'fetchpriority="high"' : '')}</a><div class="card-bottom"><p class="card-description">${esc(product.summary)}</p><div class="card-actions"><a class="pill pill-dark" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View details for ${esc(product.name)}">View details</a><a class="text-link" href="${contactURL(product.inquiry)}" data-inquiry="${product.id}" aria-label="Get a quote for ${esc(product.name)}">Get a quote${arrow}</a></div></div></article>`;
+  return `<article class="product-card" data-model="${product.id}" id="${product.id}"><div class="card-top"><div><p class="card-audience">${esc(product.audience)}</p><h3>${esc(product.name)}</h3></div><a class="card-detail-link" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View ${esc(product.name)} details">${plus}</a></div><a class="card-visual" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="Explore ${esc(product.name)}">${photo(product, true)}</a><div class="card-bottom"><p class="card-description">${esc(product.summary)}</p><div class="card-actions"><a class="pill pill-dark" href="#${id}" data-open="${id}" aria-haspopup="dialog" aria-label="View details for ${esc(product.name)}">View details</a><a class="text-link" href="${contactURL(product.inquiry)}" data-inquiry="${product.id}" aria-label="Get a quote for ${esc(product.name)}">Get a quote${arrow}</a></div></div></article>`;
 }
 function lineup() {
   return `<section class="product-lineup wrap" id="lineup" aria-labelledby="lineup-title"><h2 class="sr-only" id="lineup-title">Explore our golf carts</h2><div class="product-grid">${data.products.map(card).join('')}</div><p class="lineup-note">Contact our team for pricing, specifications and availability.</p></section>`;
@@ -69,7 +76,7 @@ function modelBenefits(product) {
   const image = product.benefitImage;
   const visual = image
     ? `<img src="${asset(image.src)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="lazy" decoding="async">`
-    : photo(product, '', true);
+    : photo(product);
   const sections = product.benefits.map(({title, text}, index) => {
     const headingId = `${product.id}-benefit-${index + 1}`;
     return `<section class="model-benefit" aria-labelledby="${headingId}">
@@ -93,7 +100,7 @@ function productDialog(product) {
   const id='product-'+product.id;
   const invitation = founderNote(product) + storyInvitation(product);
   const closing = product.benefits ? `<div class="model-closing">${invitation}</div>` : invitation;
-  return `<dialog class="product-dialog story-dialog${product.benefits ? ' f1-story' : ''}" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual${product.id==='inno-f2'?' is-f2':''}">${photo(product,'',true)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${modelDetails(product)}${closing}</div>${storyOrder(product)}</dialog>`;
+  return `<dialog class="product-dialog story-dialog${product.benefits ? ' f1-story' : ''}" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual${product.id==='inno-f2'?' is-f2':''}">${photo(product)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${modelDetails(product)}${closing}</div>${storyOrder(product)}</dialog>`;
 }
 function robo() {
   return `<section class="robo-section on-dark" id="robocaddy" aria-labelledby="robo-title"><div class="wrap robo-heading"><p class="robo-brand">ROBOCADDY<sup>®</sup></p><h2 id="robo-title" data-reveal-title>Coming soon at the<br>2027 Orlando PGA Show</h2></div><figure class="robo-image"><img src="${asset('robocaddy-teaser-1920.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="Four ROBOCADDY product concepts shown in dark silhouette for the 2027 collection preview." loading="lazy" decoding="async"></figure><div class="wrap robo-bottom"><div><p class="robo-promise">Walk or Ride.<br>The Choice Is Yours.</p><p class="robo-date">Orlando, Florida · January 2027</p></div><div class="robo-invitation"><p>A new family of personal golf mobility. Preview the silhouettes ahead of the reveal.</p><a class="text-link" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">Discover what’s next${arrow}</a></div></div></section>`;
@@ -134,5 +141,5 @@ ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></htm
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-03</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-08</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');
