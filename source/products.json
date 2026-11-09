@@ -317,29 +317,15 @@
       "headline": "A fresh perspective. A personal choice.",
       "summary": "A distinctive roof, broad windshield and open-sided golf cart design.",
       "description": "The right golf cart should feel like a considered choice. INNO-F2 brings another distinctive design to the INNOXONE collection, with a sculpted roof, broad windshield and open sides.",
-      "image": "inno-f2-1000.webp",
-      "srcset": "inno-f2-640.webp 640w, inno-f2-1000.webp 1000w, inno-f2-1400.webp 1400w",
-      "width": 1400,
-      "height": 1519,
-      "alt": "White INNO-F2 golf cart viewed from the front quarter, with an orange seat, roof and windshield.",
+      "image": "inno-f2-profile-1200.webp",
+      "srcset": "inno-f2-profile-600.webp 600w, inno-f2-profile-900.webp 900w, inno-f2-profile-1200.webp 1200w",
+      "width": 1200,
+      "height": 700,
+      "alt": "Left-facing side-profile rendering of the white INNO-F2 golf cart with an orange seat and rear basket.",
       "facts": [
         "Distinctive roof",
         "Broad windshield",
         "Open sides"
-      ],
-      "features": [
-        {
-          "title": "A distinctive profile",
-          "text": "A sculpted roof and front frame give INNO-F2 its own identity."
-        },
-        {
-          "title": "An open view",
-          "text": "A broad windshield and open sides keep the course in view."
-        },
-        {
-          "title": "Find your fit",
-          "text": "Ask our team about specifications, configurations and availability."
-        }
       ],
       "inquiry": "inno-f2",
       "story": {
@@ -374,7 +360,38 @@
         "action": "Explore INNO-F2 with us",
         "interest": "inno-f2"
       },
-      "orderTitle": "Let’s talk about INNO-F2."
+      "orderTitle": "Let’s talk about INNO-F2.",
+      "cardImage": {
+        "image": "inno-f2-1000.webp",
+        "srcset": "inno-f2-640.webp 640w, inno-f2-1000.webp 1000w, inno-f2-1400.webp 1400w",
+        "width": 1400,
+        "height": 1519,
+        "alt": "White INNO-F2 golf cart viewed from the front quarter, with an orange seat, roof and windshield."
+      },
+      "benefits": [
+        {
+          "title": "A distinctive profile",
+          "text": "A sculpted roof and front frame give INNO-F2 its own identity."
+        },
+        {
+          "title": "An open view",
+          "text": "A broad windshield and open sides keep the course in view."
+        },
+        {
+          "title": "A seat between shots",
+          "text": "Settle into the contoured seat and rest your arm on the way to your next shot."
+        },
+        {
+          "title": "Find your fit",
+          "text": "Ask our team about specifications, configurations and availability."
+        }
+      ],
+      "benefitImage": {
+        "src": "inno-f2-1000.webp",
+        "width": 1000,
+        "height": 1085,
+        "alt": "Front view of the INNO-F2 showing its windshield surround, open cabin and orange seat."
+      }
     }
   ],
   "faq": [

@@ -22,7 +22,7 @@ function photo(product, lineup = false) {
   const firstCard = lineup && product.id === 'inno-f1-original';
   const sizes = lineup
     ? '(max-width:767px) min(67vw, 277px), (max-width:1100px) 258px, (min-width:1700px) 323px, 286px'
-    : product.id === 'inno-f2' ? '(max-width:767px) 280px, 340px' : '(max-width:767px) 360px, 620px';
+    : '(max-width:767px) 360px, 620px';
   return `<img src="${asset(image.image)}" srcset="${srcset(image.srcset)}" sizes="${sizes}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="${firstCard ? 'eager' : 'lazy'}" decoding="async"${firstCard ? ' fetchpriority="high"' : ''}>`;
 }
 
@@ -92,15 +92,10 @@ function modelBenefits(product) {
   </section>`;
 }
 
-function modelDetails(product) {
-  if (product.benefits) return modelBenefits(product) + storyPerspectives(product);
-  return `${storyPerspectives(product)}<section class="story-details" aria-labelledby="${product.id}-details-title"><p class="story-label">A closer look</p><h3 id="${product.id}-details-title">The details around your day.</h3><dl class="dialog-features">${product.features.map(f=>`<div><dt>${esc(f.title)}</dt><dd>${esc(f.text)}</dd></div>`).join('')}</dl></section>`;
-}
 function productDialog(product) {
   const id='product-'+product.id;
   const invitation = founderNote(product) + storyInvitation(product);
-  const closing = product.benefits ? `<div class="model-closing">${invitation}</div>` : invitation;
-  return `<dialog class="product-dialog story-dialog${product.benefits ? ' f1-story' : ''}" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual${product.id==='inno-f2'?' is-f2':''}">${photo(product)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${modelDetails(product)}${closing}</div>${storyOrder(product)}</dialog>`;
+  return `<dialog class="product-dialog story-dialog cart-story" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual">${photo(product)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${modelBenefits(product)}${storyPerspectives(product)}<div class="model-closing">${invitation}</div></div>${storyOrder(product)}</dialog>`;
 }
 function robo() {
   return `<section class="robo-section on-dark" id="robocaddy" aria-labelledby="robo-title"><div class="wrap robo-heading"><p class="robo-brand">ROBOCADDY<sup>®</sup></p><h2 id="robo-title" data-reveal-title>Coming soon at the<br>2027 Orlando PGA Show</h2></div><figure class="robo-image"><img src="${asset('robocaddy-teaser-1920.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="Four ROBOCADDY product concepts shown in dark silhouette for the 2027 collection preview." loading="lazy" decoding="async"></figure><div class="wrap robo-bottom"><div><p class="robo-promise">Walk or Ride.<br>The Choice Is Yours.</p><p class="robo-date">Orlando, Florida · January 2027</p></div><div class="robo-invitation"><p>A new family of personal golf mobility. Preview the silhouettes ahead of the reveal.</p><a class="text-link" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">Discover what’s next${arrow}</a></div></div></section>`;
@@ -141,5 +136,5 @@ ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></htm
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-08</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-09</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');
