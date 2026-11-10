@@ -39,14 +39,14 @@
       },
       "perspectives": [
         {
-          "label": "For your round",
-          "title": "More attention for your next shot.",
-          "text": "Your clubs, your route and your place to pause. Original lets you move to your own ball while staying part of the group. It is a small change in how you travel, with a very personal place in how you play."
+          "label": "For personal use",
+          "title": "Your ride, ready when you are.",
+          "text": "Skip the rental and ride from your driveway to the first tee. The F1 is ideal for gated golf communities, with a comfortable bucket seat, room for your clubs and the freedom to play your way."
         },
         {
-          "label": "For your course",
-          "title": "Give your golfers another choice.",
-          "text": "From private clubs to public courses, resorts and golf communities, personal mobility can become part of your offering. Explore private ownership, member programs, premium rentals or a demonstration with our team."
+          "label": "For golf course owners",
+          "title": "Give every golfer their own ride.",
+          "text": "Single-rider carts keep pace of play moving and give each player space to focus on their game. Offer the F1 as a rental, a membership perk, and set your course apart by giving your golfers a ride they’ll remember."
         }
       ],
       "founder": {
@@ -109,6 +109,10 @@
           "value": "36 holes"
         },
         {
+          "label": "Top speed",
+          "value": "20 mph"
+        },
+        {
           "label": "Hill climb capability",
           "value": "20% at 6 mph"
         },
@@ -121,7 +125,7 @@
           "value": "Included"
         },
         {
-          "label": "Oversize seat",
+          "label": "Bucket seat",
           "value": "Included"
         },
         {
@@ -180,23 +184,23 @@
         "paragraphs": [
           "Resorts, urban courses and smaller properties don't have room for big fleets. The INNO F1 Light gives you the same single-rider experience in a lighter, simpler package. More courses can offer it, and more golfers get to play their way."
         ],
-        "statement": [
-          "Your ball.",
-          "Your pace.",
-          "Your way."
-        ],
-        "caption": "INNO-F1 Light · Essential single-rider mobility"
+        "caption": "The open-sided INNO-F1 Light.",
+        "image": "lineup-inno-f1-light-640.webp",
+        "srcset": "lineup-inno-f1-light-360.webp 360w, lineup-inno-f1-light-640.webp 640w, lineup-inno-f1-light-960.webp 960w",
+        "width": 640,
+        "height": 694,
+        "alt": "Front three-quarter rendering of the red-orange INNO-F1 Light with a black canopy and rear golf bag."
       },
       "perspectives": [
         {
-          "label": "For your round",
-          "title": "A straightforward way to make it yours.",
-          "text": "If the idea of a ride of your own feels right, Light is a configuration to explore. See its slim roof frame and dedicated golf-bag space, then talk with us about how it compares with Original."
+          "label": "For personal use",
+          "title": "Light enough for everyday use.",
+          "text": "All the freedom of the INNO-F1 in a lighter, simpler build. The F1-Light is easy to handle, easy to store and ready to take you from home to the first tee, with room for your clubs and nothing you don’t need."
         },
         {
-          "label": "For your course",
-          "title": "Start with the golfers you know.",
-          "text": "Some members want more independence. Others are curious about a different way to enjoy their regular round. Light gives your team another single-rider option to discuss as you consider a personal mobility program."
+          "label": "For golf course owners",
+          "title": "Give your customers their own ride.",
+          "text": "Not every course has room for a full cart fleet. The Light fits tighter properties, resorts and smaller courses, giving members a single-rider option that’s easy to manage and easy to add."
         }
       ],
       "invitation": {
@@ -267,13 +271,13 @@
       "perspectives": [
         {
           "label": "For your team",
-          "title": "Their own way to get there.",
-          "text": "A marshal, a staff member or a colleague helping a player: each has a reason to be out on the course. Marshal gives that person an individual vehicle and space for everyday course essentials."
+          "title": "Their own way to get around the course",
+          "text": "A marshal, a staff member or a colleague helping a player: each has an independent reason to be out on the course. The F1 marshal gives that person an individual vehicle and space for everyday course essentials."
         },
         {
-          "label": "For your golfers",
-          "title": "The human side of course service.",
-          "text": "A welcome, a useful direction or a conversation at the right moment can shape a golfer’s day. Marshal is designed for the team behind those moments, with a focus on course duties and player assistance."
+          "label": "Improve customer experience",
+          "title": "Faster rounds. Faster help.",
+          "text": "When a group falls behind or a golfer needs a hand, your staff can get there in minutes. The Marshal keeps pace of play on track and puts help on the course when it’s needed, so your golfers enjoy every hole"
         }
       ],
       "invitation": {
@@ -313,51 +317,50 @@
       "id": "inno-f2",
       "name": "INNO-F2",
       "family": "INNO-F2",
-      "audience": "Explore INNO-F2",
-      "headline": "A fresh perspective. A personal choice.",
-      "summary": "A distinctive roof, broad windshield and open-sided golf cart design.",
-      "description": "The right golf cart should feel like a considered choice. INNO-F2 brings another distinctive design to the INNOXONE collection, with a sculpted roof, broad windshield and open sides.",
-      "image": "inno-f2-profile-1200.webp",
-      "srcset": "inno-f2-profile-600.webp 600w, inno-f2-profile-900.webp 900w, inno-f2-profile-1200.webp 1200w",
+      "audience": "For two players",
+      "headline": "Designed for two. Built for comfort.",
+      "summary": "A two-seat electric golf cart with adjustable bucket seats, a ceiling fan and rear storage.",
+      "description": "The two-seat cart hasn’t changed in decades. The INNO-F2 rebuilds it around the two people riding in it, with more comfort, attention to detail, and a ride you’ll actually enjoy, round after round.",
+      "image": "f2-two-player-1200.webp",
+      "srcset": "f2-two-player-600.webp 600w, f2-two-player-1200.webp 1200w, f2-two-player-3840.webp 3840w",
       "width": 1200,
       "height": 700,
-      "alt": "Left-facing side-profile rendering of the white INNO-F2 golf cart with an orange seat and rear basket.",
+      "alt": "Front rendering of the white INNO-F2 showing both orange bucket seats.",
       "facts": [
-        "Distinctive roof",
-        "Broad windshield",
-        "Open sides"
+        "Two bucket seats",
+        "Electric drive",
+        "Ceiling fan"
       ],
       "inquiry": "inno-f2",
       "story": {
-        "label": "Explore INNO-F2",
-        "title": "Look closer. Picture your own day.",
+        "label": "The idea behind INNO-F2",
+        "title": "A quieter round for two.",
         "paragraphs": [
-          "A golf cart becomes part of the way you experience a course. The view from the seat, the shape around you and the feeling of arriving all become part of the day.",
-          "INNOXONE’s story begins with people and how they want to move. With INNO-F2, that conversation continues through another design in the collection. Take a closer look, ask what makes it different and explore whether it fits the experience you have in mind."
+          "Same two-seat setup golfers know, built on a quiet electric drive. Less noise, less upkeep and a smoother ride from the first tee to the 18th green. No engine noise between shots and no fumes in the air, just you, your partner and the round."
         ],
-        "image": "gallery-1600.webp",
-        "srcset": "gallery-640.webp 640w, gallery-1600.webp 1600w",
-        "width": 1600,
-        "height": 900,
-        "alt": "The INNOXONE collection displayed at the San Juan Capistrano Golf Gallery.",
-        "caption": "Explore the collection with our team at the INNOXONE Golf Gallery."
+        "image": "f2-detail-two-seats-web.webp",
+        "srcset": "f2-detail-two-seats-small.webp 421w, f2-detail-two-seats-web.webp 588w, f2-detail-two-seats-4k.webp 2995w",
+        "width": 588,
+        "height": 754,
+        "alt": "Two adjustable orange bucket seats in the INNO-F2 showroom cart.",
+        "caption": "Two adjustable bucket seats, side by side."
       },
       "perspectives": [
         {
-          "label": "For your own choice",
-          "title": "Start with what matters to you.",
-          "text": "Tell us where you play and what you want from your next golf cart. We will walk you through INNO-F2’s configuration, specifications and availability so you can make an informed choice."
+          "label": "For personal use",
+          "title": "Your cart. Your community. Your course.",
+          "text": "Drive from your driveway to the first tee in your own cart. The F2 gives you and your playing partner bucket seats, a ceiling fan and room for your clubs and small essentials, with no rental and no waiting at the cart barn. It’s ideal for gated golf communities where carts are allowed on community roads."
         },
         {
-          "label": "For your course",
-          "title": "Consider the experience you want to offer.",
-          "text": "Your golfers, setting and daily operation are the starting point. Discuss INNO-F2 with our team to understand the model and the practical questions that matter before bringing it to your course."
+          "label": "For golf course owners",
+          "title": "Give your golfers a cart worth remembering.",
+          "text": "Golfers notice the cart they ride in, and they talk about it in reviews. The F2 upgrades your fleet with bucket seats, a ceiling fan and a clear one-piece windshield, so every round feels more premium without changing how your course runs."
         }
       ],
       "invitation": {
-        "title": "Meet INNO-F2 through a conversation.",
-        "text": "We would like to hear what you are looking for. Ask about the current configuration and availability, or plan a Gallery visit to explore the collection.",
-        "action": "Explore INNO-F2 with us",
+        "title": "Find out if the F2 fits your ride.",
+        "text": "Whether it’s for personal use or your course fleet, we’re here to help. Ask about pricing and availability, or visit the showroom to see it up close.",
+        "action": "Ask about pricing",
         "interest": "inno-f2"
       },
       "orderTitle": "Let’s talk about INNO-F2.",
@@ -370,28 +373,48 @@
       },
       "benefits": [
         {
-          "title": "A distinctive profile",
-          "text": "A sculpted roof and front frame give INNO-F2 its own identity."
+          "title": "Stay cool on every hole",
+          "text": "A built-in ceiling fan keeps air moving under the roof. It makes a real difference on hot, still afternoons."
         },
         {
-          "title": "An open view",
-          "text": "A broad windshield and open sides keep the course in view."
+          "title": "A clear view ahead",
+          "text": "A wide one-piece windshield with no seam line running across your view. Just a clear look down the fairway."
         },
         {
-          "title": "A seat between shots",
-          "text": "Settle into the contoured seat and rest your arm on the way to your next shot."
+          "title": "Seats built for comfort",
+          "text": "Two adjustable bucket seats, so each player can set their own position. You stay supported and comfortable from the first tee to the last green."
         },
         {
-          "title": "Find your fit",
-          "text": "Ask our team about specifications, configurations and availability."
+          "title": "Storage where you need it",
+          "text": "A rear storage container keeps your essentials close: balls, gloves, towels, a water bottle. The small stuff stays organized and off the seats."
         }
       ],
-      "benefitImage": {
-        "src": "inno-f2-1000.webp",
-        "width": 1000,
-        "height": 1085,
-        "alt": "Front view of the INNO-F2 showing its windshield surround, open cabin and orange seat."
-      }
+      "detailPhotos": [
+        {
+          "name": "cabin",
+          "label": "Windshield",
+          "width": 578,
+          "height": 753
+        },
+        {
+          "name": "seat",
+          "label": "Bucket seats",
+          "width": 578,
+          "height": 751
+        },
+        {
+          "name": "storage",
+          "label": "Rear storage",
+          "width": 578,
+          "height": 744
+        },
+        {
+          "name": "storage-side",
+          "label": "Bag straps",
+          "width": 578,
+          "height": 748
+        }
+      ]
     }
   ],
   "faq": [

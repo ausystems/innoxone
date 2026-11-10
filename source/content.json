@@ -597,25 +597,25 @@
   },
   "f2": {
     "name": "INNO-F2",
-    "headline": "A fresh take on the golf cart.",
-    "description": "Meet INNO-F2, another way to experience INNOXONE personal golf mobility. A distinctive roof, wide windshield and open sides give its design a character of its own.",
+    "headline": "Designed for two. Built for comfort.",
+    "description": "A two-seat electric golf cart with adjustable bucket seats, a ceiling fan and rear storage.",
     "note": "Speak with our team about specifications, availability and the right fit for you or your course.",
-    "action": "Ask about INNO-F2",
-    "href": "contact/?interest=inno-f2",
+    "action": "Explore the two-seat INNO-F2",
+    "href": "golf-carts-products/#product-inno-f2",
     "image": "assets/inno-f2-1400.webp",
     "alt": "Front three-quarter view of the white INNO-F2 golf cart with an orange seat, roof and windshield.",
     "details": [
       {
-        "title": "A distinctive profile",
-        "text": "A sculpted roof and front frame give INNO-F2 its own identity."
+        "title": "Stay cool on every hole",
+        "text": "A built-in ceiling fan keeps air moving under the roof. It makes a real difference on hot, still afternoons."
       },
       {
-        "title": "An open view",
-        "text": "A broad windshield and open sides keep the course in view."
+        "title": "A clear view ahead",
+        "text": "A wide one-piece windshield with no seam line running across your view. Just a clear look down the fairway."
       },
       {
-        "title": "Explore your options",
-        "text": "Talk to INNOXONE about the model, configuration and availability."
+        "title": "Seats built for comfort",
+        "text": "Two adjustable bucket seats, so each player can set their own position. You stay supported and comfortable from the first tee to the last green."
       }
     ]
   }

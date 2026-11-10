@@ -138,8 +138,6 @@
 .cart-story[data-product="inno-f1-original"] .benefit-visual { align-self: center; aspect-ratio: 16 / 9; min-height: 0; }
 .cart-story[data-product="inno-f1-light"] .benefit-visual img,
 .cart-story[data-product="inno-f1-marshal"] .benefit-visual img { object-fit: contain; }
-.cart-story[data-product="inno-f1-light"] .benefit-visual img { transform: scale(1.56); transform-origin: 39% 45%; }
-.cart-story[data-product="inno-f1-marshal"] .benefit-visual img { transform: scale(1.65); transform-origin: 71% 48%; }
 .model-benefit { padding-block: 20px 4px; border-top: 1px solid #dce1d8; }
 .model-benefit h3 { margin: 0; font-size: clamp(25px, 2.45vw, 34px); font-weight: 400; line-height: 1.12; letter-spacing: -.035em; text-wrap: balance; }
 .model-benefit p { margin: 14px 0 0; max-width: 60ch; font-size: 16px; line-height: 1.65; color: #50574f; text-wrap: pretty; }
@@ -168,4 +166,21 @@
   .model-benefit p { margin-top: 10px; font-size: 15px; }
   .model-specifications dl { grid-template-columns: 1fr; }
   .model-closing .story-invitation > div { gap: 12px; }
+}
+
+.cart-story[data-product="inno-f1-light"] .story-photo img { object-fit: contain; background: #eff2ed; padding: 16px; }
+.cart-story[data-product="inno-f2"] .story-photo img { aspect-ratio: auto; height: auto; max-height: 510px; object-fit: contain; width: auto; max-width: 100%; margin-inline: auto; }
+.cart-detail-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+.cart-detail-gallery figure { margin: 0; }
+.cart-detail-gallery a { display: block; border-radius: 9px; overflow: hidden; background: #eff2ed; }
+.cart-detail-gallery img { display: block; width: 100%; height: auto; }
+.cart-detail-gallery figcaption { font-size: 14px; margin-top: 10px; }
+.collection-cta { background: #18271d; color: #fff; padding-block: clamp(48px, 7vw, 100px); }
+.collection-cta .wrap { display: flex; justify-content: space-between; align-items: center; gap: 36px; }
+.collection-cta h2 { font-size: clamp(36px, 4.6vw, 66px); font-weight: 400; letter-spacing: -.04em; line-height: 1.05; }
+.collection-cta p { font-size: 17px; line-height: 1.6; color: #e0e8dc; max-width: 52ch; margin-top: 18px; }
+.collection-cta .pill { flex-shrink: 0; }
+@media(max-width:767px) {
+  .cart-detail-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; margin-top: 28px; }
+  .collection-cta .wrap { align-items: flex-start; flex-direction: column; gap: 24px; }
 }

@@ -222,3 +222,8 @@
  .home-page .founder-chapters button span{flex:none}
 }
 @media(max-width:767px){.home-page .sister-photo{width:100%;margin:32px 0 0;aspect-ratio:1.15}}
+
+@media (max-width: 767px) {
+  .home-page :is(.f2-intro, .f2-details, .why-body, .robo-story-copy, .sister-copy, .harold-copy) p:not(.eyebrow) { font-size: max(1rem, 16px); line-height: 1.6; }
+  .home-page .faq-list details > p { font-size: 16px; line-height: 1.6; }
+}
