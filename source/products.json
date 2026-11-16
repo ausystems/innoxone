@@ -234,7 +234,74 @@
         "width": 640,
         "height": 694,
         "alt": "Front three-quarter rendering of the red-orange INNO-F1 Light with a black canopy and rear golf bag."
-      }
+      },
+      "specifications": [
+        {
+          "label": "Body frame",
+          "value": "Heavy-duty space frame"
+        },
+        {
+          "label": "Vehicle weight",
+          "value": "720 lb"
+        },
+        {
+          "label": "Battery",
+          "value": "2 × 48 V, 30 Ah"
+        },
+        {
+          "label": "Parts warranty",
+          "value": "2 years"
+        },
+        {
+          "label": "Battery warranty",
+          "value": "2 years"
+        },
+        {
+          "label": "Motor power",
+          "value": "2,000 W"
+        },
+        {
+          "label": "Travel range",
+          "value": "36 holes"
+        },
+        {
+          "label": "Top speed",
+          "value": "20 mph"
+        },
+        {
+          "label": "Hill climb capability",
+          "value": "20% at 6 mph"
+        },
+        {
+          "label": "Brakes",
+          "value": "Hydraulic brake + EM brake"
+        },
+        {
+          "label": "Golf bag rack",
+          "value": "Included"
+        },
+        {
+          "label": "Bucket seat",
+          "value": "Included"
+        },
+        {
+          "label": "Front suspension",
+          "value": "MacPherson"
+        },
+        {
+          "label": "Drink holder",
+          "value": "Included"
+        },
+        {
+          "label": "Smartphone charging port",
+          "value": "Included"
+        },
+        {
+          "label": "Charging time",
+          "value": "3 to 4 hours"
+        }
+      ],
+      "specificationNote": "F1 Original reference specifications are shown below. Contact our team to confirm the Light configuration."
     },
     {
       "id": "inno-f1-marshal",
@@ -244,11 +311,11 @@
       "headline": "Keep every round moving",
       "summary": "Electric mobility for marshals and course staff, with a rear utility box.",
       "description": "The INNO Marshal is a single-rider utility cart built for course staff. It gets marshals across the course fast, carries what they need and makes them easy to spot.",
-      "image": "f1-marshal.webp",
-      "srcset": "f1-marshal-600.webp 600w, f1-marshal-720.webp 720w, f1-marshal-900.webp 900w, f1-marshal.webp 1200w",
+      "image": "marshal-gallery-1200.webp",
+      "srcset": "marshal-gallery-600.webp 600w, marshal-gallery-1200.webp 1200w, marshal-gallery-3840.webp 3840w",
       "width": 1200,
       "height": 700,
-      "alt": "White INNO-F1 Marshal single-seat electric golf cart with an orange seat and gray rear utility box.",
+      "alt": "White-roofed INNO-F1 Marshal with its windshield placard, bucket seat and rear utility box.",
       "facts": [
         "Single rider",
         "Electric",
@@ -311,7 +378,73 @@
         "width": 640,
         "height": 694,
         "alt": "Front three-quarter rendering of the white INNO-F1 Marshal with a windshield placard and rear cargo box."
-      }
+      },
+      "specifications": [
+        {
+          "label": "Body frame",
+          "value": "Heavy-duty space frame"
+        },
+        {
+          "label": "Vehicle weight",
+          "value": "720 lb"
+        },
+        {
+          "label": "Battery",
+          "value": "2 × 48 V, 30 Ah"
+        },
+        {
+          "label": "Parts warranty",
+          "value": "2 years"
+        },
+        {
+          "label": "Battery warranty",
+          "value": "2 years"
+        },
+        {
+          "label": "Motor power",
+          "value": "2,000 W"
+        },
+        {
+          "label": "Travel range",
+          "value": "36 holes"
+        },
+        {
+          "label": "Top speed",
+          "value": "20 mph"
+        },
+        {
+          "label": "Hill climb capability",
+          "value": "20% at 6 mph"
+        },
+        {
+          "label": "Brakes",
+          "value": "Hydraulic brake + EM brake"
+        },
+        {
+          "label": "Golf bag rack",
+          "value": "Included"
+        },
+        {
+          "label": "Bucket seat",
+          "value": "Included"
+        },
+        {
+          "label": "Front suspension",
+          "value": "MacPherson"
+        },
+        {
+          "label": "Drink holder",
+          "value": "Included"
+        },
+        {
+          "label": "Smartphone charging port",
+          "value": "Included"
+        },
+        {
+          "label": "Charging time",
+          "value": "3 to 4 hours"
+        }
+      ]
     },
     {
       "id": "inno-f2",
@@ -414,7 +547,34 @@
           "width": 578,
           "height": 748
         }
-      ]
+      ],
+      "specifications": [
+        {
+          "label": "Passenger capacity",
+          "value": "2 players"
+        },
+        {
+          "label": "Drive",
+          "value": "Electric"
+        },
+        {
+          "label": "Seating",
+          "value": "Two adjustable bucket seats"
+        },
+        {
+          "label": "Windshield",
+          "value": "One piece"
+        },
+        {
+          "label": "Cabin ventilation",
+          "value": "Ceiling fan"
+        },
+        {
+          "label": "Rear storage",
+          "value": "Included"
+        }
+      ],
+      "specificationNote": "For motor, battery, range and dimensions, request the current F2 technical sheet from our team."
     }
   ],
   "faq": [
@@ -431,71 +591,8 @@
       "a": "Contact us to arrange a showroom visit at 31896 Plaza Dr Suite D2, San Juan Capistrano, California. Ask which models are available to see and whether a demonstration can be arranged for your visit."
     },
     {
-      "q": "When will ROBOCADDY be revealed?",
-      "a": "The ROBOCADDY collection is coming to the 2027 Orlando PGA Show in January 2027. The silhouettes are a collection preview. Contact our team with questions about the reveal and future availability."
+      "q": "Can I meet the ROBOCADDY team at the PGA Show?",
+      "a": "Yes. Apply for a private meeting at the 2027 Orlando PGA Show. Our team reviews each request and contacts applicants to arrange a time."
     }
-  ],
-  "robocaddy": {
-    "id": "robocaddy",
-    "name": "ROBOCADDY®",
-    "audience": "Coming January 2027",
-    "headline": "Walk or Ride. The Choice Is Yours.",
-    "description": "A new family of personal golf mobility, born from a golfer’s wish to choose how the next nine holes feel. Coming soon at the 2027 Orlando PGA Show.",
-    "story": {
-      "label": "The story behind ROBOCADDY",
-      "title": "Nine holes. One simple question.",
-      "paragraphs": [
-        "Several years ago, Young Kim was walking Palo Alto Hills Golf & Country Club in California with a powered caddy carrying his bag. After nine holes, he felt tired. He wanted to ride the remaining nine.",
-        "That moment stayed with him. At the 2025 PGA Show, he asked golfers whether they would rather walk or ride. The more revealing question was whether they wanted the freedom to do both during the same round. That idea became the heart of ROBOCADDY."
-      ],
-      "statement": [
-        "Walk.",
-        "Ride.",
-        "Choose."
-      ],
-      "caption": "The next chapter of Walk & Ride Golf."
-    },
-    "founder": {
-      "quote": "Why can’t golfers walk when they want to walk, and ride when they want to ride?",
-      "name": "Young Kim",
-      "role": "Founder, inventor and designer, INNOXONE"
-    },
-    "perspectives": [
-      {
-        "label": "For golfers",
-        "title": "Your round can change as you do.",
-        "text": "Enjoy the walk. Choose the ride. The ROBOCADDY vision is personal mobility that gives golfers more choice within the same round, with purpose-built designs for different ways to play."
-      },
-      {
-        "label": "For course operators",
-        "title": "A broader way to think about mobility.",
-        "text": "The longer-term vision pairs ROBOCADDY with INNOXONE CONNECT AI, a planned platform linking golfers, vehicles and course teams. Improvements to fleet use and course operations are goals to explore through course pilots."
-      }
-    ],
-    "family": [
-      {
-        "name": "F1",
-        "text": "Personal single-rider mobility for golfers who want to ride independently."
-      },
-      {
-        "name": "F2",
-        "text": "Intelligent two-person mobility, designed around walking, riding or a combination of both."
-      },
-      {
-        "name": "SOLO",
-        "text": "A personal robotic golf companion envisioned to follow one walking golfer and carry their equipment."
-      },
-      {
-        "name": "DUO",
-        "text": "An intelligent robotic caddy envisioned to support two walking golfers and their equipment."
-      }
-    ],
-    "invitation": {
-      "title": "Be part of the conversation.",
-      "text": "The family stays in silhouette ahead of its introduction. Tell us how you like to play, or what your course needs, and ask our team about the January 2027 reveal.",
-      "action": "Ask about the reveal",
-      "interest": "robocaddy-2027"
-    },
-    "orderTitle": "Discover the next chapter."
-  }
+  ]
 }

@@ -5,6 +5,20 @@
     document.documentElement.classList.add('dialog-fallback');
     return;
   }
+  const application = document.getElementById('meeting-application');
+  const draft = document.getElementById('meeting-draft');
+  application.addEventListener('input', () => { draft.hidden = true; });
+  application.addEventListener('submit', event => {
+    event.preventDefault();
+    const fields = new FormData(application);
+    const pairs = [['Full name','name'], ['Email','email'], ['Phone','phone'], ['Organization','organization'], ['Representing','role'], ['Meeting interest','interest']];
+    const body = pairs.map(([label, key]) => label + ': ' + fields.get(key).trim()).join('\n');
+    const compose = document.getElementById('meeting-compose');
+    compose.href = application.action + '?subject=' + encodeURIComponent('ROBOCADDY private meeting application | 2027 Orlando PGA Show') + '&body=' + encodeURIComponent(body);
+    draft.querySelector('textarea').value = body;
+    draft.hidden = false;
+    compose.focus();
+  });
   const openers = new WeakMap(), fromHistory = new WeakSet();
   const menuButton = document.querySelector('[data-open="site-menu"]');
   function defaultOpener(dialog) {

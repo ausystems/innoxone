@@ -180,21 +180,13 @@
   "robocaddy": {
     "name": "ROBOCADDY®",
     "headline": "Coming soon at the 2027 Orlando PGA Show",
-    "description": "The next chapter of Walk & Ride Golf. A new family of personal golf mobility, built around the freedom to choose how you move.",
     "image": "assets/robocaddy-teaser-1920.webp",
-    "alt": "Four ROBOCADDY product concepts shown in dark silhouette ahead of the 2027 Orlando PGA Show.",
-    "promise": "Walk or Ride. The Choice Is Yours.",
     "show": "Orlando, Florida · January 2027",
-    "action": "Ask about the 2027 reveal",
-    "href": "contact/?interest=robocaddy-2027",
     "caption": "2027 collection preview",
-    "storyLabel": "Why ROBOCADDY was born",
-    "storyTitle": "Golf has always been a game of movement.",
-    "storyParagraphs": [
-      "For generations, golfers walked the fairways, experiencing the course one step at a time. Then golf carts made the game more accessible and convenient.",
-      "But golfers have always had to choose: to walk, to ride, or to compromise. We created ROBOCADDY to give golfers a better choice. Walk, ride, or do both, and make golf more enjoyable."
-    ],
-    "closing": "Modern golf is about to move forward."
+    "alt": "The ROBOCADDY collection in silhouette.",
+    "description": "Join us in Orlando for a private introduction.",
+    "action": "Request a PGA Show meeting",
+    "href": "golf-carts-products/#product-robocaddy"
   },
   "sister": {
     "name": "Better golf, indoors and outdoors.",
@@ -353,10 +345,10 @@
         "href": "contact/?interest=course-demonstration"
       },
       {
-        "q": "What is ROBOCADDY?",
-        "a": "ROBOCADDY is INNOXONE’s Walk & Ride Golf mobility family, created to give golfers the choice to walk, ride or do both. The 2027 collection is coming soon at the Orlando PGA Show in January 2027. Contact our team for details about the reveal and future availability.",
-        "link": "Discover ROBOCADDY",
-        "href": "#robocaddy"
+        "q": "How can I meet ROBOCADDY at the PGA Show?",
+        "a": "Yes. Apply for a private meeting at the 2027 Orlando PGA Show. Our team reviews each request and contacts applicants to arrange a time.",
+        "link": "Apply for a meeting",
+        "href": "golf-carts-products/#product-robocaddy"
       },
       {
         "q": "How do I confirm price, delivery and availability?",

@@ -68,7 +68,7 @@ function specificationDisclosure(product) {
   ).join('');
   return `<details class="model-specifications">
     <summary>${esc(product.name)} specifications${plus}</summary>
-    <dl>${rows}</dl>
+    ${product.specificationNote ? `<p class="spec-note">${esc(product.specificationNote)}</p>` : ''}<dl>${rows}</dl>
   </details>`;
 }
 
@@ -106,14 +106,42 @@ function productDialog(product) {
   return `<dialog class="product-dialog story-dialog cart-story" id="${id}" data-product="${product.id}" aria-labelledby="${id}-title"><div class="story-topbar"><span>INNOXONE collection</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="${esc(product.name)} story"><div class="dialog-story-hero"><div class="dialog-copy"><p class="dialog-family">${esc(product.audience)}</p><h2 id="${id}-title">${esc(product.name)}</h2><p class="dialog-lead">${esc(product.headline)}</p><p class="dialog-description">${esc(product.description)}</p></div><div class="dialog-visual">${photo(product)}<ul class="dialog-facts" aria-label="Model highlights">${product.facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul></div></div>${storyChapter(product)}${modelBenefits(product)}${storyPerspectives(product)}<div class="model-closing">${invitation}</div></div>${storyOrder(product)}</dialog>`;
 }
 function robo() {
-  return `<section class="robo-section on-dark" id="robocaddy" aria-labelledby="robo-title"><div class="wrap robo-heading"><p class="robo-brand">ROBOCADDY<sup>®</sup></p><h2 id="robo-title" data-reveal-title>Coming soon at the<br>2027 Orlando PGA Show</h2></div><figure class="robo-image"><img src="${asset('robocaddy-teaser-1920.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="Four ROBOCADDY product concepts shown in dark silhouette for the 2027 collection preview." loading="lazy" decoding="async"></figure><div class="wrap robo-bottom"><div><p class="robo-promise">Walk or Ride.<br>The Choice Is Yours.</p><p class="robo-date">Orlando, Florida · January 2027</p></div><div class="robo-invitation"><p>A new family of personal golf mobility. Preview the silhouettes ahead of the reveal.</p><a class="text-link" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">Discover what’s next${arrow}</a></div></div></section>`;
+  const event = common.robocaddy;
+  return `<section class="robo-section on-dark" id="robocaddy" aria-labelledby="robo-title">
+    <div class="wrap robo-heading"><p class="robo-brand">ROBOCADDY<sup>®</sup></p>
+    <h2 id="robo-title">${esc(event.headline)}</h2></div>
+    <figure class="robo-image"><img src="${asset('robocaddy-teaser-1280.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="${esc(event.alt)}" loading="lazy"></figure>
+    <div class="meeting-invite wrap"><p>Meet with our team in Orlando.</p><a class="pill" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">${esc(event.action)}${arrow}</a></div>
+  </section>`;
 }
+
 function roboDialog() {
-  const p=data.robocaddy;
-  return `<dialog class="product-dialog story-dialog robo-dialog" id="product-robocaddy" data-product="robocaddy" aria-labelledby="product-robocaddy-title"><div class="story-topbar"><span>INNOXONE · The next chapter</span>${close}</div><div class="dialog-body story-scroll" tabindex="0" role="region" aria-label="The ROBOCADDY story"><div class="robo-story-hero"><p class="dialog-family">${esc(p.audience)}</p><h2 id="product-robocaddy-title">${esc(p.name)}</h2><p class="dialog-lead">${esc(p.headline)}</p><img src="${asset('robocaddy-teaser-1280.webp')}" width="1280" height="512" alt="Four ROBOCADDY concepts kept in silhouette ahead of the 2027 reveal." loading="lazy" decoding="async"><p class="dialog-description">${esc(p.description)}</p><p class="robo-preview-note">2027 collection preview</p></div>${storyChapter(p)}${founderNote(p)}<section class="story-robo-family" aria-labelledby="robo-family-title"><p class="story-label">One family. More ways to play.</p><h3 id="robo-family-title">A choice for the way you move.</h3><p class="family-intro">Meet the vision for F1, F2, SOLO and DUO. The collection will be introduced at the January 2027 PGA Show in Orlando.</p><dl>${p.family.map(model=>`<div><dt>${esc(model.name)}</dt><dd>${esc(model.text)}</dd></div>`).join('')}</dl><p class="family-note">Future product concepts. Ask our team about the reveal, specifications and availability.</p></section>${storyPerspectives(p)}${storyInvitation(p)}</div>${storyOrder(p,true)}</dialog>`;
+  return `<dialog class="product-dialog story-dialog meeting-dialog" id="product-robocaddy" data-product="robocaddy" aria-labelledby="meeting-title">
+    <div class="story-topbar"><span>INNOXONE · PGA Show 2027</span>${close}</div>
+    <div class="dialog-body story-scroll meeting-content" tabindex="0">
+      <header class="meeting-intro"><p class="robo-brand">ROBOCADDY<sup>®</sup></p>
+      <h2 id="meeting-title">Request a private meeting.</h2>
+      <p>January 2027 · Orlando, Florida</p></header>
+      <form id="meeting-application" action="mailto:${esc(common.contact.email)}" method="post" enctype="text/plain">
+        <p>Tell us who you represent and what you’d like to discuss. Our team will review your application and contact you to arrange a time.</p>
+        <div class="meeting-fields">
+          <label>Full name<input name="name" autocomplete="name" required maxlength="90"></label>
+          <label>Work email<input name="email" type="email" autocomplete="email" required maxlength="120"></label>
+          <label>Phone number<input name="phone" type="tel" autocomplete="tel" required maxlength="40"></label>
+          <label>Organization<input name="organization" autocomplete="organization" required maxlength="120"></label>
+          <label>I represent<select name="role" required><option value="">Select one</option><option>A golf course or resort</option><option>A dealer or distributor</option><option>A business partner</option><option>Media or press</option><option>Other</option></select></label>
+          <label>Meeting interest<textarea name="interest" rows="3" required maxlength="500"></textarea></label>
+        </div>
+        <button class="pill" type="submit">Prepare application email${arrow}</button>
+        <p class="meeting-delivery">Send your application to ${esc(common.contact.email)} from your email app.</p>
+        <div id="meeting-draft" hidden><h3>Your application is ready to send.</h3><a class="pill" id="meeting-compose" href="mailto:${esc(common.contact.email)}">Open email app${arrow}</a>
+        <details><summary>Copy application details</summary><textarea aria-label="Application details to copy" rows="8" readonly></textarea></details></div>
+      </form>
+    </div></dialog>`;
 }
+
 function visit() {
-  return `<section class="visit-section wrap" aria-labelledby="visit-title"><figure class="visit-image"><img src="${asset('gallery-1600.webp')}" srcset="${srcset('gallery-640.webp 640w, gallery-1600.webp 1600w')}" sizes="(max-width:767px) 90vw, 70vw" width="1600" height="900" alt="INNOXONE golf carts on display in the San Juan Capistrano showroom." loading="lazy" decoding="async"></figure><div class="visit-copy"><p class="eyebrow">Experience INNOXONE</p><h2 id="visit-title" data-reveal-title>Find your fit in San Juan Capistrano.</h2><p>Bring your playing partner or course team to the INNOXONE Golf Gallery. Compare the seating, check the space for your clubs and ask which models are available for a demonstration.</p>${inquiry('Plan a showroom visit', 'showroom-visit')}<address>31896 Plaza Dr Suite D2<br>San Juan Capistrano, CA 92675</address><a class="text-link" href="${esc(common.contact.map)}">Get directions${arrow}</a></div></section>`;
+  return `<section class="visit-section wrap" aria-labelledby="visit-title"><figure class="visit-image"><img src="${asset('gallery-collection-1920.webp')}" srcset="${srcset('gallery-collection-640.webp 640w, gallery-collection-1280.webp 1280w, gallery-collection-1920.webp 1920w, gallery-collection-3840.webp 3840w')}" sizes="(max-width:767px) 90vw, 70vw" width="3840" height="2560" alt="The full lineup of INNOXONE golf carts on display in the San Juan Capistrano showroom." loading="lazy" decoding="async"></figure><div class="visit-copy"><p class="eyebrow">Experience INNOXONE</p><h2 id="visit-title" data-reveal-title>Find your fit in San Juan Capistrano.</h2><p>Bring your playing partner or course team to the INNOXONE Golf Gallery. Compare the seating, check the space for your clubs and ask which models are available for a demonstration.</p>${inquiry('Plan a showroom visit', 'showroom-visit')}<address>31896 Plaza Dr Suite D2<br>San Juan Capistrano, CA 92675</address><a class="text-link" href="${esc(common.contact.map)}">Get directions${arrow}</a></div></section>`;
 }
 function questions() {
   return `<section class="questions-section wrap" aria-labelledby="questions-title"><div class="questions-intro"><p class="story-label">Frequently asked questions</p><h2 id="questions-title">Your questions, answered.</h2><p>Choosing a golf cart is personal. Start here, or talk it through with our team.</p></div><div class="question-list">${data.faq.map((item,index) => `<details class="question"${index===0?' open':''}><summary>${esc(item.q)}${plus}</summary><p>${esc(item.a)}</p></details>`).join('')}</div><a class="text-link questions-contact" href="tel:${common.contact.tel}" data-inquiry="general">Still deciding? Talk to our team${arrow}</a></section>`;
@@ -144,5 +172,5 @@ ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></htm
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-10</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-16</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');
