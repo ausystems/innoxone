@@ -228,7 +228,7 @@
   .home-page .faq-list details > p { font-size: 19px; line-height: 1.6; }
 }
 
-.home-page .robo-intro .robo-brand { font-size: clamp(38px, 6vw, 82px); line-height: 1.03; letter-spacing: -.045em; margin-bottom: 18px; }
+.robo-intro .robo-brand-logo { display: block; width: min(100%, clamp(280px, 59vw, 540px)); height: auto; margin: 0 auto clamp(18px, 2.2vw, 30px); }
 .home-page .robo-intro h2 { font-size: clamp(21px, 2.2vw, 32px); line-height: 1.2; letter-spacing: -.02em; }
 @media (max-width: 420px) {
   .home-page .inquiry-paths { grid-template-columns: minmax(0, 1fr); }

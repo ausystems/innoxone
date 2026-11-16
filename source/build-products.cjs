@@ -108,7 +108,7 @@ function productDialog(product) {
 function robo() {
   const event = common.robocaddy;
   return `<section class="robo-section on-dark" id="robocaddy" aria-labelledby="robo-title">
-    <div class="wrap robo-heading"><p class="robo-brand">ROBOCADDY<sup>®</sup></p>
+    <div class="wrap robo-heading"><img class="robo-brand-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy" decoding="async">
     <h2 id="robo-title">${esc(event.headline)}</h2></div>
     <figure class="robo-image"><img src="${asset('robocaddy-teaser-1280.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="${esc(event.alt)}" loading="lazy"></figure>
     <div class="meeting-invite wrap"><p>Meet with our team in Orlando.</p><a class="pill" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">${esc(event.action)}${arrow}</a></div>
@@ -119,7 +119,7 @@ function roboDialog() {
   return `<dialog class="product-dialog story-dialog meeting-dialog" id="product-robocaddy" data-product="robocaddy" aria-labelledby="meeting-title">
     <div class="story-topbar"><span>INNOXONE · PGA Show 2027</span>${close}</div>
     <div class="dialog-body story-scroll meeting-content" tabindex="0">
-      <header class="meeting-intro"><p class="robo-brand">ROBOCADDY<sup>®</sup></p>
+      <header class="meeting-intro"><img class="robo-brand-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy" decoding="async">
       <h2 id="meeting-title">Request a private meeting.</h2>
       <p>January 2027 · Orlando, Florida</p></header>
       <form id="meeting-application" action="mailto:${esc(common.contact.email)}" method="post" enctype="text/plain">

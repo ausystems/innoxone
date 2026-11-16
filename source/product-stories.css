@@ -185,15 +185,7 @@
   .collection-cta .wrap { align-items: flex-start; flex-direction: column; gap: 24px; }
 }
 
-.products-page .robo-heading .robo-brand,
-.meeting-intro .robo-brand {
-  margin: 0 0 16px;
-  font-size: clamp(38px, 6vw, 82px);
-  font-weight: 550;
-  line-height: 1.03;
-  letter-spacing: -.045em;
-}
-.robo-brand sup { vertical-align: super; font-size: .27em; }
+.robo-heading .robo-brand-logo { display: block; width: min(100%, clamp(280px, 59vw, 540px)); height: auto; margin: 0 auto clamp(18px, 2.2vw, 30px); }
 .products-page .robo-heading h2 { font-size: clamp(21px, 2.2vw, 32px); letter-spacing: -.02em; }
 .meeting-invite { display: flex; justify-content: space-between; align-items: center; gap: 22px; }
 .meeting-invite p { font-size: clamp(24px, 3vw, 42px); letter-spacing: -.035em; line-height: 1.15; }
@@ -203,10 +195,10 @@
 .products-page .meeting-dialog { width: min(840px, calc(100% - 32px)); }
 .products-page .meeting-dialog[open] { display: flex; flex-direction: column; }
 .meeting-dialog .meeting-content { display: block; overflow: auto; min-height: 0; flex: 1; }
-.meeting-intro { padding: clamp(26px,5vw,52px); background: #121a16; color: white; }
-.meeting-intro .robo-brand { font-size: clamp(34px, 4vw, 54px); }
+.meeting-intro { padding: clamp(26px,5vw,52px); background: #f3f4f0; color: #121a16; }
+.meeting-intro .robo-brand-logo { display: block; width: min(100%, 340px); height: auto; }
 .meeting-intro h2 { font-size: clamp(31px, 4vw, 52px); font-weight: 400; letter-spacing: -.04em; line-height: 1.1; margin: 24px 0 12px; }
-.meeting-intro > p:last-child { color: #d8e3d7; font-size: 18px; }
+.meeting-intro > p:last-child { color: #49534b; font-size: 18px; }
 #meeting-application { padding: clamp(22px, 4vw, 48px); }
 #meeting-application > p { line-height: 1.6; font-size: 18px; }
 .meeting-fields { margin: 28px 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
