@@ -326,6 +326,16 @@ main section[id],main article[id],main [tabindex="-1"]{scroll-margin-top:20px}
   .robocaddy-page .site-header .nav-right .pill { font-size: 15px; padding-inline: 12px; }
   .robo-mode-controls button { font-size: 15px; padding-inline: 11px; }
 }
+@media (max-width: 1023px) and (max-height: 500px) and (orientation: landscape) {
+  .robo-hero { min-height: calc(310px + 72vw); }
+  .robo-hero-layout { padding-top: 20px; }
+  .robo-official-logo { width: 132px; margin-bottom: 16px; }
+  .robo-hero h1 { font-size: clamp(38px, 5.4vw, 52px); }
+  .robo-hero-choice { display: inline; }
+  .robocaddy-page .robo-hero-copy > p { margin-top: 14px; font-size: 17px; }
+  .robo-hero-copy > p > span { display: inline; }
+  .robo-hero-copy > .pill { margin-top: 18px; min-height: 48px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .robo-mode-controls button, .robo-letter summary, .robo-letter summary > span { transition: none; }
 }
