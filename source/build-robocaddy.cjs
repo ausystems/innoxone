@@ -11,7 +11,9 @@ const paragraph = text => '<p>' + esc(text) + '</p>';
 const action = (label, href, mode = '') => `<a class="pill" href="${href}"${mode ? ' data-pga-mode="' + mode + '"' : ''}>${label}${arrow}</a>`;
 function photo(key, sizes, eager = false) {
   const image = data.images[key];
-  return `<img src="${asset(image.base + '-1206.webp')}" srcset="${asset(image.base + '-640.webp')} 640w, ${asset(image.base + '-1206.webp')} 1206w" sizes="${sizes}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>`;
+  const widths = image.widths || [640, image.width];
+  const sources = widths.map(width => asset(image.base + '-' + width + '.webp') + ' ' + width + 'w').join(', ');
+  return `<img src="${asset(image.base + '-' + image.width + '.webp')}" srcset="${sources}" sizes="${sizes}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>`;
 }
 function letter(id, title, paragraphs) {
   return `<details class="robo-letter"><summary>${title}<span aria-hidden="true">+</span></summary><div class="robo-letter-body" id="${id}">${paragraphs.map(paragraph).join('')}<p class="letter-signature">Young Kim<span>Founder &amp; CEO of INNOXONE</span></p></div></details>`;
@@ -24,10 +26,7 @@ function hero() {
       <p>Personal electric golf carts that follow you when you walk. Ride whenever you’re ready.</p>
       ${action('Meet us at the PGA Show', '#pga-showcase')}
     </div>
-    <div class="robo-hero-gallery">
-      <figure class="robo-hero-walk media-reveal">${photo('soloWalk','(max-width:540px) calc(100vw - 40px), (min-width:1000px) and (max-height:800px) 510px, (min-width:1300px) 615px, 49vw',true)}</figure>
-      <figure class="robo-hero-ride media-reveal">${photo('soloRide','(max-width:540px) 64vw, (min-width:1000px) and (max-height:800px) 430px, (min-width:1300px) 521px, 42vw')}</figure>
-    </div>
+    <figure class="robo-hero-panorama media-reveal">${photo('hero','(min-width:1000px) and (max-height:800px) 900px, (min-width:1000px) min(91vw, 1320px, calc(225svh - 1013px)), 91vw',true)}</figure>
   </div></section>`;
 }
 function story() {
@@ -59,7 +58,7 @@ function choice() {
 function solo() {
   return `<section class="robo-solo wrap robo-section-space" id="solo" aria-labelledby="solo-title">
     <div class="robo-model-copy"><p class="robo-model-name">ROBOCADDY SOLO</p><h2 id="solo-title" data-reveal-title>A smaller cart.<br>A bigger choice.</h2><p>SOLO is where the Walk &amp; Ride idea began. A compact personal golf cart that carries your bag, follows your walk and gives you a seat when you want one.</p><p>Enjoy the fairway on foot. Take a ride to your next shot. Make the choice your own, all eighteen holes.</p><a class="text-link" href="#pga-request" data-pga-mode="tour">Meet SOLO in Orlando${arrow}</a></div>
-    <figure class="robo-solo-photo media-reveal">${photo('soloRide','(max-width:767px) 90vw, 58vw')}</figure>
+    <figure class="robo-solo-photo media-reveal">${photo('soloBeauty','(max-width:767px) 90vw, 58vw')}</figure>
   </section>`;
 }
 function f1() {
@@ -88,6 +87,7 @@ function registration() {
   </div></section>`;
 }
 const origin = 'https://ausystems.github.io/innoxone/';
+const socialImage = origin + 'assets/' + data.images.hero.base + '-' + data.images.hero.width + '.webp';
 const schema = {'@context':'https://schema.org','@graph':[
   {'@type':'WebPage','@id':data.meta.canonical+'#webpage',url:data.meta.canonical,name:data.meta.title,description:data.meta.description,inLanguage:'en-US',about:[{'@type':'Thing',name:'RoboCaddy SOLO'},{'@type':'Thing',name:'RoboCaddy F1'}]},
   {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:origin},{'@type':'ListItem',position:2,name:'RoboCaddy',item:data.meta.canonical}]},
@@ -99,7 +99,7 @@ const html = `<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff">
 <title>${esc(data.meta.title)}</title><meta name="description" content="${esc(data.meta.description)}">
 <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1"><link rel="canonical" href="${data.meta.canonical}"><link rel="sitemap" type="application/xml" href="../sitemap.xml"><link rel="icon" href="../assets/innoxone-logo.svg" type="image/svg+xml">
-<meta property="og:type" content="website"><meta property="og:site_name" content="INNOXONE"><meta property="og:title" content="${esc(data.meta.title)}"><meta property="og:description" content="${esc(data.meta.description)}"><meta property="og:url" content="${data.meta.canonical}"><meta property="og:image" content="${origin}assets/robocaddy-solo-follow-1206.webp"><meta property="og:image:width" content="1206"><meta property="og:image:height" content="804"><meta property="og:image:alt" content="RoboCaddy SOLO following a golfer across the fairway"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(data.meta.title)}"><meta name="twitter:description" content="${esc(data.meta.description)}"><meta name="twitter:image" content="${origin}assets/robocaddy-solo-follow-1206.webp">
+<meta property="og:type" content="website"><meta property="og:site_name" content="INNOXONE"><meta property="og:title" content="${esc(data.meta.title)}"><meta property="og:description" content="${esc(data.meta.description)}"><meta property="og:url" content="${data.meta.canonical}"><meta property="og:image" content="${socialImage}"><meta property="og:image:width" content="${data.images.hero.width}"><meta property="og:image:height" content="${data.images.hero.height}"><meta property="og:image:alt" content="${esc(data.images.hero.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(data.meta.title)}"><meta name="twitter:description" content="${esc(data.meta.description)}"><meta name="twitter:image" content="${socialImage}">
 <link rel="preload" href="../assets/mona-sans-homepage.woff2" as="font" type="font/woff2" crossorigin>
 <script>${fs.readFileSync(path.join(__dirname,'motion-head.js'),'utf8')}</script>
 <style>${css}</style>

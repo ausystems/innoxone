@@ -12,9 +12,8 @@
 .robo-hero-choice { display: inline-block; color: var(--robo-deep); }
 .robo-hero-copy > p { margin: 20px auto 0; max-width: 850px; }
 .robo-hero-copy > .pill { margin-top: 24px; }
-.robo-hero-gallery { display: grid; grid-template-columns: 1.18fr 1fr; align-items: end; gap: clamp(14px, 1.7vw, 26px); max-width: 1160px; margin: 34px auto 0; }
-.robo-hero-gallery figure { border-radius: var(--robo-radius); overflow: hidden; }
-.robo-hero-gallery img { width: 100%; height: auto; }
+.robo-hero-panorama { max-width: 1320px; margin: 34px auto 0; border-radius: var(--robo-radius); overflow: hidden; }
+.robo-hero-panorama img { width: 100%; aspect-ratio: 2.25; height: auto; object-fit: cover; object-position: center; }
 .robo-story-heading { max-width: 790px; margin-bottom: 56px; }
 .robo-story-heading > p { max-width: 54ch; margin-top: 24px; }
 .robo-founder-layout { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); gap: clamp(32px, 7vw, 100px); align-items: start; }
@@ -92,13 +91,22 @@
 @media (max-width: 1100px) {
   .robo-registration-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 32px; }
 }
+@media (min-width: 1000px) and (min-height: 801px) {
+  .robo-hero-panorama { max-width: min(1320px, calc(225svh - 1013px)); }
+}
 @media (min-width: 1000px) and (max-height: 800px) {
-  .robo-hero { padding-top: 28px; }
-  .robo-hero-gallery { max-width: 960px; margin-top: 30px; }
+  .robo-hero { padding-top: 24px; }
+  .robo-official-logo { width: 180px; margin-bottom: 16px; }
+  .robo-hero h1 { font-size: clamp(72px, 7vw, 96px); }
+  .robo-hero-copy > p { font-size: 18px; margin-top: 14px; }
+  .robo-hero-copy > .pill { margin-top: 20px; }
+  .robo-hero-panorama { max-width: 900px; margin-top: 24px; }
+  .robo-hero-panorama img { aspect-ratio: 2.35; }
 }
 @media (max-width: 900px) {
   .robo-hero h1 { font-size: clamp(60px, 8vw, 72px); }
   .robo-hero-copy > p { max-width: 46ch; }
+  .robo-hero-panorama img { aspect-ratio: 16 / 9; }
   .robo-solo { grid-template-columns: 1fr; }
   .robo-solo .robo-model-copy { max-width: 720px; }
   .robo-registration-grid { grid-template-columns: 1fr; grid-template-areas: "intro" "form" "details"; gap: 32px; }
@@ -138,8 +146,8 @@
   .robo-hero-copy > .pill { margin-top: 24px; }
 }
 @media (max-width: 540px) {
-  .robo-hero-gallery { grid-template-columns: 1fr; gap: 14px; margin-top: 34px; }
-  .robo-hero-ride { width: 70%; justify-self: end; }
+  .robo-hero-panorama { margin-top: 30px; }
+  .robo-hero-panorama img { aspect-ratio: 1.6; }
 }
 @media (max-width: 359px) {
   .robo-hero-copy > .pill { font-size: 16px; padding-inline: 17px; }

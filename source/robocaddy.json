@@ -52,34 +52,77 @@
   },
   "images": {
     "soloWalk": {
-      "base": "robocaddy-solo-follow",
-      "width": 1206,
-      "height": 804,
-      "alt": "RoboCaddy SOLO preview showing a golfer walking ahead of the compact cart with his clubs on board."
+      "base": "robo-campaign-solo-walk",
+      "width": 1536,
+      "height": 1024,
+      "widths": [
+        640,
+        960,
+        1536
+      ],
+      "alt": "RoboCaddy SOLO visualization showing an unoccupied cart carrying a golf bag behind a golfer walking along a coastal fairway."
     },
     "soloRide": {
-      "base": "robocaddy-solo-ride",
-      "width": 1206,
-      "height": 806,
-      "alt": "RoboCaddy SOLO preview showing a golfer riding in the personal seat with his golf bag behind him."
+      "base": "robo-campaign-solo-ride",
+      "width": 1536,
+      "height": 1024,
+      "widths": [
+        640,
+        960,
+        1536
+      ],
+      "alt": "RoboCaddy SOLO visualization showing a golfer seated with his hands on the handlebars and his clubs behind the seat."
     },
     "f1Walk": {
-      "base": "robocaddy-f1-follow",
-      "width": 1206,
-      "height": 793,
-      "alt": "RoboCaddy F1 preview showing a golfer walking ahead of the cart with its canopy, personal seat and golf bag."
+      "base": "robo-campaign-f1-walk",
+      "width": 1536,
+      "height": 1024,
+      "widths": [
+        640,
+        960,
+        1536
+      ],
+      "alt": "RoboCaddy F1 visualization showing the single-rider cart with canopy and golf bag following a golfer on foot."
     },
     "f1Ride": {
-      "base": "robocaddy-f1-ride",
-      "width": 1206,
-      "height": 805,
-      "alt": "RoboCaddy F1 preview showing a golfer riding with his clubs within reach."
+      "base": "robo-campaign-f1-ride",
+      "width": 1536,
+      "height": 1024,
+      "widths": [
+        640,
+        960,
+        1536
+      ],
+      "alt": "RoboCaddy F1 visualization showing a golfer seated at the steering wheel beneath the canopy on a coastal fairway."
     },
     "booth": {
       "base": "robocaddy-pga-showcase",
       "width": 1206,
       "height": 608,
       "alt": "Preview of the planned INNOXONE PGA Show display with a reception desk and an enclosed product showcase."
+    },
+    "hero": {
+      "base": "robo-campaign-hero",
+      "width": 1672,
+      "height": 941,
+      "widths": [
+        640,
+        960,
+        1280,
+        1672
+      ],
+      "alt": "RoboCaddy SOLO and F1 visualization on a coastal golf course, showing the compact open SOLO beside the larger F1 with its canopy."
+    },
+    "soloBeauty": {
+      "base": "robo-campaign-solo-detail",
+      "width": 1536,
+      "height": 1024,
+      "widths": [
+        640,
+        960,
+        1536
+      ],
+      "alt": "RoboCaddy SOLO product visualization showing its personal seat, open design, handlebars and golf bag on a coastal fairway."
     }
   }
 }
