@@ -19,14 +19,18 @@ function letter(id, title, paragraphs) {
   return `<details class="robo-letter"><summary>${title}<span aria-hidden="true">+</span></summary><div class="robo-letter-body" id="${id}">${paragraphs.map(paragraph).join('')}<p class="letter-signature">Young Kim<span>Founder &amp; CEO of INNOXONE</span></p></div></details>`;
 }
 function hero() {
-  return `<section class="robo-hero" aria-labelledby="robo-page-title"><div class="wrap">
+  const mobile = data.images.heroMobile;
+  const mobileSources = mobile.widths.map(width => asset(mobile.base + '-' + width + '.webp') + ' ' + width + 'w').join(', ');
+  return `<section class="robo-hero" aria-labelledby="robo-page-title">
+    <picture class="robo-hero-scene"><source media="(max-width:1023px)" srcset="${mobileSources}" sizes="100vw" width="${mobile.width}" height="${mobile.height}">${photo('hero','100vw',true)}</picture>
+    <div class="wrap robo-hero-layout">
     <div class="robo-hero-copy">
       <img class="robo-official-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy">
       <h1 id="robo-page-title" data-reveal-title>Walk. Ride. <span class="robo-hero-choice">Your choice.</span></h1>
-      <p>Personal electric golf carts that follow you when you walk. Ride whenever you’re ready.</p>
-      ${action('Meet us at the PGA Show', '#pga-showcase')}
+      <p><span>Electric golf carts that follow you.</span> <span>Walk freely. Ride when you’re ready.</span></p>
+      ${action('Request a private preview', '#pga-request', 'tour')}
     </div>
-    <figure class="robo-hero-panorama media-reveal">${photo('hero','(min-width:1000px) and (max-height:800px) 900px, (min-width:1000px) min(91vw, 1320px, calc(225svh - 1013px)), 91vw',true)}</figure>
+    <div class="robo-hero-event"><span>Coming to the <strong>2027 PGA Show</strong></span><span>January 27-29 <span aria-hidden="true">·</span> Orlando, Florida</span></div>
   </div></section>`;
 }
 function story() {

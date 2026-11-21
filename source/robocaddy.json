@@ -102,16 +102,15 @@
       "alt": "Preview of the planned INNOXONE PGA Show display with a reception desk and an enclosed product showcase."
     },
     "hero": {
-      "base": "robo-campaign-hero",
+      "base": "robo-hero-coastal",
       "width": 1672,
       "height": 941,
       "widths": [
-        640,
         960,
         1280,
         1672
       ],
-      "alt": "RoboCaddy SOLO and F1 visualization on a coastal golf course, showing the compact open SOLO beside the larger F1 with its canopy."
+      "alt": "RoboCaddy SOLO and F1 product visualization on a coastal golf course at dawn, with their personal seats and golf bags ready for a round."
     },
     "soloBeauty": {
       "base": "robo-campaign-solo-detail",
@@ -123,6 +122,17 @@
         1536
       ],
       "alt": "RoboCaddy SOLO product visualization showing its personal seat, open design, handlebars and golf bag on a coastal fairway."
+    },
+    "heroMobile": {
+      "base": "robo-hero-coastal-mobile",
+      "width": 941,
+      "height": 1672,
+      "widths": [
+        480,
+        720,
+        941
+      ],
+      "alt": "RoboCaddy SOLO and F1 product visualization on a coastal golf course at dawn, with their personal seats and golf bags ready for a round."
     }
   }
 }
