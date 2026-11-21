@@ -32,7 +32,7 @@ ${runtime}</script><script>
 ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}
 </script></body></html>`;
 fs.writeFileSync(path.join(ROOT,'index.html'),html);
-fs.writeFileSync(path.join(ROOT,'sitemap-homepage.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ausystems.github.io/innoxone/</loc><lastmod>2026-11-16</lastmod></url></urlset>\n');
+fs.writeFileSync(path.join(ROOT,'sitemap-homepage.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ausystems.github.io/innoxone/</loc><lastmod>2026-11-21</lastmod></url></urlset>\n');
 console.log('Built static homepage:',Buffer.byteLength(html),'bytes; FAQs:',DATA.faq.items.length);
 
 // Build the shared collection page alongside the homepage.
@@ -42,5 +42,7 @@ require('./build-about.cjs');
 
 require('./build-contact.cjs');
 
-const urls=['','golf-carts-products/','about/','contact/'].map(route=>assetBase+route);
+require('./build-robocaddy.cjs');
+
+const urls=['','golf-carts-products/','robocaddy/','about/','contact/'].map(route=>assetBase+route);
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(url=>'<url><loc>'+url+'</loc></url>').join('')+'</urlset>\n');

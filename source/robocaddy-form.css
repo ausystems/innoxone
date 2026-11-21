@@ -1,0 +1,48 @@
+.pga-request { background: white; border-radius: 22px; padding: clamp(24px, 3vw, 44px); }
+.pga-mode { border: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; padding: 5px; margin: 0; background: #edf1e8; border-radius: 999px; }
+.pga-mode label { position: relative; cursor: pointer; }
+.pga-mode input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.pga-mode label > span { display: flex; justify-content: center; align-items: center; min-height: 50px; padding: 12px 16px; border-radius: 999px; font-size: 17px; font-weight: 500; text-align: center; line-height: 1.2; transition: background .25s, color .25s; }
+.pga-mode input:checked + span { background: #243023; color: white; }
+.pga-mode input:focus-visible + span { outline: 2px solid #243023; outline-offset: 3px; }
+.robocaddy-page .pga-mode-description { margin-top: 24px; font-size: 18px; min-height: 58px; }
+.pga-fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px 18px; margin-top: 24px; }
+.pga-fields > label { display: flex; flex-direction: column; gap: 9px; font-size: 17px; line-height: 1.45; font-weight: 500; }
+.pga-fields .pga-field-wide { grid-column: 1 / -1; }
+.pga-optional { color: #60695b; font-size: 16px; font-weight: 400; }
+.pga-form :is(input:not([type="checkbox"],[type="radio"]),select,textarea) { font: inherit; font-size: 17px; min-width: 0; width: 100%; padding: 13px 12px; min-height: 50px; border: 1px solid #b7c0b0; border-radius: 6px; color: #1d251a; background: #fff; }
+.pga-form textarea { resize: vertical; line-height: 1.5; }
+.pga-form :is(input,textarea,select):focus-visible { outline: 2px solid #3d6b2a; outline-offset: 2px; }
+.pga-news { display: flex; align-items: start; gap: 12px; margin-top: 28px; font-size: 16px; line-height: 1.5; cursor: pointer; }
+.pga-news input { accent-color: #3d6b2a; flex: none; width: 20px; height: 20px; margin: 2px 0 0; }
+.robocaddy-page .pga-form-note { margin-top: 22px; font-size: 16px; line-height: 1.6; }
+.pga-submit { width: 100%; margin-top: 22px; min-height: 54px; }
+.pga-submit > span { font-size: 23px; font-weight: 400; }
+.robocaddy-page .pga-privacy { font-size: 16px; margin-top: 18px; line-height: 1.6; }
+.pga-privacy a { text-decoration: underline; text-underline-offset: 3px; }
+.pga-email-ready { margin-top: 30px; padding-top: 26px; border-top: 1px solid #dce2d6; }
+.robocaddy-page .pga-email-ready h3 { font-size: 28px; line-height: 1.2; }
+.robocaddy-page .pga-email-ready p { font-size: 17px; margin-top: 14px; }
+.pga-email-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-block: 22px; }
+.pga-copy { padding: 0; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width:1100px) and (min-width:901px) {
+  .pga-fields { grid-template-columns: 1fr; }
+  .pga-mode label > span { font-size: 16px; padding-inline: 12px; }
+}
+@media (max-width:540px) {
+  .pga-request { padding: 24px 20px; border-radius: 18px; }
+  .pga-fields { grid-template-columns: 1fr; gap: 20px; }
+  .pga-mode label > span { font-size: 16px; padding-inline: 10px; }
+  .robocaddy-page .pga-mode-description { font-size: 18px; min-height: 0; }
+  .pga-email-actions > .pill { width: 100%; }
+}
+@media (max-width:359px) {
+  .pga-request { padding-inline: 16px; }
+  .pga-mode label > span { font-size: 16px; padding-inline: 8px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .pga-mode label > span { transition: none; }
+}
+
+.pga-email-fallback p { margin-block: 22px; }
+.pga-email-fallback .text-link { display: flex; margin-top: 14px; }

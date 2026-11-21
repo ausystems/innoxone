@@ -1,24 +1,14 @@
 // Native product cards, with shareable URLs and natural Back / Forward navigation.
 (() => {
+  if (location.hash === '#product-robocaddy') {
+    location.replace('../robocaddy/?request=meeting#pga-request');
+    return;
+  }
   const dialogs = [...document.querySelectorAll('dialog')];
   if (typeof HTMLDialogElement === 'undefined' || !('showModal' in HTMLDialogElement.prototype)) {
     document.documentElement.classList.add('dialog-fallback');
     return;
   }
-  const application = document.getElementById('meeting-application');
-  const draft = document.getElementById('meeting-draft');
-  application.addEventListener('input', () => { draft.hidden = true; });
-  application.addEventListener('submit', event => {
-    event.preventDefault();
-    const fields = new FormData(application);
-    const pairs = [['Full name','name'], ['Email','email'], ['Phone','phone'], ['Organization','organization'], ['Representing','role'], ['Meeting interest','interest']];
-    const body = pairs.map(([label, key]) => label + ': ' + fields.get(key).trim()).join('\n');
-    const compose = document.getElementById('meeting-compose');
-    compose.href = application.action + '?subject=' + encodeURIComponent('ROBOCADDY private meeting application | 2027 Orlando PGA Show') + '&body=' + encodeURIComponent(body);
-    draft.querySelector('textarea').value = body;
-    draft.hidden = false;
-    compose.focus();
-  });
   const openers = new WeakMap(), fromHistory = new WeakSet();
   const menuButton = document.querySelector('[data-open="site-menu"]');
   function defaultOpener(dialog) {
@@ -78,6 +68,10 @@
   });
   document.querySelectorAll('#site-menu a').forEach(link=>link.addEventListener('click',()=>document.getElementById('site-menu').close()));
   function syncHash(){
+    if (location.hash === '#product-robocaddy') {
+      location.replace('../robocaddy/?request=meeting#pga-request');
+      return;
+    }
     const next=document.getElementById(location.hash.slice(1));
     const target=next?.matches('.product-dialog')?next:null;
     const current=document.querySelector('.product-dialog[open]');

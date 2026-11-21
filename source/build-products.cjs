@@ -28,7 +28,7 @@ function photo(product, lineup = false) {
 
 function header() { return shell.header('products'); }
 function intro() {
-  return `<section class="collection-intro wrap" aria-labelledby="page-title"><p class="collection-label">Golf Carts &amp; Products</p><div class="collection-heading"><h1 id="page-title" data-reveal-title>Golf carts. Made personal.</h1><p>Find your own way around the course. Explore golf carts for players and course teams.</p></div></section><nav class="collection-navigation" aria-label="Product models"><div class="wrap collection-jumps"><a href="#inno-f1-original" aria-label="Explore INNO-F1 Original">Original</a><a href="#inno-f1-light" aria-label="Explore INNO-F1 Light">Light</a><a href="#inno-f1-marshal" aria-label="Explore INNO-F1 Marshal">Marshal</a><a href="#inno-f2">INNO-F2</a><a href="#robocaddy">ROBOCADDY</a></div></nav>`;
+  return `<section class="collection-intro wrap" aria-labelledby="page-title"><p class="collection-label">INNO Carts</p><div class="collection-heading"><h1 id="page-title" data-reveal-title>Golf carts. Made personal.</h1><p>Find your own way around the course. Explore golf carts for players and course teams.</p></div></section><nav class="collection-navigation" aria-label="Product models"><div class="wrap collection-jumps"><a href="#inno-f1-original" aria-label="Explore INNO-F1 Original">Original</a><a href="#inno-f1-light" aria-label="Explore INNO-F1 Light">Light</a><a href="#inno-f1-marshal" aria-label="Explore INNO-F1 Marshal">Marshal</a><a href="#inno-f2">INNO-F2</a><a href="#robocaddy">ROBOCADDY</a></div></nav>`;
 }
 function card(product) {
   const id = 'product-' + product.id;
@@ -111,33 +111,8 @@ function robo() {
     <div class="wrap robo-heading"><img class="robo-brand-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy" decoding="async">
     <h2 id="robo-title">${esc(event.headline)}</h2></div>
     <figure class="robo-image"><img src="${asset('robocaddy-teaser-1280.webp')}" srcset="${srcset('robocaddy-teaser-768.webp 768w, robocaddy-teaser-1280.webp 1280w, robocaddy-teaser-1920.webp 1920w')}" sizes="100vw" width="1920" height="768" alt="${esc(event.alt)}" loading="lazy"></figure>
-    <div class="meeting-invite wrap"><p>Meet with our team in Orlando.</p><a class="pill" href="#product-robocaddy" data-open="product-robocaddy" aria-haspopup="dialog">${esc(event.action)}${arrow}</a></div>
+    <div class="meeting-invite wrap"><p>Meet with our team in Orlando.</p><a class="pill" href="../robocaddy/?request=meeting#pga-request">${esc(event.action)}${arrow}</a></div>
   </section>`;
-}
-
-function roboDialog() {
-  return `<dialog class="product-dialog story-dialog meeting-dialog" id="product-robocaddy" data-product="robocaddy" aria-labelledby="meeting-title">
-    <div class="story-topbar"><span>INNOXONE · PGA Show 2027</span>${close}</div>
-    <div class="dialog-body story-scroll meeting-content" tabindex="0">
-      <header class="meeting-intro"><img class="robo-brand-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy" decoding="async">
-      <h2 id="meeting-title">Request a private meeting.</h2>
-      <p>January 2027 · Orlando, Florida</p></header>
-      <form id="meeting-application" action="mailto:${esc(common.contact.email)}" method="post" enctype="text/plain">
-        <p>Tell us who you represent and what you’d like to discuss. Our team will review your application and contact you to arrange a time.</p>
-        <div class="meeting-fields">
-          <label>Full name<input name="name" autocomplete="name" required maxlength="90"></label>
-          <label>Work email<input name="email" type="email" autocomplete="email" required maxlength="120"></label>
-          <label>Phone number<input name="phone" type="tel" autocomplete="tel" required maxlength="40"></label>
-          <label>Organization<input name="organization" autocomplete="organization" required maxlength="120"></label>
-          <label>I represent<select name="role" required><option value="">Select one</option><option>A golf course or resort</option><option>A dealer or distributor</option><option>A business partner</option><option>Media or press</option><option>Other</option></select></label>
-          <label>Meeting interest<textarea name="interest" rows="3" required maxlength="500"></textarea></label>
-        </div>
-        <button class="pill" type="submit">Prepare application email${arrow}</button>
-        <p class="meeting-delivery">Send your application to ${esc(common.contact.email)} from your email app.</p>
-        <div id="meeting-draft" hidden><h3>Your application is ready to send.</h3><a class="pill" id="meeting-compose" href="mailto:${esc(common.contact.email)}">Open email app${arrow}</a>
-        <details><summary>Copy application details</summary><textarea aria-label="Application details to copy" rows="8" readonly></textarea></details></div>
-      </form>
-    </div></dialog>`;
 }
 
 function visit() {
@@ -154,7 +129,7 @@ const schema = {'@context':'https://schema.org','@graph':[
   organization,
   {'@type':'CollectionPage','@id':data.meta.canonical+'#webpage',url:data.meta.canonical,name:data.meta.title,description:data.meta.description,inLanguage:'en-US',publisher:{'@id':organization['@id']},mainEntity:{'@id':data.meta.canonical+'#collection'}},
   {'@type':'ItemList','@id':data.meta.canonical+'#collection',name:'INNOXONE golf carts',numberOfItems:data.products.length,itemListElement:data.products.map((product,index) => ({'@type':'ListItem',position:index+1,item:{'@type':'Product','@id':data.meta.canonical+'#product-'+product.id,name:product.name,description:product.summary,image:'https://ausystems.github.io/innoxone/assets/'+product.image,brand:{'@type':'Brand',name:'INNOXONE'},category:'Golf carts',url:data.meta.canonical+'#product-'+product.id}}))},
-  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://ausystems.github.io/innoxone/'},{'@type':'ListItem',position:2,name:'Golf Carts & Products',item:data.meta.canonical}]},
+  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://ausystems.github.io/innoxone/'},{'@type':'ListItem',position:2,name:'INNO Carts',item:data.meta.canonical}]},
   {'@type':'FAQPage','@id':data.meta.canonical+'#questions',mainEntity:data.faq.map(item => ({'@type':'Question',name:item.q,acceptedAnswer:{'@type':'Answer',text:item.a}}))}
 ]};
 const fallbackCSS = '.story-dialog{height:auto!important;max-height:none!important;overflow:visible!important}.story-dialog .dialog-body{overflow:visible;max-height:none;height:auto}.story-topbar{display:none!important}.product-dialog:not([open]){display:block;position:static;width:calc(100% - 40px);max-width:1152px;max-height:none;margin:32px auto;background:#fff;border:1px solid var(--line)}.product-dialog .dialog-close,.menu-button{display:none}.dialog-order{position:static}.site-header .nav-left{display:flex;gap:16px}.site-header .nav-left>a:not([aria-current]){display:none}.site-header .nav-left>a{font-size:11px}.site-header .wordmark{width:110px}.site-header .nav-right{display:none}.site-header .header-inner{grid-template-columns:1fr auto}';
@@ -167,10 +142,10 @@ const html = `<!doctype html><html lang="en-US"><head>
 <link rel="preload" href="../assets/mona-sans-homepage.woff2" as="font" type="font/woff2" crossorigin>
 <script>${fs.readFileSync(path.join(__dirname,'motion-head.js'),'utf8')}</script><style>${css}\n${fallbackCSS.split('}').filter(Boolean).map(rule => {const [selectors,body]=rule.split('{'); return selectors.split(',').map(selector => '.dialog-fallback '+selector).join(',')+'{'+body+'}';}).join('')}</style><noscript><style>${fallbackCSS}</style></noscript>
 <script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>
-</head><body id="top" class="products-page">${header()}<main id="main">${intro()}${lineup()}${comparison()}${data.products.map(productDialog).join('')}${robo()}${roboDialog()}${visit()}${questions()}<section class="collection-cta" aria-labelledby="collection-cta-title"><div class="wrap"><div><h2 id="collection-cta-title">Ready for your own golf cart?</h2><p>Tell us which model you have in mind. Our team can help with pricing, availability and course fleet options.</p></div>${inquiry('Request a quote', '')}</div></section></main>${footer()}${menu()}<script>${runtime}</script><script>
+</head><body id="top" class="products-page">${header()}<main id="main">${intro()}${lineup()}${comparison()}${data.products.map(productDialog).join('')}${robo()}${visit()}${questions()}<section class="collection-cta" aria-labelledby="collection-cta-title"><div class="wrap"><div><h2 id="collection-cta-title">Ready for your own golf cart?</h2><p>Tell us which model you have in mind. Our team can help with pricing, availability and course fleet options.</p></div>${inquiry('Request a quote', '')}</div></section></main>${footer()}${menu()}<script>${runtime}</script><script>
 ${fs.readFileSync(path.join(__dirname,'motion.js'),'utf8')}</script></body></html>`;
 const target = path.join(ROOT, 'golf-carts-products');
 fs.mkdirSync(target, {recursive:true});
 fs.writeFileSync(path.join(target, 'index.html'), html);
-fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-16</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'sitemap-products.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-21</lastmod></url></urlset>\n`);
 console.log('Built products collection:', Buffer.byteLength(html), 'bytes;', data.products.length, 'models + ROBOCADDY preview');

@@ -33,8 +33,12 @@
       "current": true
     },
     {
-      "name": "Golf Carts & Products",
+      "name": "INNO Carts",
       "href": "golf-carts-products/"
+    },
+    {
+      "name": "RoboCaddy",
+      "href": "robocaddy/"
     },
     {
       "name": "About Us",
@@ -185,8 +189,8 @@
     "caption": "2027 collection preview",
     "alt": "The ROBOCADDY collection in silhouette.",
     "description": "Join us in Orlando for a private introduction.",
-    "action": "Request a PGA Show meeting",
-    "href": "golf-carts-products/#product-robocaddy"
+    "action": "Explore RoboCaddy",
+    "href": "robocaddy/"
   },
   "sister": {
     "name": "Better golf, indoors and outdoors.",
@@ -346,9 +350,9 @@
       },
       {
         "q": "How can I meet ROBOCADDY at the PGA Show?",
-        "a": "Yes. Apply for a private meeting at the 2027 Orlando PGA Show. Our team reviews each request and contacts applicants to arrange a time.",
+        "a": "Request a private tour or a 30-minute business meeting at INNOXONE Booth 3217, January 27-29, 2027. Our team will contact you to confirm the details.",
         "link": "Apply for a meeting",
-        "href": "golf-carts-products/#product-robocaddy"
+        "href": "robocaddy/?request=meeting#pga-request"
       },
       {
         "q": "How do I confirm price, delivery and availability?",

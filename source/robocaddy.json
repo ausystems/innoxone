@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "RoboCaddy SOLO & F1 | Walk & Ride Golf | INNOXONE",
+    "description": "Meet RoboCaddy SOLO and F1. Personal electric golf carts that follow you as you walk. Request a private tour or business meeting at the 2027 PGA Show.",
+    "canonical": "https://ausystems.github.io/innoxone/robocaddy/"
+  },
+  "story": {
+    "title": "It began after nine holes.",
+    "paragraphs": [
+      "I was testing a powered golf bag carrier after noticing more golfers using them. I enjoyed the front nine. My bag traveled with me, and I could experience the course on foot.",
+      "But at the turn, I realized I didn’t want to push myself to walk another nine holes.",
+      "I returned to the clubhouse. Sitting there, I began thinking about golfers who might feel exactly as I did, happy to walk part of a round, then ready for a ride.",
+      "Soon, I was sketching on a napkin.",
+      "I imagined a compact golf cart that could carry my bag and follow me while I walked, with a seat ready whenever I wanted to ride. I could make that choice throughout the round, according to how I felt.",
+      "That sketch became the beginning of ROBOCADDY SOLO.",
+      "Instead of playing the back nine that day, I found myself designing a new way to experience all eighteen.",
+      "Three questions stayed with me.",
+      "Would you like to walk?",
+      "Would you like to ride?",
+      "Or would you like the freedom to walk and ride?",
+      "My answer was the third. I believed many other golfers would feel the same.",
+      "That belief became the foundation of ROBOCADDY and the Walk & Ride philosophy we are bringing to golf.",
+      "Walk when you want. Ride when you need.",
+      "We move golf forward."
+    ]
+  },
+  "f1Story": {
+    "title": "Four years of moving golf forward.",
+    "paragraphs": [
+      "Four years of moving golf forward.",
+      "We introduced INNO-F1 Original at the 2023 PGA Show in Orlando. Golf Channel featured it among its Top Five Golf Carts from the show, giving golfers an early look at our vision for the single-rider experience.",
+      "Four years later, we are excited to introduce its next chapter at the 2027 PGA Show.",
+      "For golfers who already love INNO-F1, the experience will feel familiar. A personal seat. Your own clubs within reach. The freedom to travel directly to your ball and focus on your game.",
+      "Now, F1 adds another freedom.",
+      "Step out and walk. Your F1 follows you.",
+      "Watching our early adopters enjoy INNO-F1 helped me see how much more personal golf mobility could become. A golfer’s preferences can change throughout a round. Sometimes you want to ride. Sometimes you want to walk toward your next shot, enjoy the landscape, or share a conversation along the fairway.",
+      "ROBOCADDY’s following technology makes that choice part of the F1 experience. Walk when you wish, with your cart carrying your bag behind you. Return to your seat whenever you need a ride.",
+      "We have brought the Walk & Ride philosophy shared with SOLO to a full-sized, premium single-rider golf cart.",
+      "As the designer of INNO-F1 Original, I am delighted to see that first vision evolve, giving golfers more choice in how they experience all 18 holes.",
+      "ROBOCADDY F1.",
+      "Walk when you want. Ride when you need.",
+      "We move golf forward."
+    ]
+  },
+  "event": {
+    "name": "INNOXONE RoboCaddy Showcase",
+    "dates": "January 27-29, 2027",
+    "booth": "3217",
+    "venue": "Orange County Convention Center, West Concourse",
+    "city": "Orlando, Florida",
+    "email": "info@innoxone.com"
+  },
+  "images": {
+    "soloWalk": {
+      "base": "robocaddy-solo-follow",
+      "width": 1206,
+      "height": 804,
+      "alt": "RoboCaddy SOLO preview showing a golfer walking ahead of the compact cart with his clubs on board."
+    },
+    "soloRide": {
+      "base": "robocaddy-solo-ride",
+      "width": 1206,
+      "height": 806,
+      "alt": "RoboCaddy SOLO preview showing a golfer riding in the personal seat with his golf bag behind him."
+    },
+    "f1Walk": {
+      "base": "robocaddy-f1-follow",
+      "width": 1206,
+      "height": 793,
+      "alt": "RoboCaddy F1 preview showing a golfer walking ahead of the cart with its canopy, personal seat and golf bag."
+    },
+    "f1Ride": {
+      "base": "robocaddy-f1-ride",
+      "width": 1206,
+      "height": 805,
+      "alt": "RoboCaddy F1 preview showing a golfer riding with his clubs within reach."
+    },
+    "booth": {
+      "base": "robocaddy-pga-showcase",
+      "width": 1206,
+      "height": 608,
+      "alt": "Preview of the planned INNOXONE PGA Show display with a reception desk and an enclosed product showcase."
+    }
+  }
+}
