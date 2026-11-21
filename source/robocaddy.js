@@ -27,18 +27,6 @@
       });
     });
   });
-  const chapters = [...document.querySelectorAll('.robo-chapters a')];
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      const visible = entries.filter(entry => entry.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);
-      if (!visible.length) return;
-      chapters.forEach(link => {
-        if (link.hash === '#' + visible[0].target.id) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      });
-    }, {rootMargin: '-145px 0px -45% 0px', threshold: 0});
-    chapters.forEach(link => observer.observe(document.querySelector(link.hash)));
-  }
   const menu = document.getElementById('site-menu');
   const opener = document.querySelector('[data-open="site-menu"]');
   if (typeof menu.showModal === 'function') {

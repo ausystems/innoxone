@@ -17,18 +17,18 @@ function letter(id, title, paragraphs) {
   return `<details class="robo-letter"><summary>${title}<span aria-hidden="true">+</span></summary><div class="robo-letter-body" id="${id}">${paragraphs.map(paragraph).join('')}<p class="letter-signature">Young Kim<span>Founder &amp; CEO of INNOXONE</span></p></div></details>`;
 }
 function hero() {
-  return `<section class="robo-hero wrap" aria-labelledby="robo-page-title">
+  return `<section class="robo-hero" aria-labelledby="robo-page-title"><div class="wrap">
     <div class="robo-hero-copy">
       <img class="robo-official-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy">
-      <h1 id="robo-page-title" data-reveal-title>Walk. Ride.<br>Your choice.</h1>
-      <p>Golf carts that follow you when you walk. A personal seat whenever you’re ready to ride.</p>
+      <h1 id="robo-page-title" data-reveal-title>Walk. Ride. <span class="robo-hero-choice">Your choice.</span></h1>
+      <p>Personal electric golf carts that follow you when you walk. Ride whenever you’re ready.</p>
       ${action('Meet us at the PGA Show', '#pga-showcase')}
     </div>
-    <figure class="robo-hero-media media-reveal">${photo('soloWalk','(max-width:900px) 90vw, 56vw',true)}</figure>
-  </section>
-  <nav class="robo-chapters" aria-label="RoboCaddy sections"><div class="wrap">
-    <a href="#robo-story">Story</a><a href="#walk-ride">Walk &amp; Ride</a><a href="#solo">SOLO</a><a href="#robo-f1">F1</a><a href="#pga-showcase">PGA 2027</a>
-  </div></nav>`;
+    <div class="robo-hero-gallery">
+      <figure class="robo-hero-walk media-reveal">${photo('soloWalk','(max-width:540px) calc(100vw - 40px), (min-width:1000px) and (max-height:800px) 510px, (min-width:1300px) 615px, 49vw',true)}</figure>
+      <figure class="robo-hero-ride media-reveal">${photo('soloRide','(max-width:540px) 64vw, (min-width:1000px) and (max-height:800px) 430px, (min-width:1300px) 521px, 42vw')}</figure>
+    </div>
+  </div></section>`;
 }
 function story() {
   return `<section class="robo-story wrap robo-section-space" id="robo-story" aria-labelledby="robo-story-title">
