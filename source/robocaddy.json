@@ -25,20 +25,14 @@
     ]
   },
   "f1Story": {
-    "title": "Four years of moving golf forward.",
+    "title": "Step out and walk. Your F1 follows you.",
     "paragraphs": [
-      "Four years of moving golf forward.",
-      "We introduced INNO-F1 Original at the 2023 PGA Show in Orlando. Golf Channel featured it among its Top Five Golf Carts from the show, giving golfers an early look at our vision for the single-rider experience.",
-      "Four years later, we are excited to introduce its next chapter at the 2027 PGA Show.",
       "For golfers who already love INNO-F1, the experience will feel familiar. A personal seat. Your own clubs within reach. The freedom to travel directly to your ball and focus on your game.",
-      "Now, F1 adds another freedom.",
-      "Step out and walk. Your F1 follows you.",
       "Watching our early adopters enjoy INNO-F1 helped me see how much more personal golf mobility could become. A golfer’s preferences can change throughout a round. Sometimes you want to ride. Sometimes you want to walk toward your next shot, enjoy the landscape, or share a conversation along the fairway.",
       "ROBOCADDY’s following technology makes that choice part of the F1 experience. Walk when you wish, with your cart carrying your bag behind you. Return to your seat whenever you need a ride.",
       "We have brought the Walk & Ride philosophy shared with SOLO to a full-sized, premium single-rider golf cart.",
       "As the designer of INNO-F1 Original, I am delighted to see that first vision evolve, giving golfers more choice in how they experience all 18 holes.",
-      "ROBOCADDY F1.",
-      "Walk when you want. Ride when you need.",
+      "ROBOCADDY F1. Walk when you want. Ride when you need.",
       "We move golf forward."
     ]
   },
@@ -96,10 +90,15 @@
       "alt": "RoboCaddy F1 visualization showing a golfer seated at the steering wheel beneath the canopy on a coastal fairway."
     },
     "booth": {
-      "base": "robocaddy-pga-showcase",
-      "width": 1206,
-      "height": 608,
-      "alt": "Preview of the planned INNOXONE PGA Show display with a reception desk and an enclosed product showcase."
+      "base": "robocaddy-pga-solo-f1",
+      "width": 1766,
+      "height": 891,
+      "widths": [
+        640,
+        1206,
+        1766
+      ],
+      "alt": "Illustrative preview of the INNOXONE PGA Show booth, with SOLO and F1 artwork, a reception desk and an enclosed showcase."
     },
     "hero": {
       "base": "robo-hero-coastal",

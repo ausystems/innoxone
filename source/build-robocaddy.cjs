@@ -27,7 +27,7 @@ function hero() {
     <div class="robo-hero-copy">
       <img class="robo-official-logo" src="${asset('robocaddy-logo.webp')}" width="996" height="166" alt="RoboCaddy">
       <h1 id="robo-page-title" data-reveal-title>Walk. Ride. <span class="robo-hero-choice">Your choice.</span></h1>
-      <p><span>Electric golf carts that follow you.</span> <span>Walk freely. Ride when you’re ready.</span></p>
+      <p><span>Electric golf carts that follow you.</span> <span>Walk when you want. Ride when you need.</span></p>
       ${action('Request a private preview', '#pga-request', 'tour')}
     </div>
     <div class="robo-hero-event"><span>Coming to the <strong>2027 PGA Show</strong></span><span>January 27-29 <span aria-hidden="true">·</span> Orlando, Florida</span></div>
@@ -36,7 +36,7 @@ function hero() {
 function story() {
   return `<section class="robo-story wrap robo-section-space" id="robo-story" aria-labelledby="robo-story-title">
     <div class="robo-story-heading"><h2 id="robo-story-title" data-reveal-title>It began after<br>nine holes.</h2>
-    <p>Young Kim enjoyed the walk. At the turn, he was ready for a ride. Back in the clubhouse, a sketch on a napkin became the beginning of RoboCaddy.</p></div>
+    <p>While testing a powered golf bag carrier, Young Kim enjoyed nine holes on foot. At the turn, he wanted a ride. A sketch on a clubhouse napkin became the beginning of RoboCaddy SOLO.</p></div>
     <div class="robo-founder-layout">
       <figure class="robo-founder"><img src="${asset('about-young-kim-800.webp')}" srcset="${asset('about-young-kim-480.webp')} 480w, ${asset('about-young-kim-800.webp')} 800w" sizes="(max-width:767px) 90vw, 32vw" width="800" height="491" alt="Young Kim, founder and designer of INNOXONE." loading="lazy" decoding="async"><figcaption>Young Kim<span>Founder &amp; CEO of INNOXONE</span></figcaption></figure>
       <div class="robo-founder-words"><blockquote>“Instead of playing the back nine that day, I found myself designing a new way to experience all eighteen.”</blockquote>
@@ -48,7 +48,7 @@ function story() {
 }
 function choice() {
   return `<section class="robo-choice robo-section-space" id="walk-ride" aria-labelledby="choice-title"><div class="wrap">
-    <div class="robo-centered-heading"><h2 id="choice-title" data-reveal-title>Walk when you want.<br>Ride when you need.</h2><p>Following technology brings both choices into one electric golf cart. Your clubs travel with you, whichever way you want to play.</p></div>
+    <div class="robo-centered-heading"><h2 id="choice-title" data-reveal-title>Walk when you want,<br>Ride when you need</h2><p>Your cart carries your bag and follows you as you walk, leaving your hands free. When you want a ride, your seat is ready. Make that choice throughout the round.</p></div>
     <div class="robo-mode-demo" data-mode-demo>
       <div class="robo-mode-controls" role="tablist" aria-label="See SOLO walking and riding">
         <button type="button" id="solo-walk-tab" role="tab" aria-selected="true" aria-controls="solo-walk-panel" data-mode-tab="walk">Walk. It follows.</button>
@@ -61,23 +61,23 @@ function choice() {
 }
 function solo() {
   return `<section class="robo-solo wrap robo-section-space" id="solo" aria-labelledby="solo-title">
-    <div class="robo-model-copy"><p class="robo-model-name">ROBOCADDY SOLO</p><h2 id="solo-title" data-reveal-title>A smaller cart.<br>A bigger choice.</h2><p>SOLO is where the Walk &amp; Ride idea began. A compact personal golf cart that carries your bag, follows your walk and gives you a seat when you want one.</p><p>Enjoy the fairway on foot. Take a ride to your next shot. Make the choice your own, all eighteen holes.</p><a class="text-link" href="#pga-request" data-pga-mode="tour">Meet SOLO in Orlando${arrow}</a></div>
+    <div class="robo-model-copy"><p class="robo-model-name">ROBOCADDY SOLO</p><h2 id="solo-title" data-reveal-title>Walk or ride.<br>Decide as you go.</h2><p>A compact golf cart that carries your bag and follows you as you walk, with a seat ready whenever you want to ride.</p><p>With RoboCaddy SOLO, you can make that choice throughout the round. Walk the fairway with your hands free, then take a seat for the next stretch whenever you feel like riding.</p><a class="text-link" href="#pga-request" data-pga-mode="tour">Meet SOLO in Orlando${arrow}</a></div>
     <figure class="robo-solo-photo media-reveal">${photo('soloBeauty','(max-width:767px) 90vw, 58vw')}</figure>
   </section>`;
 }
 function f1() {
   return `<section class="robo-f1 robo-section-space" id="robo-f1" aria-labelledby="f1-title"><div class="wrap">
-    <div class="robo-f1-heading"><p class="robo-model-name">ROBOCADDY F1</p><h2 id="f1-title" data-reveal-title>A familiar ride.<br>A new kind of freedom.</h2><p>A personal seat. Your own clubs within reach. Now, step out and walk. Your F1 follows you.</p></div>
+    <div class="robo-f1-heading"><p class="robo-model-name">ROBOCADDY F1</p><h2 id="f1-title" data-reveal-title>Step out and walk.<br>Your F1 follows you.</h2><p>A personal seat. Your own clubs within reach. The freedom to travel directly to your ball and focus on your game. Now, following technology brings the Walk &amp; Ride choice to F1.</p></div>
     <div class="robo-f1-photos">
       <figure class="media-reveal">${photo('f1Walk','(max-width:767px) 90vw, 46vw')}<figcaption>Walk toward your next shot. F1 follows with your clubs.</figcaption></figure>
       <figure class="media-reveal">${photo('f1Ride','(max-width:767px) 90vw, 46vw')}<figcaption>Return to your seat whenever you need a ride.</figcaption></figure>
     </div>
-    <div class="robo-f1-story"><div><h3>Four years of<br>moving golf forward.</h3><p class="robo-years"><span>2023</span><span aria-hidden="true">→</span><span>2027</span></p></div><div><p>INNO-F1 Original made its debut at the 2023 Orlando PGA Show, where Golf Channel featured it among its Top Five Golf Carts. RoboCaddy F1 brings that personal experience into its next chapter.</p><p>The Walk &amp; Ride philosophy shared with SOLO now comes to a full-sized, premium single-rider golf cart. Walk to enjoy the landscape or a conversation. Ride when the next part of your round calls for it.</p><a class="text-link" href="https://www.youtube.com/watch?v=PbiDwF1Hp-o">See the 2023 Golf Channel feature${arrow}</a>${letter('f1-founder-story','Read the F1 story',data.f1Story.paragraphs)}</div></div>
+    <div class="robo-f1-story"><div><h3>Four years of<br>moving golf forward.</h3><p class="robo-years"><span>2023</span><span aria-hidden="true">→</span><span>2027</span></p></div><div><p>INNO-F1 Original made its debut at the 2023 Orlando PGA Show, where Golf Channel featured it among its Top Five Golf Carts. RoboCaddy F1 brings that personal experience into its next chapter.</p><p>The Walk &amp; Ride philosophy shared with SOLO now comes to a full-sized, premium single-rider golf cart. Walk when you wish, with your cart carrying your bag behind you. Return to your seat whenever you need a ride.</p><a class="text-link" href="https://www.youtube.com/watch?v=PbiDwF1Hp-o">See the 2023 Golf Channel feature${arrow}</a>${letter('f1-founder-story','Read the F1 story',data.f1Story.paragraphs)}</div></div>
   </div></section>`;
 }
 function showcase() {
   return `<section class="robo-showcase wrap robo-section-space" id="pga-showcase" aria-labelledby="showcase-title">
-    <div class="robo-showcase-heading"><p class="robo-model-name">PGA Show 2027</p><h2 id="showcase-title" data-reveal-title>Your first look.<br>By appointment.</h2><p>Step inside the INNOXONE exclusive display zone for a private introduction to the full four-model RoboCaddy family. Access is reserved for pre-registered visitors.</p></div>
+    <div class="robo-showcase-heading"><p class="robo-model-name">PGA Show 2027</p><h2 id="showcase-title" data-reveal-title>Your first look.<br>By appointment.</h2><p>Step inside the INNOXONE exclusive display zone for a private introduction to RoboCaddy SOLO and F1. Access is reserved for pre-registered visitors.</p></div>
     <dl class="robo-event-details"><div><dt>When</dt><dd>January 27-29, 2027</dd></div><div><dt>Where</dt><dd>Orlando, Florida</dd></div><div><dt>Find us</dt><dd>INNOXONE Booth 3217</dd></div></dl>
     <figure class="robo-booth media-reveal">${photo('booth','90vw')}<figcaption>Preview of the planned INNOXONE display at the Orange County Convention Center, West Concourse.</figcaption></figure>
     <div class="robo-visit-options"><article><h3>Come for a closer look.</h3><p>Meet our team at reception and take a guided tour inside the exclusive display zone to discover RoboCaddy.</p><a class="text-link" href="#pga-request" data-pga-mode="tour">Request a private tour${arrow}</a></article><article><h3>Let’s talk about what’s next.</h3><p>Explore collaborative launch opportunities in a private, 30-minute meeting and presentation for prospective business partners.</p><a class="text-link" href="#pga-request" data-pga-mode="business">Request a business meeting${arrow}</a></article></div>
@@ -95,7 +95,7 @@ const socialImage = origin + 'assets/' + data.images.hero.base + '-' + data.imag
 const schema = {'@context':'https://schema.org','@graph':[
   {'@type':'WebPage','@id':data.meta.canonical+'#webpage',url:data.meta.canonical,name:data.meta.title,description:data.meta.description,inLanguage:'en-US',about:[{'@type':'Thing',name:'RoboCaddy SOLO'},{'@type':'Thing',name:'RoboCaddy F1'}]},
   {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:origin},{'@type':'ListItem',position:2,name:'RoboCaddy',item:data.meta.canonical}]},
-  {'@type':'Event',name:'INNOXONE RoboCaddy showcase at the 2027 PGA Show',description:'Private tours and 30-minute business meeting requests for the INNOXONE exclusive display zone at Booth 3217.',startDate:'2027-01-27T08:30:00-05:00',endDate:'2027-01-29T14:00:00-05:00',eventStatus:'https://schema.org/EventScheduled',eventAttendanceMode:'https://schema.org/OfflineEventAttendanceMode',url:data.meta.canonical+'#pga-showcase',image:origin+'assets/robocaddy-pga-showcase-1206.webp',location:{'@type':'Place',name:'INNOXONE Booth 3217, Orange County Convention Center, West Concourse',address:{'@type':'PostalAddress',addressLocality:'Orlando',addressRegion:'FL',addressCountry:'US'}},organizer:{'@type':'Organization',name:'INNOXONE',url:'https://www.innoxone.com/'}}
+  {'@type':'Event',name:'INNOXONE RoboCaddy showcase at the 2027 PGA Show',description:'Private tours and 30-minute business meeting requests for the INNOXONE exclusive display zone at Booth 3217.',startDate:'2027-01-27T08:30:00-05:00',endDate:'2027-01-29T14:00:00-05:00',eventStatus:'https://schema.org/EventScheduled',eventAttendanceMode:'https://schema.org/OfflineEventAttendanceMode',url:data.meta.canonical+'#pga-showcase',image:origin+'assets/'+data.images.booth.base+'-'+data.images.booth.width+'.webp',location:{'@type':'Place',name:'INNOXONE Booth 3217, Orange County Convention Center, West Concourse',address:{'@type':'PostalAddress',addressLocality:'Orlando',addressRegion:'FL',addressCountry:'US'}},organizer:{'@type':'Organization',name:'INNOXONE',url:'https://www.innoxone.com/'}}
 ]};
 const css = ['site.css','footer.css','editorial.css','robocaddy.css','robocaddy-form.css','motion.css'].map(file=>fs.readFileSync(path.join(__dirname,file),'utf8')).join('\n');
 const js = ['robocaddy.js','robocaddy-form.js','motion.js'].map(file=>fs.readFileSync(path.join(__dirname,file),'utf8')).join('\n');
@@ -111,5 +111,5 @@ const html = `<!doctype html>
 </head><body id="top" class="robocaddy-page">${shell.header('robocaddy')}<main id="main">${hero()}${story()}${choice()}${solo()}${f1()}${showcase()}${registration()}</main>${shell.footer('robocaddy')}${shell.menu('robocaddy')}<script>${js}</script></body></html>`;
 fs.mkdirSync(path.join(ROOT,'robocaddy'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'robocaddy/index.html'),html);
-fs.writeFileSync(path.join(ROOT,'sitemap-robocaddy.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-21</lastmod></url></urlset>\n`);
+fs.writeFileSync(path.join(ROOT,'sitemap-robocaddy.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${data.meta.canonical}</loc><lastmod>2026-11-25</lastmod></url></urlset>\n`);
 console.log('Built RoboCaddy:',Buffer.byteLength(html),'bytes; SOLO, F1 and PGA Show requests.');
